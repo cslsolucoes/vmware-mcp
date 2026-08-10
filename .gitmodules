@@ -1,0 +1,27 @@
+[submodule "referencia/vsphere-automation-sdk-python"]
+	path = referencia/vsphere-automation-sdk-python
+	url = https://github.com/vmware/vsphere-automation-sdk-python.git
+[submodule "referencia/vsphere-automation-sdk-go"]
+	path = referencia/vsphere-automation-sdk-go
+	url = https://github.com/vmware/vsphere-automation-sdk-go.git
+[submodule "referencia/vmware-vsphere-mcp-server"]
+	path = referencia/vmware-vsphere-mcp-server
+	url = https://github.com/giuliolibrando/vmware-vsphere-mcp-server.git
+[submodule "referencia/vsphere-automation-sdk-java"]
+	path = referencia/vsphere-automation-sdk-java
+	url = https://github.com/vmware/vsphere-automation-sdk-java.git
+[submodule "referencia/vmware-esxi-mcp"]
+	path = referencia/vmware-esxi-mcp
+	url = https://github.com/uldyssian-sh/vmware-esxi-mcp.git
+[submodule "referencia/ssh-mcp-server"]
+	path = referencia/ssh-mcp-server
+	url = https://github.com/giuliolibrando/ssh-mcp-server.git
+[submodule "referencia/vmware-vcenter-mcp"]
+	path = referencia/vmware-vcenter-mcp
+	url = https://github.com/uldyssian-sh/vmware-vcenter-mcp.git
+[submodule "referencia/govmomi"]
+	path = referencia/govmomi
+	url = https://github.com/vmware/govmomi.git
+[submodule "referencia/vsphere-automation-sdk-rest"]
+	path = referencia/vsphere-automation-sdk-rest
+	url = https://github.com/vmware-archive/vsphere-automation-sdk-rest.git

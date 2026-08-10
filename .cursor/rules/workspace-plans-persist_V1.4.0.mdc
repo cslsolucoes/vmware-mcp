@@ -1,0 +1,240 @@
+﻿---
+alwaysApply: true
+description: "Artefactos do projecto em .workspace/ (plans, reports, skills, rules, agents) — nunca em .cursor/ (genérico). Planos/reports: <NomeProjeto>YYYY-MM-DD-HHMMSS-<slug-kebab>.plan.md / .report.md; formato Cursor. Identidade resolvida pela raiz do repositório."
+---
+
+# Persistência de artefactos do projecto em `.workspace/`
+
+## Escopo
+
+Esta rule define onde gravar artefactos **específicos do projecto na raiz do repositório actual**. O pack genérico permanece em **`.cursor/`**; a instância do clone vai para **`.workspace/`** (relativo à raiz).
+
+### Identidade do projecto (obrigatória, sem hardcode)
+
+Resolver `<NomeProjeto>` e `<projectId>` **sempre** nesta ordem (nunca gravar um nome de clone nas rules do pack):
+
+1. `.workspace/context.json` → `projectName` / `projectId` (se existirem)
+2. Linha `program X;` em `*.dpr` / `*.lpr` na **raiz** do repositório (ou em `{BACKEND_ROOT}` se definido no context)
+3. **Basename da pasta raiz** do repositório (sem espaços)
+
+Usar esses valores em nomes de ficheiro e exemplos concretos gerados em runtime.
+
+### Destinos obrigatórios (projecto → `.workspace/`)
+
+| Artefacto do projecto | Destino (relativo à raiz) | Proibido |
+| --------------------- | ------------------------- | -------- |
+| **Planos** | `.workspace/plans/` | `.cursor/plans/` |
+| **Reports** | `.workspace/reports/` | `.cursor/` (qualquer subpasta) |
+| **Skills** | `.workspace/skills/` | `.cursor/skills/` |
+| **Rules** | `.workspace/rules/` | `.cursor/rules/` |
+| **Agents** | `.workspace/agents/` | `.cursor/agents/` |
+
+Sempre que couber **criar ou gravar** um destes artefactos **do projecto** — incluindo pedidos explícitos de plano, report, skill, rule ou agent específicos deste repositório — o agente **DEVE**:
+
+1. **Criar** o documento **somente** sob o destino `.workspace/...` correspondente (nunca sob `.cursor/` para conteúdo de projecto).
+2. Cumprir a **nomenclatura e formato** abaixo (e, para skills/rules/agents, a regra **`pack-artifact-placement`**).
+3. Criar a pasta de destino se ainda não existir (sem `.gitkeep` vazio desnecessário).
+
+**Não se aplica** a: respostas curtas sem entrega de ficheiro; quando o utilizador disser explicitamente para **não** gravar ficheiro.
+
+**`.cursor/` = genérico (pack):** frameworks reutilizáveis, padrões universais, templates de migração genéricos, skills/rules/agents do pack. **Não** colocar aí convenções, nomes, paths ou fluxos exclusivos do projecto actual.
+
+**Fora de âmbito (permanecem em `.cursor/plans/`):** templates genéricos do pack (ex.: `documentation-migration-plan_V1.0.md`). Ao **materializar** um plano executável a partir de um template, a cópia **DEVE** ir para `.workspace/plans/` com a nomenclatura canónica desta rule.
+
+Alinhamento: classificação genérico vs instância em **`pack-artifact-placement`**. Em caso de conflito sobre **destino ou nomenclatura de planos/reports**, prevalece **esta rule**.
+
+---
+
+## Skills / Rules / Agents do projecto
+
+### Regra absoluta
+
+- Skills, rules e agents **do projecto** → **`.workspace/{skills,rules,agents}/`**
+- Skills, rules e agents **genéricos do pack** → **`.cursor/{skills,rules,agents}/`** (só com classificação explícita de genérico / aprovação do utilizador)
+
+Se a classificação for duvidosa (`< 80 %`): **perguntar** (genérico → `.cursor/` vs específico do projecto → `.workspace/`), conforme Category C de **`pack-artifact-placement`**. Se o utilizador pedir explicitamente um artefacto “deste projecto” / “deste repositório” → **`.workspace/`**.
+
+### Nomenclatura (instância)
+
+Prefixo com `<projectId>` resolvido pela secção Identidade, conforme **`pack-artifact-placement`**:
+
+| Tipo | Padrão |
+| ---- | ------ |
+| Rules | `.workspace/rules/<projectId>-<slug>_V<major>.<minor>.<patch>.mdc` |
+| Skills | `.workspace/skills/<projectId>-<slug>_V<major>.<minor>.<patch>/SKILL.md` |
+| Agents | `.workspace/agents/<projectId>-<slug>_V<major>.<minor>.<patch>.md` |
+
+Frontmatter mínimo em `.workspace/`: `name`, `description`, `model`, `thinking`, `category`, `scope: project-workspace`, `project_id`, `version` (ver **`pack-artifact-placement`** Regra 3).
+
+### Entrega no chat (skills/rules/agents)
+
+Indicar o path sob `.workspace/`, por exemplo:
+
+`Skill gravada em: .workspace/skills/<projectId>-<slug>_V1.0.0/SKILL.md`
+
+---
+
+## Nomenclatura de planos (obrigatória)
+
+**Único padrão aceite:**
+
+```text
+<NomeProjeto>YYYY-MM-DD-HHMMSS-<slug-kebab>.plan.md
+```
+
+| Segmento | Regra |
+| -------- | ----- |
+| `<NomeProjeto>` | Ver secção **Identidade do projecto** (sem espaços). |
+| `YYYY-MM-DD-HHMMSS` | Timestamp **local** no momento da criação; **sem** separador entre o nome do projecto e a data. |
+| `<slug-kebab>` | Descrição curta em `kebab-case`; **sem espaços**. |
+| Sufixo | **`.plan.md`** — proibido gravar planos de execução só como `.md`. |
+
+**Exemplo de padrão** (substituir pelos valores resolvidos na raiz):
+
+- `<NomeProjeto>2026-08-01-201430-plans-reports-workspace.plan.md`
+
+**Actualização / revisão:** por omissão, criar **nova** revisão com **novo** timestamp (mesmo slug ou slug derivado). Só editar o ficheiro existente se o utilizador indicar explicitamente esse path.
+
+---
+
+## Nomenclatura de reports (obrigatória)
+
+**Único padrão aceite:**
+
+```text
+<NomeProjeto>YYYY-MM-DD-HHMMSS-<slug-kebab>.report.md
+```
+
+Mesmas regras de `<NomeProjeto>`, timestamp e slug que nos planos. Sufixo **`.report.md`**.
+
+**Exemplo de padrão:**
+
+- `<NomeProjeto>2026-08-01-201500-smoke-stdio.report.md`
+
+---
+
+## Formato canónico — planos (Markdown + Cursor)
+
+O ficheiro **DEVE** começar por **frontmatter YAML** seguido do corpo.
+
+**Frontmatter mínimo:**
+
+```yaml
+---
+title: "<título curto do plano>"
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+status: draft | approved | executed | superseded
+locale: pt-PT
+---
+```
+
+**Campos opcionais (compatibilidade com Plan / UI Cursor):**
+
+```yaml
+name: "<título curto>"       # alternativa curta ao title
+overview: "<uma linha>"      # resumo executivo
+# todos: []                  # opcional: lista de tarefas rastreáveis (id, content, status)
+---
+```
+
+**Secções obrigatórias** (nesta ordem, com nível `##`):
+
+| Secção | Conteúdo |
+| ------ | -------- |
+| **Resumo** | 2–4 frases: o quê, porquê, resultado esperado. |
+| **Objectivos** | Lista marcada, mensuráveis quando possível. |
+| **Âmbito e exclusões** | O que entra e o que fica fora. |
+| **Inventário de ficheiros / artefactos** | Tabela: caminho, operação (criar/editar/mover/remover), nota breve. |
+| **Passos / fases** | Numerados; sub-passos com `###` se necessário. |
+| **Dependências e riscos** | Bloqueadores, ordem crítica, hipóteses. |
+| **Critérios de conclusão** | Como validar que o plano foi bem executado. |
+
+**Secções opcionais** (quando aplicável):
+
+- **Rollback** — como reverter.
+- **Referências** — links ou paths (`Documentation/`, skills, issues).
+
+---
+
+## Formato canónico — reports (Markdown + Cursor)
+
+O ficheiro **DEVE** começar por **frontmatter YAML** seguido do corpo.
+
+**Frontmatter mínimo:**
+
+```yaml
+---
+title: "<título curto do report>"
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: report
+status: draft | final
+locale: pt-PT
+---
+```
+
+**Campos opcionais:**
+
+```yaml
+name: "<título curto>"
+overview: "<uma linha>"
+---
+```
+
+**Secções recomendadas** (adaptar ao tipo de report):
+
+| Secção | Conteúdo |
+| ------ | -------- |
+| **Resumo** | Conclusão em 2–4 frases. |
+| **Contexto** | Motivo, âmbito, ambiente. |
+| **Achados** | Lista ou tabela do que foi observado. |
+| **Evidências** | Comandos, paths, excertos relevantes. |
+| **Recomendações / próximos passos** | Acções concretas (se aplicável). |
+
+---
+
+## Planos de migração / áreas protegidas
+
+Se o plano incidir sobre **`Documentation/`**, **`.cursor/skills/`**, **`.cursor/Templates/`**, **`.cursor/agents/`** ou **`.cursor/rules/`**, o corpo **DEVE** estar alinhado às exigências da regra **`documentation-migration-plan-mode`** (inventário completo, antes/depois, backup, ordem de execução, rollback).
+
+**Nota:** alterações a skills/rules/agents **do projecto** fazem-se em **`.workspace/`** (não em `.cursor/`). A rule de migração aplica-se a áreas protegidas sob `.cursor/` e `Documentation/`; criar/editar em `.workspace/{skills,rules,agents}/` **não** exige esse modo de plano, salvo se o utilizador pedir plano explícito.
+
+Pode usar como base estrutural o template **`.cursor/plans/documentation-migration-plan_V1.0.md`**; o **artefacto de plano persistido** para execução **DEVE** ser gravado em **`.workspace/plans/`** com a nomenclatura canónica (não substituir o template versionado em `.cursor/plans/`).
+
+---
+
+## Entrega no chat
+
+Na resposta ao utilizador, indicar **sempre** o caminho do ficheiro gravado (com `<NomeProjeto>` / `<projectId>` já resolvidos), por exemplo:
+
+`Plano gravado em: .workspace/plans/<NomeProjeto>YYYY-MM-DD-HHMMSS-<slug>.plan.md`
+
+`Report gravado em: .workspace/reports/<NomeProjeto>YYYY-MM-DD-HHMMSS-<slug>.report.md`
+
+`Rule gravada em: .workspace/rules/<projectId>-<slug>_V1.0.0.mdc`
+
+---
+
+## Pós-edição e `/syncdb`
+
+Writes **apenas** em `.workspace/` (plans, reports, skills, rules, agents) **não** exigem `/syncdb` do pack `.cursor/index.db`.
+
+Se a operação tocar ficheiros sob **`.cursor/`** (pack genérico), após essas edições rodar **`/syncdb`** conforme a regra **`pack-inventory-autoupdate`**.
+
+---
+
+## Versão interna (ficheiro)
+
+| Campo | Valor |
+| ----- | ----- |
+| **FileVersion** | 1.4.0 |
+| **Política** | `.cursor/VERSION.md` |
+
+## Changelog (este ficheiro)
+
+- 1.4.0 (01/08/2026): Identidade só pela raiz/`context.json`/`program` (sem nomes de clone); harmonização Category C (perguntar se duvidoso); exemplos com placeholders.
+- 1.3.0 (01/08/2026): Skills, rules e agents **do projecto** → **`.workspace/{skills,rules,agents}/`** (proibido criar em `.cursor/` genérico); tabela de destinos; alinhamento a `pack-artifact-placement`; nota sobre modo plano de migração.
+- 1.2.0 (01/08/2026): Destino de planos do projecto → **`.workspace/plans/`**; reports → **`.workspace/reports/`**; nomenclatura obrigatória `<NomeProjeto>YYYY-MM-DD-HHMMSS-<slug-kebab>.plan.md` / `.report.md`; formato Cursor mantido; templates genéricos permanecem em `.cursor/plans/`.
+- 1.1.0 (10/04/2026): Extensão obrigatória **`.plan.md`**; gatilhos alargados a qualquer pedido de gravar plano em `.cursor/plans/`; alinhamento a `.cursor/README.md` e `migration-plan`; frontmatter opcional `name` / `overview` / `todos`.
+- 1.0.0 (10/04/2026): Criação — persistência obrigatória de planos em `.cursor/plans/` com frontmatter e secções canónicas.

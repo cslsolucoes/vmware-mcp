@@ -1,0 +1,112 @@
+---
+name: MCPVMWare-local-arquivos
+description: "Inventário de paths, pacotes e estrutura reais deste clone (MCPVMWare) — instância específica do projecto, não propagada pelo sync do pack .cursor/."
+model: sonnet
+thinking: normal
+category: project
+scope: project-workspace
+project_id: MCPVMWare
+version: 1.3.0
+---
+
+# MCPVMWare — inventário local do clone
+
+## Identidade
+
+- **Raiz do repositório:** `d:\MCPVMWare`
+- **projectId / projectName:** `MCPVMWare` (resolvido por basename da raiz — sem `context.json` prévio, sem `*.dpr`/`*.lpr` na raiz)
+
+## Estrutura real (reorganizada pelo usuário em 09/08/2026 22:48-22:55)
+
+**IMPORTANTE — inverteu o significado de `src/` face às versões anteriores desta rule:**
+
+- **`src/`** — hoje é o **módulo Go PRÓPRIO do MCPVMWare** (não mais o vendor do govmomi). `module github.com/cslsoftwares/mcpvmware`, `go 1.25.0`, `require github.com/vmware/govmomi v0.55.1` (resolvido pelo cache/proxy Go — não lido do clone local). Layout: `src/mcpvmware-mcp/main.go` (entrypoint), `src/mcp/types.go`, `src/vmware/client.go`, `src/tools/registry.go`+`system.go`. Build: `cd src && go build ./...`.
+- **`referencia/`** (renomeado de `outros/`) — material de terceiros, **só leitura, nunca editado/fork**:
+  - `referencia/govmomi/` — clone limpo do SDK oficial (adicionado nesta reorganização; antes vivia em `src/`).
+  - `referencia/vsphere-automation-sdk-{go,java,python,rest}/` — SDKs REST/VAPI oficiais. `go` ainda **Beta sem suporte vSphere/vCenter** (só VMC/NSX-T); `rest` descontinuado (redireciona pras Postman collections). Java/Python têm aviso de migração para "VCF SDK" em releases 9.0.0.0+.
+  - `referencia/vmware-esxi-mcp/` — MCP server comunidade (Python). **Análise 09/08/2026: é essencialmente um mock** — `connect_to_esxi()` nunca chama pyVmomi de verdade, tools retornam dados hardcoded, testes referenciam módulos inexistentes, CI mascara falhas. Baixo valor de reuso; só a nomenclatura (`action` unificado) e a hierarquia de exceções por recurso são aproveitáveis como ideia.
+  - `referencia/vmware-vcenter-mcp/` — MCP server comunidade (Python), 100% SOAP/pyVmomi, 10 tools. **Zero tools de VAMI/appliance** apesar de listar o SDK oficial no requirements.txt (dependência morta). README desalinhado do código real (documenta tools que não existem).
+  - `referencia/vmware-vsphere-mcp-server/` — MCP server comunidade (Python), o mais real dos 3: híbrido REST (`cis/session`) + pyVmomi (41 tools). Confirma padrões já adotados no nosso Go (`confirm:bool` para destrutivas, evitar N+1 de chamadas REST — usar PropertyCollector em lote). Bugs a NÃO replicar: parâmetro `hostname` decorativo (ignorado), TLS `CERT_NONE` hardcoded.
+  - `referencia/ssh-mcp-server/` — MCP genérico de SSH/Linux, não específico de VMware; irrelevante (VAMI é HTTPS/REST, não SSH).
+  - **Conclusão da análise (09/08/2026, 4 agentes Explore em paralelo):** nenhum dos 3 MCP servers da comunidade resolve VAMI — a Fase 4 do plano aprovado continua sem precedente demonstrado, é terreno próprio.
+- Coleções Postman de referência REST/VAPI vivem em `.workspace/` (não na raiz):
+  - `VMware Automation.postman_collection.json`
+  - `VMware Cloud on AWS APIs.postman_collection.json`
+  - `vSphere Automation REST Resources*.postman_collection.json`
+  - `vSphere Automation REST Samples.postman_collection.json`
+  - `vSphere Automation REST resources for Content Library.postman_collection.json`
+  - `vSphere.postman_collection.json`
+  - `Guia_Instalacao_Remota_Windows_11.md` — guia de instalação remota (Windows 11).
+
+## Toolchain instalada neste clone
+
+- **Go:** `C:\Program Files\Go` (`go1.26.5 windows/amd64`, verificado em 09/08/2026) — compilar/testar a partir de `src/` (é o module root agora).
+
+## Módulo Go do projecto — estado (materializado 09/08/2026, movido para `src/` 09/08/2026 22:52)
+
+- **`src/go.mod`:** `module github.com/cslsoftwares/mcpvmware` · `go 1.25.0`
+  (path do módulo é um *default razoável* baseado no domínio da empresa —
+  ajustar com `go mod edit -module` se o owner tiver outro org/repo real).
+- **Propósito:** servidor MCP (Model Context Protocol) para VMware — expõe
+  operações vSphere/vCenter como tools MCP, usando `govmomi` como
+  **dependência normal via `go.mod`**, nunca editado como fork (`referencia/govmomi/`
+  é só para leitura de fonte/exemplos).
+- **Arquitectura de referência:** `D:\MCPNas\truenas-mcp` (memória
+  `reference_truenas_mcp_golang`) — mesmo servidor MCP TrueNAS em Go já
+  usado por este workspace (tools `mcp__mcpTrueNas__*`). Camadas espelhadas:
+  `mcpvmware-mcp/main.go` (entrypoint + stdio handler), `mcp/types.go`,
+  `tools/registry.go` (Registry), `vmware/client.go` (wrapper sobre
+  `govmomi.NewClient` + `find.Finder`).
+- **Estado:** validado ponta a ponta contra hardware real (ESXi 7.0.3
+  standalone, `10.100.2.54`) — `go build`/`go vet`/`gofmt` limpos a partir de
+  `src/`. 2 tools seed (`vmware_about`, `vmware_list_vms`). Plano detalhado
+  das próximas fases (sessão/keepalive, inventário, VM lifecycle+snapshots,
+  host ops, VAMI) aprovado em
+  `D:\Users\claiton.linhares\.claude\plans\streamed-imagining-lightning.md`.
+- **Follow-up conhecido (= Phase 0 do plano, bloqueante):** trocar
+  `vmware.NewClient` (chama `govmomi.NewClient` directamente, login cedo
+  demais pra plugar keepalive) por keepalive em memória
+  (`session/keepalive.NewHandlerSOAP`) — evita expiração silenciosa de
+  sessão num servidor de longa duração.
+- Kit de skills que suporta este módulo: `.cursor/skills/developer-go-*`
+  (30 skills) — entrada `developer-go-master-orchestrator`.
+- **Fonte de verdade de progresso sessão-a-sessão:** `.wolf/STATUS.md` — ler
+  antes deste ficheiro se as informações divergirem (este ficheiro pode
+  ficar levemente atrasado; STATUS.md é atualizado por fase de trabalho).
+
+## Implicação para as rules do pack
+
+- **FPC/Lazarus/ProvidersORM:** não aplicável — não há `FPC_ROOT`/`LAZARUS_ROOT`/pacotes ProvidersORM configurados neste clone.
+- **`dcc32.cfg`/`fpc32.opts`/etc.:** não existem — nenhum build Delphi/FPC foi gerado.
+- A skill `project-init-rules-generator` (questionário P1–P9/Q1–Q7, orientado a projectos Delphi/FPC com ProvidersORM) **não se aplica** — o repositório real é um servidor MCP Go para VMware, não um projecto Delphi/FPC.
+
+## Estrutura `.workspace/` criada
+
+- `.workspace/context.json` — identidade do clone (inclui `goModule`, `referenceMaterial`).
+- `.workspace/rules/MCPVMWare-local-arquivos_V1.3.0.mdc` — este ficheiro.
+
+Subpastas adicionais (`plans/`, `reports/`, `skills/`, `agents/`, `Templates/`) **não foram criadas** por não haver ainda conteúdo — criar apenas quando o primeiro artefacto de cada categoria for gerado (Regra 4-A de `pack-artifact-placement`).
+
+## Versão interna (ficheiro)
+
+| Campo | Valor |
+| ----- | ----- |
+| **FileVersion** | 1.3.0 |
+| **Política** | `.cursor/VERSION.md` |
+
+## Changelog (este ficheiro)
+
+- 1.3.0 (09/08/2026): Reescrita para refletir a reorganização de pastas feita
+  pelo usuário (22:48-22:55): `src/` inverteu de significado (era vendor
+  govmomi, agora é o módulo Go próprio do MCPVMWare); `outros/` renomeado
+  para `referencia/` e passou a incluir também `referencia/govmomi/`.
+  Adicionado resumo da análise dos 3 MCP servers da comunidade + 4 SDKs
+  oficiais (09/08/2026 22:43). Build verificado limpo a partir do novo
+  `src/`. Ficheiro renomeado de `_V1.2.0.mdc` para `_V1.3.0.mdc`.
+- 1.2.0 (09/08/2026): Adicionada secção "Módulo Go do projecto" — `go.mod`
+  (`github.com/cslsoftwares/mcpvmware`) materializado, scaffold do servidor
+  MCP criado e validado, arquitectura de referência `D:\MCPNas\truenas-mcp`
+  documentada, follow-up de `session/cache.Session` registado. Ficheiro
+  renomeado de `_V1.0.0.mdc` para `_V1.2.0.mdc` (sufixo == FileVersion).
+- 1.1.0 (09/08/2026): Adicionada secção Toolchain — Go instalado em `C:\Program Files\Go` (go1.26.5 windows/amd64).
+- 1.0.0 (09/08/2026): Criação — instância local materializada a partir do estado real da raiz (sem `.dpr`/`.lpr`; `src/` = vendor Go govmomi, na época).

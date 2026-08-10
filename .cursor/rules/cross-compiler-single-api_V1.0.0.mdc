@@ -1,0 +1,58 @@
+---
+description: Procedimento de ouro — preferir componente/lib de API UNICA cross-compiler (Delphi+FPC) a duas implementacoes com {$IFDEF}. Reduz codigo, divergencia e tokens.
+globs: ["**/*.pas", "**/*.lpr", "**/*.dpr"]
+alwaysApply: true
+---
+
+# Procedimento de ouro — API única cross-compiler vs `{$IFDEF}` duplo
+
+**FolderVersion:** 1.0.0 · **Data:** 04/07/2026 · **Origem:** decisao do owner (HTTP do DllBootstrap = Indy)
+
+## A regra
+
+Quando existir um **componente/biblioteca maduro que ofereça a MESMA API em Delphi e FPC**,
+**preferi-lo** a escrever duas implementacoes condicionais
+(`{$IFDEF FPC} <api-fpc> {$ELSE} <api-delphi> {$ENDIF}`).
+
+**Porque** (beneficios diretos):
+- **Menos codigo** — uma so lógica em vez de dois ramos paralelos.
+- **Menos divergencia/bugs** — nao ha dois caminhos que derivam com o tempo.
+- **Economia de tokens** — menos codigo para gerar, ler, rever e manter.
+- **Menos superficie de teste** — um caminho, nao dois.
+
+## Quando aplicar
+
+- Existe uma lib **cross-compiler comprovada** (compila Delphi + FPC) cuja API única cobre o caso.
+- A lib esta **disponivel no ambiente-alvo** (bundled ou empacotada em `Packages/`/`dll/`).
+- A dependencia e **aceitavel** no contexto (ver excecoes).
+
+## Exemplos canonicos (ecossistema ProvidersORM)
+
+| Necessidade | Preferir (API única) | Em vez de (`{$IFDEF}` duplo) |
+|-------------|----------------------|------------------------------|
+| HTTP (download) | **Indy `TIdHTTP`** (Delphi+FPC) | `System.Net.HttpClient` (Delphi) × `fphttpclient` (FPC) |
+| Archive / zip   | **ZipFileORM** (`IArchive`) | `System.Zip` (Delphi) × `TUnZipper` (FPC) |
+| Base de dados   | **Zeos** (default) | engines nativos por plataforma |
+
+## Excecoes (quando o `{$IFDEF}` ou o RTL nativo se justifica)
+
+- **Núcleo sem dependencias:** se a unit tem de ficar auto-contida (zero libs), o RTL nativo
+  com `{$IFDEF}` pode ser preferivel a arrastar uma dependencia — **decisao explicita do owner**.
+- **RTL trivial:** quando o caso e tao simples que o `{$IFDEF}` nativo e mais leve que a lib.
+- **Lib indisponivel** num dos alvos: se a lib nao existe/nao compila num compilador, o ramo
+  condicional e inevitavel.
+
+Nestes casos, isolar o `{$IFDEF}` numa unica unit-adaptador (nao espalhar pelo codigo).
+
+## Relacao com outras regras
+
+- Complementa a **cross-compiler obrigatoria** (Delphi 12 + FPC 3.3.1): a preferencia por API
+  única e a forma de cumprir o cross-compiler com o minimo de codigo condicional.
+- Onde a dependencia colide com o núcleo (ex.: ZipFileORM × ProvidersORM em `Commons.*`),
+  resolver por **absorcao como modulo** + reconciliacao de namespaces (§3-C / D12), nao por copia
+  cega nem por reescrita nativa.
+
+## Changelog
+
+- 1.0.1 (05/08/2026): Promovido de `.workspace/rules/` para pack canónico `.cursor/rules/` (SSOT).
+- 1.0.0 (04/07/2026): versao inicial. Motivada pela escolha de Indy `TIdHTTP` (API única

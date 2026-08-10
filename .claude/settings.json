@@ -1,0 +1,96 @@
+{
+  "_template_info": "Template para .claude/settings.json — substituir {PLACEHOLDERS} antes de usar. Fonte: .cursor/Templates/mirror-config/",
+  "_template_version": "1.0.0",
+  "project": "MCPVMWare-support-workspace",
+  "description": "Workspace de apoio para desenvolvimento do repositorio canonico D:\\MCPVMWare.",
+  "context": {
+    "canonicalRepository": "D:\\MCPVMWare",
+    "rulesPath": ".claude/rules",
+    "skillsPath": ".claude/skills",
+    "compileDoc": ".claude/skills/project-compile-database-docs_V1.0.1/exemplos/compile.md",
+    "databaseDoc": ".claude/skills/project-compile-database-docs_V1.0.1/exemplos/database.md",
+    "directivesDoc": ".claude/skills/project-diretivas-compilacao_V1.0.1/exemplos/diretivas_compilacao.md"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/session-start.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/pre-read.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/pre-write.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/post-read.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/post-write.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/precompact.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/stop.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

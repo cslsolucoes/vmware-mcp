@@ -1,0 +1,652 @@
+{
+  "info": {
+    "_postman_id": "fa535e09-4433-4179-83f8-2978e9cdadfa",
+    "name": "vSphere Automation REST resources for Content Library",
+    "description": "vSphere Automation REST resources for Content Library",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38068694",
+    "_collection_link": "https://go.postman.co/collection/1501576-fa535e09-4433-4179-83f8-2978e9cdadfa?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "- Session",
+      "item": [
+        {
+          "name": "Login to vCenter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session"
+          },
+          "response": []
+        },
+        {
+          "name": "Get current session info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session?~action=get",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ],
+              "query": [
+                {
+                  "key": "~action",
+                  "value": "get"
+                }
+              ]
+            },
+            "description": "Get current session info"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout of vCenter ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout of vCenter API"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "All Librarys",
+      "item": [
+        {
+          "name": "Content Library: List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library"
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "Content Library: Get details of single library",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library/id:7ea9915d-6542-4dff-8ff0-f0bf9f315f77",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library",
+                "id:7ea9915d-6542-4dff-8ff0-f0bf9f315f77"
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Library Items",
+      "item": [
+        {
+          "name": "List all items in a specific library",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library/item?library_id=0527489b-d316-442e-8784-2e8e0234b35c",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library",
+                "item"
+              ],
+              "query": [
+                {
+                  "key": "library_id",
+                  "value": "0527489b-d316-442e-8784-2e8e0234b35c"
+                }
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "List details of a library item",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library/item/id:67ecae42-f7a1-4720-99f6-c0b01f769ec3",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library",
+                "item",
+                "id:67ecae42-f7a1-4720-99f6-c0b01f769ec3"
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "List files in a specific library item",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library/item/file?library_item_id=67ecae42-f7a1-4720-99f6-c0b01f769ec3",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library",
+                "item",
+                "file"
+              ],
+              "query": [
+                {
+                  "key": "library_item_id",
+                  "value": "67ecae42-f7a1-4720-99f6-c0b01f769ec3"
+                }
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "List storage items in a specific library item",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/library/item/storage?library_item_id=67ecae42-f7a1-4720-99f6-c0b01f769ec3",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "library",
+                "item",
+                "storage"
+              ],
+              "query": [
+                {
+                  "key": "library_item_id",
+                  "value": "67ecae42-f7a1-4720-99f6-c0b01f769ec3"
+                }
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "Query an OVF package for deployment details",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"target\": {\r\n        \"folder_id\": \"group-v9\",\r\n        \"host_id\": \"host-10\",\r\n        \"resource_pool_id\": \"resgroup-8\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/vcenter/ovf/library-item/id:34d670b1-42d4-4e7b-9884-315dd50d6660?~action=filter",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "vcenter",
+                "ovf",
+                "library-item",
+                "id:34d670b1-42d4-4e7b-9884-315dd50d6660"
+              ],
+              "query": [
+                {
+                  "key": "~action",
+                  "value": "filter"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deploy a library item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"deployment_spec\": {\r\n        \"accept_all_EULA\": true,\r\n        \"default_datastore_id\": \"datastore-14\"\r\n    },\r\n    \"target\": {\r\n        \"folder_id\": \"group-v7\",\r\n        \"host_id\": \"host-10\",\r\n        \"resource_pool_id\": \"resgroup-9\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/vcenter/ovf/library-item/id:6cbbef21-a5a3-4929-aecf-619da80881df?~action=deploy",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "vcenter",
+                "ovf",
+                "library-item",
+                "id:6cbbef21-a5a3-4929-aecf-619da80881df"
+              ],
+              "query": [
+                {
+                  "key": "~action",
+                  "value": "deploy"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Local Library",
+      "item": [
+        {
+          "name": "Content Library: Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"create_spec\": {\r\n        \"name\": \"CL1\",\r\n        \"description\": \"CL1 Desc\",\r\n        \"publish_info\": {\r\n            \"authentication_method\": \"NONE\",\r\n            \"persist_json_enabled\": false,\r\n            \"published\": false\r\n        },\r\n        \"storage_backings\": [\r\n            {\r\n                \"datastore_id\": \"datastore-12\",\r\n                \"type\": \"DATASTORE\"\r\n            }\r\n        ],\r\n        \"type\": \"LOCAL\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/local-library",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "local-library"
+              ]
+            },
+            "description": "Create Local Content Library"
+          },
+          "response": []
+        },
+        {
+          "name": "List all local librarys",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/local-library",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "local-library"
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "Get details of a local library",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/local-library/id:618f1654-b48c-4886-a266-ad17e30d63fa",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "local-library",
+                "id:618f1654-b48c-4886-a266-ad17e30d63fa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a local library",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/local-library/id:618f1654-b48c-4886-a266-ad17e30d63fa",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "local-library",
+                "id:618f1654-b48c-4886-a266-ad17e30d63fa"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Subscribed Library",
+      "item": [
+        {
+          "name": "Subscribed Library:  Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"create_spec\": {\r\n        \"subscription_info\": {\r\n            \"authentication_method\": \"NONE\",\r\n            \"ssl_thumbprint\": \"69:d9:9e:e9:0b:4b:68:24:09:2b:ce:14:d7:4a:f9:8c:bd:c6:5a:e9\",\r\n            \"automatic_sync_enabled\": true,\r\n            \"subscription_url\": \"https://s3-us-west-1.amazonaws.com/vghetto-content-library/lib.json\",\r\n            \"on_demand\": false\r\n        },\r\n        \"name\": \"virtuallyGhetto CL\",\r\n        \"description\": \"William Lams CL: http://www.virtuallyghetto.com/2015/04/subscribe-to-vghetto-nested-esxi-template-content-library-in-vsphere-6-0.html\",\r\n        \"publish_info\": {\r\n            \"authentication_method\": \"NONE\",\r\n            \"persist_json_enabled\": false,\r\n            \"published\": false\r\n        },\r\n        \"storage_backings\": [\r\n            {\r\n                \"datastore_id\": \"datastore-28\",\r\n                \"type\": \"DATASTORE\"\r\n            }\r\n        ],\r\n        \"type\": \"SUBSCRIBED\"\r\n    }\r\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library"
+              ]
+            },
+            "description": "Subscribe to online Library"
+          },
+          "response": []
+        },
+        {
+          "name": "List all subscribed librarys",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library"
+              ]
+            },
+            "description": "List Content Library IDs"
+          },
+          "response": []
+        },
+        {
+          "name": "Get details of a subscribed library",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library/id:c063ff5c-4b65-4330-a5ca-ff191a4037c4",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library",
+                "id:c063ff5c-4b65-4330-a5ca-ff191a4037c4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a subscribed library",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library/id:c063ff5c-4b65-4330-a5ca-ff191a4037c4",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library",
+                "id:c063ff5c-4b65-4330-a5ca-ff191a4037c4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Evict cached content of on-demand subscribed library",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library/id:559b4db5-3953-4a42-8997-a118e4dc5f49?~action=evict",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library",
+                "id:559b4db5-3953-4a42-8997-a118e4dc5f49"
+              ],
+              "query": [
+                {
+                  "key": "~action",
+                  "value": "evict"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Force sync of subscribed library",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/content/subscribed-library/id:559b4db5-3953-4a42-8997-a118e4dc5f49?~action=sync",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "content",
+                "subscribed-library",
+                "id:559b4db5-3953-4a42-8997-a118e4dc5f49"
+              ],
+              "query": [
+                {
+                  "key": "~action",
+                  "value": "sync"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

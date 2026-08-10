@@ -1,0 +1,19 @@
+{ =============================================================================
+  {UNIT_NAME} - {SHORT_DESCRIPTION}
+
+  Descrição:
+  {LONG_DESCRIPTION}
+
+  Características:
+{FEATURES}
+
+  Project:        {PROJECT_NAME}
+  ProjectVersion: {PROJECT_VERSION}
+  ModuleVersion:  {MODULE_VERSION}
+  FileVersion:    {FILE_VERSION}
+  Author:         {AUTHOR}
+  Date:           {DATE}
+
+  Changelog (file):
+  - {FILE_VERSION} ({DATE}): {CHANGELOG_ENTRY}
+  ============================================================================= }

@@ -1,0 +1,1465 @@
+{
+  "info": {
+    "_postman_id": "9b746437-8574-49f1-876d-16b9bb574618",
+    "name": "vSphere Automation REST Samples",
+    "description": "These samples will show how to use the SHIM API. Each folder will provide a description of what APIs it will show how to use. Along the way, some environment variables will be set as part of some response processing done using Javascript. As well, some environment varialbes will be required, such as the host ip, username and password, etc. Many of the samples will reuse previously set environment variables, so if a request within a sample doesnt work, check the description of the request or the request url, headers and body for any {{ }} tokens and make sure they are available in the selected environment. Below are the environment variables needed to be preset for the samples to work.\n\n* vc - the IP or URL of the host VC\n* user - the user name to log in with\n* password - the password to log in with\n* host1 - a unique ip address to a host\n* host2 - another unique ip address to a host\n",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38068694",
+    "_collection_link": "https://go.postman.co/collection/1501576-9b746437-8574-49f1-876d-16b9bb574618?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Host Connect",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Find disconnected host",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var host = jsonData.value; ",
+                  "if (host !== null && host.length > 0) {",
+                  "    // set the host name environment variable for the next request to use",
+                  "    postman.setEnvironmentVariable('Host-1-Name', host[0].host);",
+                  "    postman.setNextRequest('Connect');",
+                  "} else {",
+                  "    // Host must already be connected, or possibly not responding",
+                  "    postman.setNextRequest(null);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}&filter.connection_states.1=DISCONNECTED",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                },
+                {
+                  "key": "filter.connection_states.1",
+                  "value": "DISCONNECTED"
+                }
+              ]
+            },
+            "description": "This request will look for the {{host1}} using the host api filter to also only find it if its connect_state property is set to DISCONNECTED. If found, it will set the environment variable Host-1-Name to the name of the host, and the next request to the Connect request. If the host is already connected or possibly in a not responding state, the next request is set to null to end the flow."
+          },
+          "response": []
+        },
+        {
+          "name": "Connect",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host/{{Host-1-Name}}/connect",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host",
+                "{{Host-1-Name}}",
+                "connect"
+              ]
+            },
+            "description": "Connect a disconnected host"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This set of requests will attempt to connect a host if it is disconnected. It will find the host if it is in a disconnected state, then proceed to connect it."
+    },
+    {
+      "name": "Host Disconnect",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Find connected host",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var host = jsonData.value; ",
+                  "if (host !== null && host.length > 0) {",
+                  "    // set the host name environment variable for the next request to use",
+                  "    postman.setEnvironmentVariable('Host-1-Name', host[0].host);",
+                  "    postman.setNextRequest('Disconnect');",
+                  "} else {",
+                  "    // Host must already be connected, or possibly not responding",
+                  "    postman.setNextRequest(null);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}&filter.connection_states.1=CONNECTED",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                },
+                {
+                  "key": "filter.connection_states.1",
+                  "value": "CONNECTED"
+                }
+              ]
+            },
+            "description": "This request will look for the {{host1}} using the host api filter to also only find it if its connect_state property is set to DISCONNECTED. If found, it will set the environment variable Host-1-Name to the name of the host, and the next request to the Connect request. If the host is already connected or possibly in a not responding state, the next request is set to null to end the flow."
+          },
+          "response": []
+        },
+        {
+          "name": "Disconnect",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host/{{Host-1-Name}}/disconnect",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host",
+                "{{Host-1-Name}}",
+                "disconnect"
+              ]
+            },
+            "description": "Disconnect a connected host"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This set of requests will attempt to disconnect a host if it is connected. It will find the host if it is in a connected state, then proceed to disconnect it."
+    },
+    {
+      "name": "Host add",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Check if host exists",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var host = jsonData.value; ",
+                  "if (host !== null && host.length <= 0) {",
+                  "    // no host found, lets add it... set next request in chain to find the host folder, which is",
+                  "    // needed to add the host to the datacenter",
+                  "    postman.setNextRequest('Find Host Folder');",
+                  "} else {",
+                  "    // host is already added, dont proceed",
+                  "    console.log('already added');",
+                  "    postman.setNextRequest(null);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                }
+              ]
+            },
+            "description": "First we will get the list of hosts and filter on the {{host1}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Find Host Folder",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "console.log(jsonData);",
+                  "var value = jsonData.value;",
+                  "",
+                  "postman.setEnvironmentVariable(\"Testbed-Host-Folder\", value.host_folder);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/datacenter/{datacenter}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "datacenter",
+                "{datacenter}"
+              ]
+            },
+            "description": "This call will list the folders and look for the host folder name, assigning it to an environment variable for the next call to use."
+          },
+          "response": []
+        },
+        {
+          "name": "Add host to datacenter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var host = jsonData.value;",
+                  "postman.setEnvironmentVariable(\"Host-1-Name\", host);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"spec\": {\n        \"force_add\": true,\n        \"folder\": \"{{Testbed-Host-Folder}}\",\n        \"hostname\": \"{{host1}}\",\n        \"user_name\": \"root\",\n        \"password\": \"\",\n        \"port\": 443,\n        \"thumbprint_verification\": \"NONE\"\n    }\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ]
+            },
+            "description": "This request will use the previously set {{Testbed-Host-Folder}} environment variable from the Find Host Folder request, as well as the {{host1}} environment variable to add {{host1}} to the datacenteer."
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This set of requests will add a host to a datacenter"
+    },
+    {
+      "name": "Host remove",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Check if host exists",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var host = jsonData.value; ",
+                  "if (host !== null && host.length == 1) {",
+                  "    postman.setEnvironmentVariable('Host-1-Name', host[0].host);",
+                  "    postman.setNextRequest('Remove Host');",
+                  "} else {",
+                  "    // doesnt exist, dont continue",
+                  "    postman.setNextRequest(null);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                }
+              ]
+            },
+            "description": "First we will get the list of hosts and filter on the {{host1}}. If the {{host1}} is found, the environment variable "
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Host",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host/{{Host-1-Name}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host",
+                "{{Host-1-Name}}"
+              ]
+            },
+            "description": "This request will attempt to remove {{host1}}. If the host exists, it should be removed. If not, the request will fail."
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This set of requests will show how to remove a host from a datacenter. It will use the {{host1}} pre configured environment variable, removing it from the datacenter if it exists. "
+    },
+    {
+      "name": "VM Create with Defaults",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Find Datastore",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('datastore', jsonData.value[0].datastore);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/datastore?filter.names.1=datastore1",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "datastore"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "datastore1"
+                }
+              ]
+            },
+            "description": "This request will use a filter to match the name of the datastores to 'datastore1'. If found, an environment variable {datastore} is set to the datastore value of the response."
+          },
+          "response": []
+        },
+        {
+          "name": "Find Host1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    postman.setEnvironmentVariable('host-id', jsonData.value[0].host);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                }
+              ]
+            },
+            "description": "This request will use the /host resource to find {{host1}}."
+          },
+          "response": []
+        },
+        {
+          "name": "Find ResourcePool for host1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('resource-pool', jsonData.value[0].resource_pool);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/resource-pool?filter.names.1=Resources&filter.hosts.1={{host-id}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "resource-pool"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "Resources"
+                },
+                {
+                  "key": "filter.hosts.1",
+                  "value": "{{host-id}}"
+                }
+              ]
+            },
+            "description": "This call will return a list of resource pools"
+          },
+          "response": []
+        },
+        {
+          "name": "Find VM Folder",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('vm-folder', jsonData.value[0].folder);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/folder?filter.type=VIRTUAL_MACHINE&filter.names.1=Discovered virtual machine",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "folder"
+              ],
+              "query": [
+                {
+                  "key": "filter.type",
+                  "value": "VIRTUAL_MACHINE"
+                },
+                {
+                  "key": "filter.names.1",
+                  "value": "Discovered virtual machine"
+                }
+              ]
+            },
+            "description": "This request uses the /folders resource to find the folder by the name of 'vm'. If found, it sets an environment variable {vm-folder} to the folder value of the response."
+          },
+          "response": []
+        },
+        {
+          "name": "Create with defaults",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"spec\": {\n        \"guest_OS\": \"RHEL_7_64\",\n        \"placement\" : {\n            \"datastore\": \"{{datastore}}\",\n            \"folder\": \"{{vm-folder}}\",\n            \"resource_pool\": \"{{resource-pool}}\"\n        }\n    }\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/vm",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "vm"
+              ]
+            },
+            "description": "Create a new VM with the bare minimum properties. All other properties will use sensible defaults. The 3 properties that MUST be defined in environment variables before this call will work are {{datastore}}, {{vm-folder}} and {{resource-pool}}."
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This sample will show the API resource calls (with details) to make in order to create a VM as simply as possible. It will use the VM sensible defaults for all other details not provided. Their are only 3 environment variables needed. The datastore, the vm folder, and the resource pool"
+    },
+    {
+      "name": "VM Create with details",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Find Datastore",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('datastore', jsonData.value[0].datastore);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/datastore?filter.names.1=datastore1",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "datastore"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "datastore1"
+                }
+              ]
+            },
+            "description": "This request will use a filter to match the name of the datastores to 'datastore1'. If found, an environment variable {datastore} is set to the datastore value of the response."
+          },
+          "response": []
+        },
+        {
+          "name": "Find Host1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    postman.setEnvironmentVariable('host-id', jsonData.value[0].host);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/host?filter.names.1={{host1}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "host"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "{{host1}}"
+                }
+              ]
+            },
+            "description": "This request will use the /host resource to find {{host1}}."
+          },
+          "response": []
+        },
+        {
+          "name": "Find ResourcePool for host1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('resource-pool', jsonData.value[0].resource_pool);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/resource-pool?filter.names.1=Resources&filter.hosts.1={{host-id}}",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "resource-pool"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "Resources"
+                },
+                {
+                  "key": "filter.hosts.1",
+                  "value": "{{host-id}}"
+                }
+              ]
+            },
+            "description": "This call will return a list of resource pools"
+          },
+          "response": []
+        },
+        {
+          "name": "Find VM Folder",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "if (undefined !== jsonData && null !== jsonData) {",
+                  "    console.log(jsonData.value);",
+                  "    postman.setEnvironmentVariable('vm-folder', jsonData.value[0].folder);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/folder?filter.type=VIRTUAL_MACHINE&filter.names.1=Discovered virtual machine",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "folder"
+              ],
+              "query": [
+                {
+                  "key": "filter.type",
+                  "value": "VIRTUAL_MACHINE"
+                },
+                {
+                  "key": "filter.names.1",
+                  "value": "Discovered virtual machine"
+                }
+              ]
+            },
+            "description": "This request uses the /folders resource to find the folder by the name of 'vm'. If found, it sets an environment variable {vm-folder} to the folder value of the response."
+          },
+          "response": []
+        },
+        {
+          "name": "Create detailed VM",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"spec\": {\n        \"name\": \"SampleVM\",\n        \"guest_OS\": \"RHEL_7_64\",\n        \"placement\" : {\n            \"datastore\": \"{{datastore}}\",\n            \"folder\": \"{{vm-folder}}\",\n            \"resource_pool\": \"{{resource-pool}}\"\n        },\n        \"memory\": {\n          \"size_MiB\": 4,\n          \"hot_add_enabled\": true\n        },\n        \"floppies\": [],\n        \"cpu\": {\n          \"hot_remove_enabled\": true,\n          \"count\": 1,\n          \"hot_add_enabled\": true,\n          \"cores_per_socket\": 1\n        },\n        \"cdroms\": [\n            {\n                \"type\": \"IDE\",\n                \"backing\": {\n                    \"iso_file\": \"[datastore1] photon-minimal-1.0TP2.iso\",\n                    \"type\": \"ISO_FILE\"\n                }\n            }\n        ],\n        \"disks\": [\n            {\n                \"new_vmdk\": {\n                    \"capacity\": 1024\n                }\n            }\n        ]\n    }\n}"
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/vm",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "vm"
+              ]
+            },
+            "description": "Create a VM with specific properties defined."
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This collection of requests will show how to gather data that is then applied to the VM create resource for more specific VM creation. Storage, resource poolls, hosts, and more will be retrieved."
+    },
+    {
+      "name": "VM Power On/Off",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Login to vCenter API and retrieve Session using username and password. The environment variables user and password are passed via the Authorization header using Basic Auth. The result is the session value, which is the same value stored in the cookie. Postman automatically manages the cookie and sends it on subsequent requests but it is also possible to add a header to send the cookie using the value returned from this call."
+          },
+          "response": []
+        },
+        {
+          "name": "Find by name",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var vm = jsonData.value; ",
+                  "if (vm !== null && vm.length == 1) {",
+                  "    // Found the VM by name, lets figure out its current state, and set the next request to be",
+                  "    // called. Also set the {{vm}} environment variable to the vm value.",
+                  "    postman.setEnvironmentVariable('vm', vm[0].vm);",
+                  "    ",
+                  "    if (vm[0].power_state === 'POWERED_ON') {",
+                  "        postman.setNextRequest('Power off');",
+                  "    } else {",
+                  "        postman.setNextRequest('Power on');",
+                  "    }",
+                  "} else {",
+                  "    // could not find VM",
+                  "    postman.setNextRequest(null);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/vm?filter.names.1=SampleVM",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "vm"
+              ],
+              "query": [
+                {
+                  "key": "filter.names.1",
+                  "value": "SampleVM"
+                }
+              ]
+            },
+            "description": "Find a VM by using the name the VM was created with"
+          },
+          "response": []
+        },
+        {
+          "name": "Power on",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/vm/{{vm}}/power/start",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "vm",
+                "{{vm}}",
+                "power",
+                "start"
+              ]
+            },
+            "description": "This request will turn the VM on"
+          },
+          "response": []
+        },
+        {
+          "name": "Power off",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/vcenter/vm/{{vm}}/power/stop",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "vcenter",
+                "vm",
+                "{{vm}}",
+                "power",
+                "stop"
+              ]
+            },
+            "description": "This request will turn the {{vm}} off"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{vault:basic-auth}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://{{vc}}/rest/com/vmware/cis/session",
+              "protocol": "https",
+              "host": [
+                "{{vc}}"
+              ],
+              "path": [
+                "rest",
+                "com",
+                "vmware",
+                "cis",
+                "session"
+              ]
+            },
+            "description": "Logout"
+          },
+          "response": []
+        }
+      ],
+      "description": "This set of requests will show how to turn a VM on and off."
+    }
+  ]
+}

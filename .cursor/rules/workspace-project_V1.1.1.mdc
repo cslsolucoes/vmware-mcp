@@ -1,0 +1,54 @@
+﻿---
+description: "Stub genérico do pack — artefactos/paths do projecto vivem em .workspace/rules/<projectId>-local-arquivos_V*.mdc (ou equivalente). Não contém paths de um clone concreto."
+alwaysApply: true
+---
+
+# WORKSPACE PROJECT — stub do pack (genérico)
+
+## Escopo
+
+Esta rule no pack **`.cursor/rules/`** é apenas um **ponteiro**. A lista concreta de pacotes, toolchains e directórios **deste clone** **não** deve viver aqui.
+
+Nome anterior (histórico): `local_arquivos_V1.0.mdc` → `workspace_project_V1.0.mdc`.
+
+## Destino obrigatório (instância)
+
+1. Resolver `<projectId>`: `.workspace/context.json` → `projectId`, senão basename da **raiz do repositório**.
+2. Ler / criar a instância em:
+
+```text
+.workspace/rules/<projectId>-local-arquivos_V<major>.<minor>.<patch>.mdc
+```
+
+3. Paths absolutos de máquina, nomes de `.dpr`/`.lpr` do clone, pacotes instalados e mapas de pastas do projecto → **somente** nesse ficheiro em `.workspace/rules/`.
+4. Planos e reports do projecto → `.workspace/plans/` e `.workspace/reports/` (ver **`workspace-plans-persist`**), nunca `.cursor/plans/` para planos de execução.
+
+## O que pode existir neste stub
+
+- Política de classificação (pack vs instância).
+- Ordem de resolução de identidade (raiz / context / `program`).
+- Referência a **`pack-artifact-placement`** e **`workspace-plans-persist`**.
+
+## O que é proibido neste ficheiro do pack
+
+- Nomes de projecto/clone concretos.
+- Paths absolutos de uma máquina específica.
+- Inventários ORM/backend de um repositório particular.
+
+## Materialização
+
+- Fluxo `/init` ou `bootstrap-build-config.ps1` (quando aplicável): gerar/actualizar a instância em `.workspace/rules/`, não preencher o stub do pack com dados do clone.
+- Se a instância **não existir**, o agente deve **criar** `.workspace/rules/<projectId>-local-arquivos_V1.0.0.mdc` a partir do estado real da raiz (sem inventar paths de outros projectos).
+
+## Versão interna (ficheiro)
+
+| Campo | Valor |
+| ----- | ----- |
+| **FileVersion** | 1.1.1 |
+| **Política** | `.cursor/VERSION.md` |
+
+## Changelog (este ficheiro)
+
+- 1.1.1 (01/08/2026): Renomeado `workspace-project_V1.1.1.mdc` → `workspace-project_V1.1.1.mdc` (stub do pack).
+- 1.1.0 (01/08/2026): Opção A — stub genérico no pack; conteúdo concreto em `.workspace/rules/<projectId>-local-arquivos_V*.mdc`.
+- 1.0.x (histórico): versão anterior com inventário de clone embutido no pack (substituída).

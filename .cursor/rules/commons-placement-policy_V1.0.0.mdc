@@ -1,0 +1,85 @@
+---
+description: Regra de ouro de colocacao dos Commons no ecossistema unificado (ProvidersORM v3). Nucleo (publico/transversal) vs por-modulo (interno exclusivo).
+globs: ["**/Commons.*.pas", "**/src.new/**/*.pas", "**/ProvidersORM/**/*.pas"]
+alwaysApply: true
+---
+
+# Regra de ouro — Colocacao dos Commons (ProvidersORM v3)
+
+**FolderVersion:** 1.1.0 · **Data:** 04/07/2026 · **Origem:** decisao do owner (D11 do plano v3)
+
+## A regra (nomenclatura)
+
+| Ficheiro | Contem | Criterio |
+|----------|--------|----------|
+| **`Commons.<Servico>.pas`** (ex.: `Commons.Types`, `Commons.Consts`, `Commons.SQL.Helpers`, `Commons.Version`) | Tudo o que e **publico ou transversal** | Faz parte da API publica **OU** e usado por outro modulo interno -> NUCLEO |
+| **`Commons.<Modulo>.<Servico>.pas`** (ex.: `Commons.Loggers.Consts`, `Commons.Printers.Types`) | Tudo o que e **interno exclusivo** de um modulo | Nao aparece na API publica **E** nenhum outro modulo o referencia -> POR-MODULO |
+
+`<Servico>` = Types | Consts | SQL | Base | Version | IOUtils | Messages | StrUtils | FPC.inc
+`<Modulo>`  = Parameters | Loggers | Printers | ActiveDirectory | Connections | Database | ...
+
+## Criterio de decisao (objetivo)
+
+Um simbolo (tipo/const/func) pertence ao **nucleo** (`Commons.<Servico>`) se satisfizer
+**qualquer** das condicoes:
+
+1. **API publica** — o consumidor precisa dele para usar o modulo:
+   - o **tipo** aparece na assinatura de um metodo publico (parametro ou retorno de
+     `IXxx` / `TProviders.<Modulo>`), ou
+   - a **constante** e um valor que o consumidor passa/le ao chamar a API (inicializacao
+     de variavel de conveniencia: defaults, sets de configuracao, nomes/mensagens).
+   > Se a **fachada** (`Providers.pas`/`Providers.Interfaces.pas`) tem de re-exportar o
+   > simbolo para o consumidor o usar, isso **confirma** que e publico -> NUCLEO. A
+   > re-exportacao e consequencia de ser publico, nao uma alternativa a promove-lo.
+2. **Uso cross-modulo** — um modulo interno diferente do dono (Loggers, Exceptions,
+   Connection, Database, Printers, ActiveDirectory) declara/consome o simbolo.
+
+Se **nenhuma** se verifica (uso estritamente interno do modulo dono) -> `Commons.<Modulo>.<Servico>`.
+
+### Verificacao pratica
+
+- **API publica (decisiva):** o simbolo esta numa assinatura de `Main/<Modulo>.Interfaces.pas`
+  (ou o consumidor passa a const ao chamar)? -> NUCLEO.
+
+      grep -nE "<Simbolo>" Main/<Modulo>.Interfaces.pas
+
+- **Cross-modulo:** procurar usos EXCLUINDO o modulo dono, a fachada e as views:
+
+      grep -rlE "<Simbolo>" --include=*.pas | grep -vE "Modulos/<Modulo>|Commons.<Modulo>|Attributers.<Modulo>|Main/<Modulo>|Main/Providers|Views/"
+
+  Se sobrar algum ficheiro -> transversal -> NUCLEO.
+
+### Dependencia arrastada
+
+Se um tipo do nucleo (ex.: `TParameter`) depende de outro (ex.: `TParameter.ValueType:
+TParameterValueType`), a dependencia vai JUNTA para o nucleo. Regra: um simbolo do nucleo
+nunca depende de um simbolo por-modulo.
+
+## Excecoes
+
+- **Atributos RTTI** nunca ficam em Commons (nem nucleo nem por-modulo) -> `Attributers.<Modulo>.*`.
+- **Manter minimo**: `Commons.<Modulo>.<Servico>` so contem o estritamente interno; se um
+  modulo nao tiver nada exclusivo, essa unit **nao existe** (caso do Parameters: nao ha
+  `Commons.Parameters.Types` porque todos os tipos sao API publica).
+- **Sem redundancia**: um valor so existe uma vez. Nomes de tabela seguem o padrao de
+  `DEFAULT_MESSAGES_TABLE` no nucleo (ex.: `DEFAULT_PARAMETERS_TABLE = 'config'`), nunca
+  duplicados numa unit por-modulo.
+
+## Exemplos aplicados (v3, 04/07/2026)
+
+Modulo Parameters (todos os tipos aparecem em `Main/Parameters.Interfaces.pas`):
+
+- `TParameter`, `TParameterList`, `TParameterValueType`, `TParameterSource`,
+  `TParameterSourceArray`, `TParameterConfig`, callbacks de import
+  -> **`Commons.Types`** (API publica). `Commons.Parameters.Types` **eliminado**.
+- `DEFAULT_PARAMETERS_TABLE`, `ParameterValueTypeNames`, `DEFAULT_PARAMETER_SOURCE`,
+  `DEFAULT_PARAMETER_VALUE_TYPE`, `DEFAULT_PARAMETER_CONFIG*`, `DEFAULT_PARAMETER_PRIORITY`,
+  mensagens `PARAMETER_*` -> **`Commons.Consts`** (o consumidor passa/le estes valores).
+- `MAX_PARAMETER_*_LENGTH`, `DEFAULT_PARAMETER_AUTO_*`, `DEFAULT_PARAMETER_ORDER_BY`,
+  `DEFAULT_CONTRATO_ID/PRODUTO_ID/PARAMETER_ORDER`, `DEFAULT_PARAMETERS_AUTO_CREATE_FILE`
+  -> **`Commons.Parameters.Consts`** (limites/comportamento/dados internos, nunca na API).
+
+## Changelog
+
+- 1.0.1 (05/08/2026): Promovido de `.workspace/rules/` para pack canónico `.cursor/rules/` (SSOT).
+- 1.0.0 (04/07/2026): versao inicial (D11). Nomenclatura `Commons.<Servico>` (nucleo) vs

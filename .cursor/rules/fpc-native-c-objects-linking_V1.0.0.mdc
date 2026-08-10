@@ -1,0 +1,76 @@
+---
+description: Procedimento canonico para linkar objetos C nativos (LZMA/7z/cab/lha/bzip2) no ecossistema ORM (Delphi + FPC). Import libs mingw via -Fl.
+globs: ["**/*.opts", "**/Commons.Compression.*.pas", "**/*File.pas", "**/Modulos/ZipFile/**"]
+alwaysApply: true
+---
+
+# Procedimento — linkar objetos C nativos (LZMA/7z/cab/lha) em Delphi + FPC
+
+**FolderVersion:** 1.0.0 · **Data:** 04/07/2026 · **Origem:** absorcao do ZipFileORM (F1-A/D12) — bug-033
+
+Algumas capacidades absorvidas ligam **objetos C pre-compilados** via `{$L ...}` +
+`{$LINKLIB ...}` (LZMA SDK, 7-Zip, cab fci/fdi, lha, bzip2). Este e o procedimento
+para que compilem nos **4 alvos** (dcc32/dcc64 + fpc32/fpc64).
+
+## 1. Onde vivem os objetos e como sao referenciados
+
+- Objetos por plataforma em **`src.new/Library/<plat>/`** — `delphi-win32` (`.obj` OMF),
+  `delphi-win64`/`fpc-win32`/`fpc-win64` (`.o` ELF/COFF).
+- A unit referencia-os com **`{$L ..\Library\<plat>\Nome.o|.obj}`**, sob
+  `{$IFDEF FPC}`/`{$ELSE}` + `{$IFDEF WIN32/WIN64}`.
+- **O `{$L}` resolve relativo ao ficheiro `.pas` que o contem.** Se a unit esta em
+  `src.new/Commons/`, entao `..\Library\` aponta para `src.new/Library/` — mantenha o
+  `Library/` um nivel acima da unit que o linka.
+
+## 2. Delphi — resolve sozinho
+
+`dcc32`/`dcc64` linkam os objetos OMF/ELF sem configuracao extra. Sem passos adicionais.
+
+## 3. FPC — precisa das import libs mingw via `-Fl`
+
+Os objetos C (mingw) exigem `{$LINKLIB msvcrt}` (memcpy/malloc/free reais) e
+`{$LINKLIB kernel32}` (VirtualAlloc, IsProcessorFeaturePresent). O FPC nao encontra
+essas import libs por defeito → erro **`Import library not found for kernel32 / msvcrt`**.
+
+**Solucao:** adicionar aos `.opts` os library paths das import libs mingw + libgcc:
+
+    # fpc32.opts (i386):
+    -Fl<mingw>\i686-w64-mingw32\lib
+    -Fl<mingw>\lib\gcc\x86_64-w64-mingw32\<gccver>\32     # libgcc multilib 32-bit
+
+    # fpc64.opts (x86_64):
+    -Fl<mingw>\x86_64-w64-mingw32\lib
+    -Fl<mingw>\lib\gcc\x86_64-w64-mingw32\<gccver>        # libgcc
+
+Onde `<mingw>` = `deps\gcc-mingw-w64` do ZipFileORM (fonte das import libs).
+
+## 4. ⚠️ Regra de ouro: BACKSLASH no `-Fl`
+
+**O path do `-Fl` no FPC (Windows) tem de usar `\` (backslash).** Com `/` (forward-slash)
+o FPC **falha silenciosamente** com o mesmo `Import library not found` — parece que o path
+esta correto mas nao e reconhecido. Este foi o erro que mais tempo custou (bug-033).
+
+## 5. Referencia canonica
+
+O proprio ZipFileORM documenta isto: **`tools/Build-FPC-Smoke.ps1`** usa
+`-Fl$LibDir -Fl$GccLibDir` por target; `CLAUDE.md` da lib descreve `deps/` (import libs)
+vs `Library/` (objetos). Ver tambem `tools/Build-*Objs.ps1` (recompilar objetos do SDK).
+
+## 6. Auto-contencao (pendente F12)
+
+Hoje os `-Fl` apontam para o `deps/` do ZipFileORM (fonte). Antes do merge a producao,
+**copiar as import libs minimas** (`libmsvcrt.a`, `libkernel32.a`, `libgcc.a` +
+dependencias diretas) para dentro da obra e reapontar os `-Fl`, para a obra ser
+auto-contida (nao depender do caminho do ZipFileORM).
+
+## 7. Checklist ao adicionar um formato com objetos nativos (7z/cab/lha/bzip2)
+
+1. Copiar os objetos das 4 plataformas para `src.new/Library/<plat>/`.
+2. Confirmar os `{$L}` da unit apontam `..\Library\<plat>\` (relativo ao `.pas`).
+3. Confirmar os `{$LINKLIB}` necessarios; garantir os `-Fl` (backslash) nos `.opts`.
+4. Gate nos 4 alvos; se o FPC falhar com "Import library not found", rever §4 (backslash) e os paths.
+
+## Changelog
+
+- 1.0.1 (05/08/2026): Promovido de `.workspace/rules/` para pack canónico `.cursor/rules/` (SSOT).
+- 1.0.0 (04/07/2026): versao inicial (bug-033). Formaliza o link de objetos C nativos

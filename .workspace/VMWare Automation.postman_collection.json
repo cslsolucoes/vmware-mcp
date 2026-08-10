@@ -1,0 +1,174 @@
+{
+  "info": {
+    "_postman_id": "116a4b04-80a2-4afb-93d1-0ff6c0000ce1",
+    "name": "VMWare Automation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38068694",
+    "_collection_link": "https://go.postman.co/collection/1501576-116a4b04-80a2-4afb-93d1-0ff6c0000ce1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "saveHelperData",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "key": "showPassword",
+              "value": false,
+              "type": "boolean"
+            },
+            {
+              "key": "username",
+              "value": "achinbha@vsphere.local",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{vault:authorization-password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{vault:basic-auth}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "https://idclab-vcen8.fareast.corp.microsoft.com/rest/com/vmware/cis/session",
+          "protocol": "https",
+          "host": [
+            "idclab-vcen8",
+            "fareast",
+            "corp",
+            "microsoft",
+            "com"
+          ],
+          "path": [
+            "rest",
+            "com",
+            "vmware",
+            "cis",
+            "session"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Hosts",
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "vmware-api-session-id",
+            "value": "09204b134b5c461b43a00f45ab5c7181",
+            "type": "text",
+            "id": 0
+          }
+        ],
+        "url": {
+          "raw": "https://idclab-vcen8.fareast.corp.microsoft.com/api/vcenter/host?connection_states=CONNECTED",
+          "protocol": "https",
+          "host": [
+            "idclab-vcen8",
+            "fareast",
+            "corp",
+            "microsoft",
+            "com"
+          ],
+          "path": [
+            "api",
+            "vcenter",
+            "host"
+          ],
+          "query": [
+            {
+              "key": "connection_states",
+              "value": "CONNECTED",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reboot Host",
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "vmware-api-session-id",
+            "value": "09204b134b5c461b43a00f45ab5c7181",
+            "type": "text",
+            "id": 0
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://idclab-vcen8.fareast.corp.microsoft.com/api/vcenter/host/host-179310?action=reboot",
+          "protocol": "https",
+          "host": [
+            "idclab-vcen8",
+            "fareast",
+            "corp",
+            "microsoft",
+            "com"
+          ],
+          "path": [
+            "api",
+            "vcenter",
+            "host",
+            "host-179310"
+          ],
+          "query": [
+            {
+              "key": "action",
+              "value": "reboot",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

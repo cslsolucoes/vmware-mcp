@@ -1,0 +1,26 @@
+{
+  "projectId": "MCPVMWare",
+  "projectName": "MCPVMWare",
+  "resolvedFrom": "basename-da-raiz",
+  "createdAt": "2026-08-09",
+  "root": "d:/MCPVMWare",
+  "notes": "Sem *.dpr/*.lpr na raiz. Reorganizado em 09/08/2026 22:48-22:55 (pelo usuário, via manipulação direta de pastas): src/ agora é o módulo Go PRÓPRIO do MCPVMWare (antes era o vendor do govmomi); todo material de terceiros (govmomi + SDKs oficiais + 3 MCP servers da comunidade + ssh-mcp-server) foi movido para referencia/ (antes 'outros/', só com os SDKs/MCP servers — govmomi foi adicionado lá nesta reorganização). Raiz inclui coleções Postman de APIs vSphere/VMware Cloud on AWS em .workspace/. O pack .cursor/.claude é o pack genérico Delphi/FPC/ProvidersORM, estendido em 09/08/2026 com a família de skills developer-go-* (kit GoLang, 30 skills) para suportar este projecto.",
+  "goModule": {
+    "path": "github.com/cslsoftwares/mcpvmware",
+    "goVersion": "1.25.0",
+    "toolchainInstalled": "go1.26.5 windows/amd64",
+    "root": "d:/MCPVMWare/src (NÃO mais a raiz do repo — mudou em 09/08/2026 22:52 quando o usuário moveu o módulo pra dentro de src/)",
+    "purpose": "Servidor MCP (Model Context Protocol) para VMware — expõe operações vSphere/vCenter como tools MCP, usando govmomi (github.com/vmware/govmomi, dependência normal via go.mod, resolvida pelo cache/proxy Go — não lida do clone local) como cliente.",
+    "referenceArchitecture": "D:\\MCPNas\\truenas-mcp (memory: reference_truenas_mcp_golang) — mesma forma <bin>/main.go + mcp/types.go + tools/registry.go + <domínio>/client.go, adaptada de WebSocket JSON-RPC (TrueNAS) para SOAP govmomi (VMware).",
+    "layout": {
+      "src/mcpvmware-mcp/main.go": "entrypoint MCP (flags --vcenter-url/--username/--password/--insecure, stdio handler) — pasta renomeada de cmd/mcpvmware-mcp/ para mcpvmware-mcp/ direto sob src/ (cmd/ ficou vazia e foi removida)",
+      "src/mcp/types.go": "tipos JSON-RPC 2.0 / MCP (genérico, mirror do truenas-mcp)",
+      "src/vmware/client.go": "wrapper fino sobre govmomi.NewClient + find.Finder",
+      "src/tools/registry.go": "Registry + ListTools/CallTool",
+      "src/tools/system.go": "tools seed: vmware_about, vmware_list_vms"
+    },
+    "referenceMaterial": "referencia/ (renomeado de outros/): referencia/govmomi/ (clone limpo, fonte oficial para leitura), vsphere-automation-sdk-{go,java,python,rest} (SDKs oficiais — go ainda Beta sem suporte vSphere/vCenter, rest descontinuado), vmware-esxi-mcp (mock, baixo valor), vmware-vcenter-mcp (SOAP/pyVmomi, sem VAMI), vmware-vsphere-mcp-server (híbrido REST+pyVmomi, o mais real dos 3), ssh-mcp-server (genérico, não usado). Análise completa feita 09/08/2026 22:43 (4 agentes Explore em paralelo) — nenhum resolve VAMI, todos confirmam padrões já adotados no scaffold Go (confirm:bool, JSON estruturado, PropertyCollector em lote).",
+    "status": "scaffold validado ponta a ponta contra ESXi real (10.100.2.54) em 09/08/2026 — 2 tools seed. Plano detalhado das próximas fases em D:\\Users\\claiton.linhares\\.claude\\plans\\streamed-imagining-lightning.md. Ver .wolf/STATUS.md para o estado mais atual (fonte de verdade, atualizado sessão a sessão).",
+    "knownFollowUp": "Trocar vmware.NewClient (govmomi.NewClient direto) por keepalive em memória (session/keepalive.NewHandlerSOAP) antes de rodar como servidor de longa duração — já detalhado como Phase 0 do plano aprovado, bloqueante para as próximas fases."
+  }
+}
