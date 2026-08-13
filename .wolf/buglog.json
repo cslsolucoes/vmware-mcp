@@ -1,4 +1,232 @@
 {
   "version": 1,
-  "bugs": []
+  "bugs": [
+    {
+      "id": "bug-001",
+      "timestamp": "2026-08-10T15:38:00",
+      "error_message": "ServerFaultCode: Login failure (vcsim, via tools.newSimClient)",
+      "file": "src/tools/testhelpers_test.go",
+      "root_cause": "vcsim's Server.URL comes back with the simulator's default credentials embedded (user:pass@host:port). newSimClient passed that URL as-is into vmware.NewClient's Config.URL. Because the URL already carried userinfo, govmomi.NewClient's own auto-login-on-userinfo behavior logged in silently before vmware.NewClient's own connect->wrap-keepalive->Login sequence ran; the subsequent explicit gc.Login(...) call then failed server-side because a session already existed (govmomi simulator's SessionManager.Login rejects a second Login while ctx.Session != nil).",
+      "fix": "Strip the URL's userinfo (u := *s.URL; u.User = nil) before building vmware.Config in newSimClient, so the real connect/wrap/login path actually executes against the simulator, matching what happens against a real vCenter/ESXi endpoint.",
+      "tags": [
+        "govmomi",
+        "vcsim",
+        "keepalive",
+        "double-login",
+        "test-harness"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T15:38:00"
+    },
+    {
+      "id": "bug-002",
+      "timestamp": "2026-08-10T15:30:00",
+      "error_message": "find.NotFoundError: \"please specify a datacenter\" (bare Finder path pattern like \"*\" against a multi-datacenter vCenter)",
+      "file": "src/tools/system.go, src/tools/inventory.go",
+      "root_cause": "vmware.NewClient only calls Finder.SetDatacenter when DefaultDatacenter resolves unambiguously (standalone ESXi, or a vCenter with exactly one datacenter). Against a vCenter with more than one datacenter, client.Finder is left with no default datacenter, and every per-datacenter list method (HostSystemList, DatastoreList, NetworkList, ResourcePoolList, ClusterComputeResourceList, VirtualMachineList) resolves its root folder relative to that datacenter internally (Finder.dcFolders -> Finder.datacenter(), which errors 'please specify a datacenter' when nil) — a bare pattern like \"*\" has no way to reach an absolute path, so it fails outright instead of listing anything. Confirmed empirically against vcsim (simulator.VPX() with Model.Datacenter=2), not assumed. This was a pre-existing latent bug in the already-shipped vmware_list_vms tool, never caught because the only real test target (10.100.2.54) is a standalone ESXi host where DefaultDatacenter always resolves.",
+      "fix": "Added tools/finder.go's dcScopedPath(folder, path) helper: builds an absolute, datacenter-wildcarded path (e.g. \"/*/host/*\") when the caller's path isn't already absolute — this bypasses the per-datacenter folder resolution requirement and works correctly whether 0, 1, or many datacenters are set as default. Applied to vmware_list_vms and all 6 new Phase 2 inventory tools. Also added emptyOnNotFound(err) to convert find.NotFoundError (returned instead of an empty slice when nothing matches, e.g. 0 clusters on standalone ESXi) into a nil error, so handlers return an empty list instead of a tool error.",
+      "tags": [
+        "govmomi",
+        "finder",
+        "datacenter",
+        "vcenter",
+        "multi-datacenter",
+        "inventory"
+      ],
+      "related_bugs": [
+        "bug-001"
+      ],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T15:30:00"
+    },
+    {
+      "id": "bug-003",
+      "timestamp": "2026-08-10T15:45:00",
+      "error_message": "SyntaxError: Unexpected token ﻿ ... is not valid JSON (JSON.parse em swagger_WS.json)",
+      "file": "scratchpad/swagger2postman.js (sessao 2026-08-10)",
+      "root_cause": "Os JSON dentro de swagger.zip do VMware Workstation (swagger_WS.json etc.) tem BOM UTF-8 no inicio; JSON.parse do Node nao aceita BOM.",
+      "fix": "Strip do BOM antes do parse: fs.readFileSync(p,\"utf8\").replace(/^﻿/, \"\"). O mesmo vale para output files de workflows lidos em Node.",
+      "tags": [
+        "bom",
+        "utf8",
+        "json",
+        "vmware-workstation",
+        "swagger",
+        "node"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T15:45:00"
+    },
+    {
+      "id": "bug-004",
+      "timestamp": "2026-08-10T16:05:00",
+      "error_message": "vmrest.exe -C rejeita/loopa com stdin em pipe: username com CRLF vira invalido e loopa infinito no EOF; senha via pipe chega vazia (leitor usa console API) e reprova complexidade; winpty headless aborta (assert cols>0)",
+      "file": "scratchpad/configure-vmrest.ps1 (sessao 2026-08-10)",
+      "root_cause": "vmrest le username de stdin mas a senha via API de console (tipo term.ReadPassword); pipe nao e console. PowerShell pipe ainda injeta CR. winpty precisa de um tty real para dimensionar.",
+      "fix": "Injecao de console real: Start-Process vmrest -C em console proprio oculto + AttachConsole(pid) + WriteConsoleInputW(CONIN$) com key events down/up por caractere (P/Invoke via Add-Type). Script: configure-vmrest.ps1. Matar o processo antes de re-tentar (loopa no EOF).",
+      "tags": [
+        "vmrest",
+        "console",
+        "stdin",
+        "password",
+        "winpty",
+        "writeconsoleinput",
+        "windows"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T16:05:00"
+    },
+    {
+      "id": "bug-005",
+      "timestamp": "2026-08-10T20:20:00",
+      "error_message": "ServerFaultCode: InvalidName from OptionManager.Query(ctx, name) when name matches zero options (vcsim, Fase 1 pilot of the codegen plan)",
+      "file": "src/tools/generated_option.go",
+      "root_cause": "Real vSphere/vcsim's QueryOptions faults with InvalidName instead of returning an empty slice when the name filter matches nothing (confirmed by reading referencia/govmomi/simulator/option_manager.go, not assumed) - inconsistent with every list-style tool already in this project (vmware_list_* treat 0 results as success, see bug-002/emptyOnNotFound). First fix attempt used soap.IsVimFault/soap.ToVimFault to detect it and got the SAME test failure again after rebuilding - wrong pair for a direct (non-Task) SOAP call. Reading vim25/soap/client.go's soapRoundTrip showed the client wraps a response Fault_ via soap.WrapSoapFault, not WrapVimFault (that pair is for types.LocalizedMethodFault-based Task errors) - IsVimFault/ToVimFault silently returned false for every case, so isInvalidNameFault never matched and the fault kept propagating as a generic error.",
+      "fix": "isInvalidNameFault(err) now uses soap.IsSoapFault(err) + soap.ToSoapFault(err).VimFault() (a *soap.Fault's own unwrap method) and type-asserts to types.InvalidName (value type, not pointer - confirmed by running the test, the XML decoder populates the value type here). handleHostOptionQuery treats a matched InvalidName as an empty result (opts = nil) instead of an error, matching finder.go's emptyOnNotFound convention.",
+      "tags": [
+        "govmomi",
+        "soap-fault",
+        "option-manager",
+        "vcsim",
+        "codegen-pilot",
+        "error-wrapping"
+      ],
+      "related_bugs": [
+        "bug-002"
+      ],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T20:20:00"
+    },
+    {
+      "id": "bug-006",
+      "timestamp": "2026-08-10T20:55:00",
+      "error_message": "go test hung 10 real minutes on TestVMLifecycleTools_WaitForIPAndNetIP (killed by Go's own test timeout, huge goroutine dump)",
+      "file": "src/tools/generated_vm_lifecycle.go, src/tools/generated_vm_lifecycle_test.go",
+      "root_cause": "vmware_vm_wait_for_ip/wait_for_net_ip/wait_for_power_state passed ctx straight through to VirtualMachine.WaitForIP/WaitForNetIP/WaitForPowerState with no derived timeout, on the theory (written as a code comment, never verified) that it 'relies on the caller's MCP request timeout' - but nothing in mcpvmware-mcp/main.go's stdio dispatch loop or mcp/types.go ever sets a deadline (confirmed by grep). property.Collector.WaitForUpdatesEx's long-poll blocked forever waiting for a guest IP that was never going to be reported for wait_for_net_ip specifically (see bug-007), and would do the same for any tool call whose wait condition never becomes true. In production this would hang the whole stdio connection indefinitely (the server handles one request at a time), not just that one tool call.",
+      "fix": "Added defaultWaitTimeout (5 min) + a timeout_seconds arg (optional, overridable) to all 3 wait_for_* tools; each derives context.WithTimeout(ctx, d) before calling the govmomi Wait* method and defers the cancel. TestVMLifecycleTools_WaitTimeoutIsBounded is the direct regression test (a wait with timeout_seconds:1 against a condition that can never be true must return within 10s, not hang).",
+      "tags": [
+        "hang",
+        "unbounded-blocking",
+        "context-timeout",
+        "wait-for-ip",
+        "codegen-pilot",
+        "mcp-dispatch"
+      ],
+      "related_bugs": [
+        "bug-007"
+      ],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T20:55:00"
+    },
+    {
+      "id": "bug-007",
+      "timestamp": "2026-08-10T20:58:00",
+      "error_message": "vmware_vm_wait_for_net_ip never succeeds against vcsim even after setting a guest IP via the documented ExtraConfig SET.guest.ipAddress test fixture",
+      "file": "src/tools/generated_vm_lifecycle_test.go",
+      "root_cause": "object.VirtualMachine.WaitForNetIP reads GuestNicInfo.IpConfig.IpAddress (the newer, structured field), but vcsim's SET.guest.ipAddress ExtraConfig trick (simulator/virtual_machine.go's applyExtraConfig) only ever writes the older, different GuestNicInfo.IpAddress ([]string) field - confirmed by reading both the real WaitForNetIP source and the simulator's applyExtraConfig switch. There is no equivalent SET.* alias for IpConfig in vcsim. A genuine simulator gap, not a bug in the tool.",
+      "fix": "Test no longer asserts a real success path for wait_for_net_ip (unreachable against vcsim as currently understood) - instead asserts it fails cleanly with context deadline exceeded within a short timeout_seconds, proving the tool is registered/wired/bounded correctly. Documented as a known vcsim limitation in generated_vm_lifecycle.go's top doc comment and the test's own comment, not hidden.",
+      "tags": [
+        "vcsim-limitation",
+        "guest-net",
+        "wait-for-net-ip",
+        "test-fixture-gap"
+      ],
+      "related_bugs": [
+        "bug-006"
+      ],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T20:58:00"
+    },
+    {
+      "id": "bug-008",
+      "timestamp": "2026-08-10T21:00:00",
+      "error_message": "vmware_vm_host_system/vmware_vm_resource_pool returned host=\"\"/resource_pool=\"\" instead of a real inventory path (caught by TestVMLifecycleTools_ReadOnlyAccessors's host_system subtest; silently masked TestVMLifecycleTools_TemplateRoundTrip too, which fataled on the downstream empty string)",
+      "file": "src/tools/generated_vm_lifecycle.go",
+      "root_cause": "object.VirtualMachine.HostSystem/ResourcePool build their return value via object.NewHostSystem(c, ref)/NewResourcePool(c, ref) directly from a property value - a bare constructor, never touched by a Finder - so the returned object's InventoryPath field is always \"\" (that field is only ever populated by Finder methods that walk the inventory tree). The handlers used host.InventoryPath/rp.InventoryPath directly, same pattern as every other handler in this codebase that DOES get its object from a Finder (resolveVM/resolveHost) - correct there, silently wrong here.",
+      "fix": "Both handlers now call find.InventoryPath(ctx, client.Client.Client, ref.Reference()) (govmomi's own helper that walks ManagedEntity.Parent to compose the real path) instead of reading .InventoryPath off a bare-constructed object. Strengthened the resource_pool test from an '!= nil' check (which a \"\" string satisfies, why it didn't catch this) to asserting a real non-empty path ending in /Resources.",
+      "tags": [
+        "inventory-path",
+        "bare-constructor",
+        "finder",
+        "codegen-pilot",
+        "silent-empty-string"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-10T21:00:00"
+    },
+    {
+      "id": "bug-009",
+      "timestamp": "2026-08-11T12:07:00",
+      "error_message": "vmware_host_network_query_network_hint returned {\"hints\": null} instead of {\"hints\": []} against a fresh host (breaks the documented count/array result shape for callers that iterate the array without a nil check)",
+      "file": "src/tools/generated_host_network.go",
+      "root_cause": "HostNetworkSystem.QueryNetworkHint's Returnval is nil against vcsim's default fixture (nothing populates it) - the handler passed that nil slice straight into the JSON result instead of normalizing it, unlike every other list-style tool in this project (e.g. handleHostManagementIPs in host.go) which always returns a non-nil empty slice for '0 results'.",
+      "fix": "Normalized to a non-nil empty []interface{}/[]T before building the JSON result, matching the existing handleHostManagementIPs convention. Found and fixed by the Fase 3 'network' group subagent during its own real-vcsim testing, not by a human review pass.",
+      "tags": [
+        "nil-vs-empty-array",
+        "json-shape",
+        "codegen-fase3",
+        "host-network"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-11T12:07:00"
+    },
+    {
+      "id": "bug-010",
+      "timestamp": "2026-08-11T14:20:00",
+      "error_message": "vmware_datastore_search/vmware_datastore_search_subfolders panics inside vcsim's task Run() when search_spec is omitted",
+      "file": "src/tools/generated_datastore_browser.go",
+      "root_cause": "simulator's searchDatastore.queryMatch/.addFile (HostDatastoreBrowser.SearchDatastore/SearchDatastoreSubFolders backend) dereference SearchSpec.Query/.Details with no nil check. The tool's search_spec argument was documented as optional (a reasonable default: search everything), but passing a nil *types.HostDatastoreBrowserSearchSpec straight through crashes the simulator's task goroutine - which would crash real vCenter/ESXi's equivalent handler too if it has the same assumption, not just vcsim.",
+      "fix": "Default to {MatchPattern: [\"*\"]} when the caller omits search_spec entirely, instead of passing nil. Found and fixed by the Fase 4 'datastore browser' group subagent during its own real-vcsim testing, before it became a production incident.",
+      "tags": [
+        "nil-pointer-panic",
+        "search-spec",
+        "codegen-fase4",
+        "datastore-browser"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-11T14:20:00"
+    },
+    {
+      "id": "bug-011",
+      "timestamp": "2026-08-12T15:20:00",
+      "error_message": "json: cannot unmarshal object into Go struct field CustomizationSpec.identity of type types.BaseCustomizationIdentitySettings",
+      "file": "src/tools/generated_vm_provisioning.go",
+      "root_cause": "handleVMCustomize's own top-of-function comment (Fase 2) claims the generic-JSON-decode pattern makes types.CustomizationSpec.Identity/Options work. It does not: types.CustomizationSpec has its own nested polymorphic fields (Identity is types.BaseCustomizationIdentitySettings, Options is types.BaseCustomizationOptions), and vim25/types has zero custom UnmarshalJSON anywhere in the package (the same architectural ceiling documented since Fase 4) - a nested polymorphic field inside an already-decoded struct silently fails or errors, it cannot be populated via json.Unmarshal into the interface type. Found empirically (not by re-reading the comment) by the Fase 7 group C subagent while implementing generated_customization_spec.go, which shares the same types.CustomizationSpec struct via CustomizationSpecItem.Spec.",
+      "fix": "Not fixed - documented as a known MVP limitation (same class as the Fase 4 nested-polymorphic-field ceiling). vmware_vm_customize cannot carry a real customization identity/options today. The false claim in handleVMCustomize's comment needs correcting in a follow-up (out of scope for the Fase 7 file that found it) - see plan/report Fase 7 pendencias.",
+      "tags": [
+        "polymorphic-json",
+        "vim25-types",
+        "codegen-fase2",
+        "codegen-fase7",
+        "known-limitation",
+        "false-comment"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-12T15:20:00"
+    },
+    {
+      "id": "bug-012",
+      "timestamp": "2026-08-12T17:15:00",
+      "error_message": "go build: m.DeleteSolutionOnly undefined (type *vms.Manager has no field or method DeleteSolutionOnly)",
+      "file": "src/tools/generated_esx_settings_cluster_vms.go",
+      "root_cause": "referencia/govmomi (the vendored checkout used for reading source during every phase of this codegen plan, Fases 0-8a) is a newer/different checkout than the actual dependency pinned in go.mod (github.com/vmware/govmomi v0.55.1, no replace directive). vapi/esx/settings/clusters/vms/transition.go gained a DeleteSolutionOnly method in referencia/govmomi that does not exist in the pinned v0.55.1 module resolved from GOMODCACHE. Diffed all 9 files in the Fase 8a CS-CRYPTO group's scope between GOMODCACHE and referencia/govmomi - DeleteSolutionOnly was the only difference in any of them.",
+      "fix": "Removed the vmware_esx_settings_clusters_vms_delete_solution_only tool (17->16 tools in that file) rather than touching go.mod (a shared dependency change, out of scope for a single codegen subagent and risky mid-flight with other parallel groups editing the same package). Documented the drift risk in the file's top doc comment. The mandatory go build clean gate every phase already requires caught this automatically - no other phase's generated code has silently referenced a method absent from the real pinned version, since every phase's gate would have failed identically.",
+      "tags": [
+        "dependency-drift",
+        "referencia-vs-gomodcache",
+        "codegen-fase8a",
+        "go-build-gate"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-08-12T17:15:00"
+    }
+  ]
 }

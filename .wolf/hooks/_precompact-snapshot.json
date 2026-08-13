@@ -1,0 +1,252 @@
+{
+  "at": "2026-08-12T18:03:53.025Z",
+  "trigger": "auto",
+  "session": {
+    "session_id": "session-2026-08-11-1551",
+    "started": "2026-08-11T18:51:24.714Z",
+    "files_read": {
+      "d:/MCPVMWare/src/tools/inventory.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:15.503Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_network.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:16.029Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_host_storage.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:16.044Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_vm_lifecycle.go": {
+        "count": 4,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:16.599Z"
+      },
+      "d:/MCPVMWare/src/tools/destructive.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:17.244Z"
+      },
+      "d:/MCPVMWare/src/tools/testhelpers_test.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:18.375Z"
+      },
+      "d:/MCPVMWare/src/tools/inventory_test.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:22.102Z"
+      },
+      "d:/MCPVMWare/src/tools/registry.go": {
+        "count": 5,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:22.788Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/folder.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:23.528Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/datacenter.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:23.708Z"
+      },
+      "d:/MCPVMWare/src/tools/finder.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:23.744Z"
+      },
+      "d:/MCPVMWare/src/tools/host.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:28.248Z"
+      },
+      "d:/MCPVMWare/src/tools/vm.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:28.644Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/datacenter.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:40.285Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/folder.go": {
+        "count": 5,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:40:48.464Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/virtual_machine.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:05.213Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_vm_lifecycle_test.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:39.959Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/compute_resource.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:40.514Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/cluster_compute_resource.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:40.526Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/environment_browser.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:40.859Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/vim25/types/if.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:41:53.679Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/compute_resource.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:06.540Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/cluster_compute_resource.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:07.040Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_vm_provisioning.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:13.957Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/resource_pool.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:18.497Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/virtual_app.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:19.044Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_vm_snapshot.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:26.106Z"
+      },
+      "D:/MCPVMWare/referencia/govmomi/simulator/cluster_compute_resource.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:36.027Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/find/finder.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:42:45.446Z"
+      },
+      "d:/MCPVMWare/src/tools/vm_test.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:06.152Z"
+      },
+      "d:/MCPVMWare/src/tools/host_test.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:06.865Z"
+      },
+      "d:/MCPVMWare/src/tools/system.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:07.024Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/object/types.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:19.507Z"
+      },
+      "D:/MCPVMWare/referencia/govmomi/simulator/cluster_compute_resource_test.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:19.650Z"
+      },
+      "D:/MCPVMWare/referencia/govmomi/simulator/model.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:27.683Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_datastore_browser.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:43:54.153Z"
+      },
+      "D:/MCPVMWare/referencia/govmomi/simulator/environment_browser.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:44:13.391Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/resource_pool.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:44:13.616Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/vim25/types/types.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:44:22.666Z"
+      },
+      "d:/MCPVMWare/referencia/govmomi/simulator/model.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:46:17.114Z"
+      },
+      "d:/MCPVMWare/src/tools/destructive_test.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:48:59.160Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_vm_device_test.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:51:57.947Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_inventory_folder.go": {
+        "count": 3,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:54:33.996Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_inventory_folder_test.go": {
+        "count": 4,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:55:44.918Z"
+      },
+      "d:/MCPVMWare/src/tools/generated_resourcepool_vapp_test.go": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:55:46.321Z"
+      },
+      "d:/MCPVMWare/src/tools/mode_test.go": {
+        "count": 2,
+        "tokens": 0,
+        "first_read": "2026-08-12T17:59:25.764Z"
+      },
+      "d:/MCPVMWare/.workspace/plans/MCPVMWare2026-08-10-175300-plano-cobertura-completa-api-codegen.plan.md": {
+        "count": 1,
+        "tokens": 0,
+        "first_read": "2026-08-12T18:03:19.082Z"
+      }
+    },
+    "files_written": [],
+    "edit_counts": {},
+    "anatomy_hits": 0,
+    "anatomy_misses": 46,
+    "repeated_reads_warned": 46,
+    "cerebrum_warnings": 0,
+    "stop_count": 4
+  }
+}

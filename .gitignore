@@ -1,3 +1,6 @@
 # Segredos / dados sensiveis (nunca versionar) — confirmado com o owner 09/08/2026
 .workspace/config_teste.json
 .workspace/DADOS_CONEXAO_TESTE.md
+
+# Config de MCP servers project-level — contem credenciais (ver .mcp.json._README)
+.mcp.json

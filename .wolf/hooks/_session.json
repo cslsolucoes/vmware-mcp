@@ -1,68 +1,558 @@
 {
-  "session_id": "session-2026-08-10-2255",
-  "started": "2026-08-10T01:55:34.164Z",
+  "session_id": "",
   "files_read": {
-    "D:/MCPVMWare/src/go.mod": {
+    "D:/MCPVMWare/referencia/govmomi/vapi/namespace/networks.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T01:56:26.732Z"
+      "first_read": "2026-08-12T20:06:55.997Z"
     },
-    "d:/MCPVMWare/README.md": {
+    "D:/MCPVMWare/referencia/govmomi/vapi/namespace/supervisorsvc.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:06:56.226Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/namespace/namespace_v2.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:06:56.437Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/namespace/internal": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:05.421Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_vcenter_template.go": {
       "count": 2,
       "tokens": 0,
-      "first_read": "2026-08-10T01:58:04.379Z"
+      "first_read": "2026-08-12T20:07:12.706Z"
     },
-    "d:/MCPVMWare/.workspace/context.json": {
+    "D:/MCPVMWare/src/tools/generated_vcenter_template_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:12.833Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_tags.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:17.060Z"
+    },
+    "D:/MCPVMWare/src/tools/registry.go": {
+      "count": 9,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:20.653Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_authorization.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:22.485Z"
+    },
+    "D:/MCPVMWare/src/tools/destructive.go": {
+      "count": 9,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:30.220Z"
+    },
+    "D:/MCPVMWare/src/tools/testhelpers_test.go": {
+      "count": 9,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:33.316Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_vm_lifecycle_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:41.651Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_task.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T01:58:04.388Z"
+      "first_read": "2026-08-12T20:07:41.741Z"
     },
-    "d:/MCPVMWare/.workspace/rules/MCPVMWare-local-arquivos_V1.2.0.mdc": {
+    "D:/MCPVMWare/src/tools/generated_authorization_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:42.049Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/transition.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T01:58:58.651Z"
+      "first_read": "2026-08-12T20:07:52.155Z"
     },
-    "D:/Users/claiton.linhares/.claude/plans/streamed-imagining-lightning.md": {
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/solutions.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:02:09.258Z"
+      "first_read": "2026-08-12T20:07:52.722Z"
     },
-    "d:/MCPVMWare/referencia/govmomi/session/keepalive/handler.go": {
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/lifecycle_hook.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:04:26.305Z"
+      "first_read": "2026-08-12T20:07:53.247Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/apply.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:53.899Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/compliance.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:54.419Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/list.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:54.887Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/cluster/cluster.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:55.419Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/crypto/crypto.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:55.908Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/cis/tasks/tasks.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:56.164Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_vm_lifecycle.go": {
+      "count": 4,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:07:59.340Z"
+    },
+    "D:/MCPVMWare/src/tools/appliance.go": {
+      "count": 6,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:00.062Z"
+    },
+    "D:/MCPVMWare/src/tools/finder.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:08.783Z"
+    },
+    "D:/MCPVMWare/src/tools/mode_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:09.724Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_library_core.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:13.143Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_library_core_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:13.534Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/vm/dataset/dataset.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:18.066Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/shutdown/shutdown.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:18.710Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/access/consolecli/consolecli.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:19.237Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/access/dcui/dcui.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:19.255Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/access/shell/shell.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:19.708Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/access/ssh/ssh.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:20.292Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/networking/proxy.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:20.813Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/appliance/logging/forwarding.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:21.392Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/authentication/authentication.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:21.428Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/esx/settings/clusters/vms/transition_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:31.489Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/cluster/cluster_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:32.060Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/cis/tasks/tasks_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:32.194Z"
+    },
+    "D:/MCPVMWare/src/vmware/client.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:32.675Z"
+    },
+    "D:/MCPVMWare/src/tools/vm.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:34.017Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/vapi/namespace/namespace.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:45.649Z"
+    },
+    "D:/MCPVMWare/referencia/govmomi/cli/vm/dataset/create.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:08:49.303Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_inventory_compute.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:09:13.302Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_network.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:09:46.741Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_inventory_compute_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:15:02.680Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_esx_settings_cluster_vms.go": {
+      "count": 4,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:15:24.871Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_vm_dataset.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:15:57.864Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_tags_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:20:25.220Z"
+    },
+    "D:/MCPVMWare/src/tools/vm_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:20:35.514Z"
+    },
+    "D:/MCPVMWare/src/tools/host_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:20:36.062Z"
+    },
+    "d:/MCPVMWare/src/tools/mode_test.go": {
+      "count": 10,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:28:32.154Z"
+    },
+    "D:/Users/claiton.linhares/AppData/Local/Temp/claude/d--MCPVMWare/6fbed7ce-375f-4ac7-979c-de2d031b844f/scratchpad/smoke/main.go": {
+      "count": 6,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:32:17.544Z"
+    },
+    "d:/MCPVMWare/.workspace/plans/MCPVMWare2026-08-10-175300-plano-cobertura-completa-api-codegen.plan.md": {
+      "count": 9,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:35:28.830Z"
+    },
+    "d:/MCPVMWare/src/tools/appliance.go": {
+      "count": 6,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:41:05.970Z"
+    },
+    "d:/MCPVMWare/src/tools/appliance_test.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:22.312Z"
+    },
+    "d:/MCPVMWare/src/tools/registry.go": {
+      "count": 18,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:25.607Z"
+    },
+    "d:/MCPVMWare/src/tools/destructive.go": {
+      "count": 7,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:25.641Z"
+    },
+    "d:/MCPVMWare/src/tools/destructive_test.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:30.424Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_appliance_small.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:40.026Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_appliance_small_test.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:40.156Z"
+    },
+    "d:/MCPVMWare/src/tools/testhelpers_test.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:44.399Z"
+    },
+    "d:/MCPVMWare/src/tools/system.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:51.550Z"
+    },
+    "D:/Users/claiton.linhares/go/pkg/mod/github.com/vmware/govmomi@v0.55.1/vapi/rest/resource.go": {
+      "count": 4,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:54.810Z"
+    },
+    "D:/Users/claiton.linhares/go/pkg/mod/github.com/vmware/govmomi@v0.55.1/vapi/rest/client.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:42:54.844Z"
+    },
+    "d:/MCPVMWare/.workspace/vSphere Automation REST Resources for appliance.postman_collection.json": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:43:09.079Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_authorization.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:43:33.360Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_vm_lifecycle_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:44:27.547Z"
+    },
+    "d:/MCPVMWare/src/tools/inventory_test.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:44:27.860Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_vm_lifecycle.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:45:40.144Z"
+    },
+    "d:/MCPVMWare/src/go.mod": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:46:01.409Z"
+    },
+    "D:/Users/claiton.linhares/AppData/Local/Temp/claude/d--MCPVMWare/6fbed7ce-375f-4ac7-979c-de2d031b844f/tasks/b7p6qqnoi.output": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:46:30.937Z"
+    },
+    "d:/MCPVMWare/src/tools/finder.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:47:24.718Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_library_core.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:49:37.778Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_vami_services_accounts_vmon_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:57:40.973Z"
+    },
+    "d:/MCPVMWare/src/tools/generated_vami_access_shutdown_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T20:57:59.272Z"
+    },
+    "D:/Users/claiton.linhares/.claude/projects/d--MCPVMWare/memory/reference_vmware_workstation_swagger.md": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:10:35.206Z"
     },
     "d:/MCPVMWare/src/vmware/client.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:04:26.526Z"
+      "first_read": "2026-08-12T21:11:40.494Z"
     },
-    "d:/MCPVMWare/referencia/govmomi/session/keepalive/example_test.go": {
+    "d:/MCPVMWare/src/mcpvmware-mcp/main.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:14:11.243Z"
+    },
+    "d:/MCPVMWare/src/workstation/client.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:16:12.412Z"
+    },
+    "D:/MCPVMWare/src/workstation/client.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:18:11.502Z"
+    },
+    "D:/MCPVMWare/src/tools/appliance_test.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:18:15.344Z"
+    },
+    "D:/MCPVMWare/src/tools/system.go": {
+      "count": 5,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:18:36.515Z"
+    },
+    "D:/MCPVMWare/src/workstation/client_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:18:43.357Z"
+    },
+    "D:/MCPVMWare/src/tools/inventory_test.go": {
+      "count": 4,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:18:48.753Z"
+    },
+    "D:/MCPVMWare/src/tools/destructive_test.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:04:26.659Z"
+      "first_read": "2026-08-12T21:18:48.885Z"
     },
-    "D:/MCPVMWare/referencia/govmomi/simulator/session_manager.go": {
+    "D:/MCPVMWare/src/tools/generated_appliance_small.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:06:28.895Z"
+      "first_read": "2026-08-12T21:19:02.764Z"
     },
-    "d:/MCPVMWare/.workspace/config_teste.json": {
+    "D:/MCPVMWare/src/tools/generated_appliance_small_test.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:14:25.821Z"
+      "first_read": "2026-08-12T21:19:03.183Z"
     },
-    "d:/MCPVMWare/.workspace/DADOS_CONEXAO_TESTE.md": {
+    "D:/MCPVMWare/src/tools/generated_vm_device.go": {
       "count": 1,
       "tokens": 0,
-      "first_read": "2026-08-10T02:14:26.137Z"
+      "first_read": "2026-08-12T21:19:34.843Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_host_network.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:19:49.804Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_authentication.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:19:57.733Z"
+    },
+    "D:/MCPVMWare/src/go.mod": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:22:33.418Z"
+    },
+    "D:/MCPVMWare/src/tools/workstation_vm_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:25:18.906Z"
+    },
+    "d:/MCPVMWare/src/cloudaws/client.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:49:20.886Z"
+    },
+    "d:/MCPVMWare/src/tools/workstation_vm.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:49:35.132Z"
+    },
+    "d:/MCPVMWare/src/tools/workstation_vm_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:49:35.396Z"
+    },
+    "D:/MCPVMWare/.workspace/VMware Cloud on AWS APIs.postman_collection.json": {
+      "count": 8,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:49:45.034Z"
+    },
+    "D:/MCPVMWare/src/cloudaws/client.go": {
+      "count": 3,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:50:07.949Z"
+    },
+    "d:/MCPVMWare/src/tools/workstation_network.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:50:45.073Z"
+    },
+    "d:/MCPVMWare/src/tools/vm.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:50:52.844Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_extension.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:50:59.853Z"
+    },
+    "D:/MCPVMWare/src/cloudaws/client_test.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:51:02.110Z"
+    },
+    "D:/MCPVMWare/src/tools/workstation_vm.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:51:12.576Z"
+    },
+    "D:/MCPVMWare/src/tools/workstation_network.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:51:29.929Z"
+    },
+    "D:/MCPVMWare/src/tools/generated_vami_techpreview_network.go": {
+      "count": 2,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:52:11.964Z"
+    },
+    "d:/MCPVMWare/src/cloudaws/client_test.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:54:20.686Z"
+    },
+    "D:/MCPVMWare/src/tools/cloudaws_orgs.go": {
+      "count": 1,
+      "tokens": 0,
+      "first_read": "2026-08-12T21:56:20.815Z"
+    },
+    "d:/MCPVMWare/README.md": {
+      "count": 1,
+      "tokens": 779,
+      "first_read": "2026-08-13T02:12:46.693Z"
     }
   },
-  "files_written": [],
-  "edit_counts": {},
-  "anatomy_hits": 0,
-  "anatomy_misses": 10,
-  "repeated_reads_warned": 1,
-  "cerebrum_warnings": 0,
-  "stop_count": 1
+  "anatomy_hits": 1,
+  "anatomy_misses": 107,
+  "repeated_reads_warned": 168
 }

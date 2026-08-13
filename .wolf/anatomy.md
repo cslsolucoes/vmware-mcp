@@ -1,21 +1,17 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-08-09T19:07:38.274Z
-> Files: 513 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-08-10T06:23:15.341Z
+> Files: 508 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ./
 
 - `.claudeignore` — .claudeignore — Claude Code (Anthropic) (~379 tok)
 - `.cursorignore` — .cursorignore — Cursor IDE / VS Code (~367 tok)
+- `.gitignore` — Git ignore rules (~39 tok)
+- `.gitmodules` (~361 tok)
 - `CLAUDE.md` — OpenWolf (~2204 tok)
-- `Guia_Instalacao_Remota_Windows_11.md` — ⚠️ Pré-requisitos e Avisos Importantes (~2599 tok)
-- `VMWare Automation.postman_collection.json` (~1185 tok)
-- `VMware Cloud on AWS APIs.postman_collection.json` (~49740 tok)
-- `vSphere Automation REST Resources for appliance.postman_collection.json` (~35926 tok)
-- `vSphere Automation REST resources for Content Library.postman_collection.json` (~5787 tok)
-- `vSphere Automation REST Resources.postman_collection.json` (~22232 tok)
-- `vSphere Automation REST Samples.postman_collection.json` (~14178 tok)
-- `vSphere.postman_collection.json` (~103 tok)
+- `LICENSE` — Project license (~295 tok)
+- `README.md` — Project documentation (~779 tok)
 
 ## .claude/
 
@@ -25,14 +21,20 @@
 ## .cursor/
 
 - `config.json` (~2247 tok)
-- `pack-inventory.json` (~51207 tok)
+- `pack-inventory.json` (~76397 tok)
 - `README.md` — Project documentation (~9541 tok)
 - `VERSION.md` — Política de Versionamento — `.cursor/` (~345 tok)
 
+## .cursor/Patchs/
+
+- `2026-08-09_conformidade-pos-kit-golang.md` — Patch — Conformidade pós-kit GoLang (auditoria + correção de lacuna) (~3055 tok)
+- `2026-08-09_kit-golang.md` — Patch — Kit de Skills GoLang (`developer-go-*`) (~1291 tok)
+- `2026-08-09_mcpvmware-go-scaffold.md` — Patch — Scaffold do módulo Go `mcpvmware` (servidor MCP para VMware) (~1833 tok)
+
 ## .cursor/agents/
 
-- `agents-pack-manifest_V1.7.1.md` — Versão interna — `.cursor/agents/` (~841 tok)
-- `developer-agent-orchestrator_V2.3.0.md` — Categoria (~2900 tok)
+- `agents-pack-manifest_V1.7.2.md` — Versão interna — `.cursor/agents/` (~1171 tok)
+- `developer-agent-orchestrator_V2.4.0.md` — Categoria (~2979 tok)
 - `developer-delphi-agent-auditor_V1.0.0.md` — Idioma de saída (~1126 tok)
 - `developer-delphi-agent-connections-expert_V1.3.0.md` — Categoria (~1933 tok)
 - `developer-delphi-agent-database-expert_V1.3.0.md` — Categoria (~2085 tok)
@@ -48,6 +50,7 @@
 - `developer-delphi-agent-views-expert_V1.3.0.md` — Agentes gestores (~1885 tok)
 - `developer-delphi-agent-views-orchestrator_V1.3.0.md` — Categoria (~1937 tok)
 - `developer-delphi-agent-writer_V1.0.0.md` — Idioma de saída (~872 tok)
+- `developer-golang-agent-orchestrator_V1.0.0.md` — Managed by (~2348 tok)
 - `developer-vuejs-agent-core-expert_V1.2.0.md` — Managed by (~1332 tok)
 - `developer-vuejs-agent-orchestrator_V1.2.0.md` — Managed by (~1743 tok)
 - `developer-vuejs-agent-routing-state-expert_V1.2.0.md` — Categoria (~1111 tok)
@@ -93,53 +96,7 @@
 
 ## .cursor/plans/
 
-- `activedirectoryorm_ldap_rn-m01_ac44371d.plan.md` — Plano: ActiveDirectoryORM — LDAP para Windows AD (OO + Fluente + Attributers) (~7942 tok)
-- `documentation-migration-plan_V1.0.plan.md` — Plano de Migração Documental — {PROJECT_NAME} (~4284 tok)
-- `e-gestorerp-project-roadmap-backend-v1-swirling-lagoon.plan.md` — Plano — Alinhar roadmap backend + Consolidar `Documentation/Roteiro/` (~9840 tok)
-- `gaps-resolution-plan_V1.0.0.md` — Plano de Resolução de Lacunas — Onda E9 (~2657 tok)
-- `loggers-absorption-finalize-v1.0.plan.md` — Estado atual da absorção (~1504 tok)
-- `loggers-parameters-master-absorption-v1.0.plan.md` — Contexto (~5899 tok)
-- `parameters-absorption-finalize-v1.0.plan.md` — Estado atual da absorção (~1373 tok)
-- `parameters-embed-sync-v1.0.plan.md` — Revisão v1.1 — decisões incorporadas (~6761 tok)
-- `plano_de_nomenclatura_mxx_b5955ce0.plan.md` — Plano de Nomenclatura MXX (~1423 tok)
-- `plugin-absorption-plan_V1.0.0.md` — Plano de Absorção — `delphi-dev-plugin` → pack `.cursor/` (~3141 tok)
 - `README.md` — Project documentation (~232 tok)
-- `skills-correction-and-split-plan_V1.0.0.md` — Plano — Correções e Subdivisão de Skills (~6273 tok)
-- `skills-projection-plan_V1.0.0.md` — Plano de Projeção e Qualidade do Pack de Skills (~8776 tok)
-- `synapse-ldap-fork_b3f4e901.plan.md` — Plano: Synapse — Migração + Compatibilidade AD 100% em TLDAPSend (001.007.002) (~11531 tok)
-- `temporal-sleeping-kay.md` — Plano: synapse-ldap-fork — AD 100% em TLDAPSend (001.007.002) (~11996 tok)
-- `vuejs-skills-improvement-plan_V1.0.0.md` — Plano de Melhoria — Skills Vue.js · Onda E11 (~2760 tok)
-
-## .cursor/plans/audit/
-
-- `_raw-output.txt` (~5599 tok)
-- `E7-lint-report.md` — E7 — Lint de Consistência do Pack .cursor/ (~1119 tok)
-- `E7-warn-after.txt` (~3084 tok)
-- `E7-warn-before.txt` (~4685 tok)
-- `E8-final-consolidation.md` — Validação Consolidada Final — Pós Refactor v5 + v6 (~2556 tok)
-- `E9-skills-correction-split-final.md` — Validação Final — Onda E8 (Correções + Subdivisões) (~923 tok)
-- `L01-architecture.md` — Relatório Auditoria — Lote L01 architecture + orchestrator (~7045 tok)
-- `L02-assembly.md` — Relatório Auditoria — Lote L02 assembly (~8951 tok)
-- `L03-build.md` — Relatório Auditoria — Lote L03 build + debugging-techniques (~5813 tok)
-- `L04-docs.md` — Relatório Auditoria — Lote L04 docs (~5431 tok)
-- `L05-mobile-errors.md` — Relatório Auditoria — Lote L05 mobile + errors (~5624 tok)
-- `L06-fmx.md` — Relatório Auditoria — Lote L06 fmx (~6092 tok)
-- `L07-horse.md` — Relatório Auditoria — Lote L07 horse (~5121 tok)
-- `L08-language-rtl.md` — Relatório Auditoria — Lote L08 language + rtl (~3518 tok)
-- `L09-patterns-programming.md` — Relatório Auditoria — Lote L09 patterns + programming (~11803 tok)
-- `L10-performance-testing.md` — Relatório Auditoria — Lote L10 performance + testing (~4326 tok)
-- `L11-providers-infra.md` — Relatório Auditoria — Lote L11 providers + infra + threading (~2157 tok)
-- `L12-rdw-ad.md` — Relatório Auditoria — Lote L12 REST-DataWare + Active Directory (~2022 tok)
-- `L13-windows.md` — Relatório Auditoria — Lote L13 windows (~1056 tok)
-- `L14-web.md` — Relatório Auditoria — Lote L14 vuejs + web (~1793 tok)
-- `L15-documentation-part1.md` — Relatório Auditoria — Lote L15 documentation (parte 1/2) (~1501 tok)
-- `L16-documentation-part2.md` — Relatório Auditoria — Lote L16 documentation (parte 2/2) (~1541 tok)
-- `L17-governance.md` — Relatório Auditoria — Lote L17 governance (~1812 tok)
-- `L18-project-quality-version.md` — Relatório Auditoria — Lote L18 project + quality + version (~1879 tok)
-- `L19-rules.md` — Relatório Auditoria — Lote L19 rules (~1485 tok)
-- `L20-agents-developer.md` — Relatório Auditoria — Lote L20 agents developer (~1358 tok)
-- `L21-agents-docs-gov.md` — Relatório Auditoria — Lote L21 agents documentation + governance/quality/version (~1226 tok)
-- `L22-commands-and-summary.md` — Relatório Auditoria — Lote L22 commands + SÍNTESE GLOBAL (~2431 tok)
 
 ## .cursor/rules/
 
@@ -152,12 +109,10 @@
 - `documentation-migration-plan-mode_V1.2.0.mdc` — Declares interactiva (~2496 tok)
 - `fpc-native-c-objects-linking_V1.0.0.mdc` (~974 tok)
 - `openwolf-protocol_V1.0.0.mdc` (~530 tok)
-- `openwolf.md` (~328 tok)
-- `openwolf.mdc` (~87 tok)
 - `pack-artifact-placement_V1.3.0.mdc` (~3308 tok)
 - `pack-inventory-autoupdate_V1.0.0.mdc` — Declares skill (~685 tok)
-- `pack-rules-manifest_V1.8.0.md` — Versão interna — `.cursor/rules/` (~878 tok)
-- `pack-scripts-nomenclature_V1.3.0.mdc` (~1077 tok)
+- `pack-rules-manifest_V1.8.0.md` — Versão interna — `.cursor/rules/` (~876 tok)
+- `pack-scripts-nomenclature_V1.4.0.mdc` (~1277 tok)
 - `project-bootstrap-autostart_V1.2.0.mdc` (~3873 tok)
 - `project-documentation_V1.0.1.mdc` — ", "**/Documentation/**"] (~2571 tok)
 - `workspace-plans-persist_V1.4.0.mdc` (~2807 tok)
@@ -206,7 +161,7 @@
 - `bootstrap-build-config.ps1` (~3630 tok)
 - `bootstrap-form-unit.ps1` (~1966 tok)
 - `bootstrap-mirror-symlinks.ps1` — Declares Get (~14215 tok)
-- `Bootstrap-Reset.ps1` — Declares Test (~4735 tok)
+- `bootstrap-reset.ps1` — Declares Test (~4735 tok)
 - `bootstrap-skills-project.ps1` — Declares Get (~1935 tok)
 - `database_session_manager.py` — cache_dir, host_safe, find_all_caches, parse_cache_meta + 11 more (~6693 tok)
   - fn `cache_dir` L68-71 (~24 tok)
@@ -291,7 +246,7 @@
   - fn `stats_db` L453-480 (~274 tok)
   - fn `main` L481-559 (~834 tok)
 - `scaffold-modules-backend.ps1` — Write: List, TryGetById, TryInsert, TryUpdate, TryDelete (~8465 tok)
-- `scripts-pack-manifest_V1.5.1.md` — Versão interna — `.cursor/scripts/` (~1620 tok)
+- `scripts-pack-manifest_V1.5.1.md` — Versão interna — `.cursor/scripts/` (~1622 tok)
 - `sync_cursor_pack.py` — SyncState: resolve_source_root, detect_project_name, remove_obsolete_items, copy_with_token_subst + 3 more (~4974 tok)
   - class `SyncState` L72-83 (~86 tok)
   - fn `resolve_source_root` L84-92 (~84 tok)
@@ -305,68 +260,68 @@
 - `sync-cursor-pack.ps1` — Declares Resolve (~5310 tok)
 - `transform-headers-adorm.ps1` — Declares ConvertDate (~1518 tok)
 - `transform-headers-backend.ps1` — Declares Get (~3834 tok)
-- `validate_consolidated.py` — CheckResult: status, add_fail, add_warn, add + 13 more (~5777 tok)
-  - class `CheckResult` L66-87 (~147 tok)
-  - class `Report` L88-143 (~591 tok)
-  - fn `read_text` L144-150 (~43 tok)
-  - fn `rel` L151-157 (~40 tok)
-  - fn `check_links_in_file` L158-177 (~227 tok)
-  - fn `check_cursor_version` L178-195 (~198 tok)
-  - fn `check_cursor_links` L196-204 (~83 tok)
-  - fn `check_cursor_structure` L205-219 (~163 tok)
-  - fn `check_cursor_naming` L220-252 (~392 tok)
-  - fn `check_cursor_init` L253-262 (~129 tok)
-  - fn `check_cursor_autostart` L263-282 (~230 tok)
-  - fn `run_cursor` L283-300 (~150 tok)
-  - fn `check_docs_version` L301-314 (~128 tok)
-  - fn `check_docs_links` L315-327 (~106 tok)
-  - fn `check_docs_structure` L328-341 (~125 tok)
-  - fn `check_docs_naming` L342-361 (~234 tok)
-  - fn `check_docs_hub` L362-374 (~141 tok)
-  - fn `check_docs_html` L375-386 (~133 tok)
-  - fn `check_docs_gestordoc` L387-402 (~170 tok)
-  - fn `run_docs` L403-421 (~157 tok)
-  - fn `check_source_headers` L422-439 (~181 tok)
-  - fn `check_source_uses` L440-446 (~68 tok)
-  - fn `check_source_structure` L447-464 (~182 tok)
-  - fn `check_source_naming` L465-477 (~132 tok)
-  - fn `check_source_build` L478-490 (~151 tok)
-  - fn `check_source_ignore` L491-506 (~145 tok)
-  - fn `run_source` L507-531 (~227 tok)
-  - fn `main` L532-569 (~401 tok)
-- `validate_pack.py` — URL configuration (~6536 tok)
-  - fn `load_mirror_config` L73-89 (~190 tok)
-  - class `Issue` L90-98 (~38 tok)
-  - class `Report` L99-119 (~182 tok)
-  - fn `parse_frontmatter` L120-142 (~203 tok)
-  - fn `extract_fileversion` L143-147 (~32 tok)
-  - fn `is_changelog_line` L148-151 (~22 tok)
-  - fn `rel` L152-162 (~86 tok)
-  - fn `validate_skills` L163-213 (~596 tok)
-  - fn `validate_agents` L214-253 (~461 tok)
-  - fn `validate_rules` L254-267 (~118 tok)
-  - fn `validate_commands` L268-284 (~176 tok)
-  - fn `validate_manifests` L285-313 (~367 tok)
-  - fn `is_network_path` L314-330 (~162 tok)
-  - fn `validate_mirrors` L331-363 (~400 tok)
-  - fn `validate_counts` L364-377 (~158 tok)
-  - fn `check_stale_refs` L378-399 (~292 tok)
-  - fn `validate_no_instance_strings` L400-457 (~666 tok)
-  - fn `validate_indexes_fresh` L458-514 (~612 tok)
-  - fn `main` L515-604 (~896 tok)
-- `validate-skills-consistency.py` — -*- coding: utf-8 -*- (~2926 tok)
-  - class `Finding` L69-91 (~188 tok)
-  - fn `strip_version_suffix` L92-95 (~27 tok)
-  - fn `check_bom` L96-107 (~127 tok)
-  - fn `check_frontmatter_and_name` L108-170 (~708 tok)
-  - fn `check_pascal_ifdef` L171-208 (~442 tok)
-  - fn `check_broken_refs` L209-222 (~145 tok)
-  - fn `iter_target_files` L223-229 (~62 tok)
-  - fn `main` L230-290 (~635 tok)
+- `validate_consolidated.py` — CheckResult: status, add_fail, add_warn, add + 11 more (~6019 tok)
+  - class `CheckResult` L74-95 (~147 tok)
+  - class `Report` L96-151 (~591 tok)
+  - fn `read_text` L152-158 (~43 tok)
+  - fn `rel` L159-165 (~40 tok)
+  - fn `check_links_in_file` L166-185 (~227 tok)
+  - fn `check_cursor_version` L186-203 (~198 tok)
+  - fn `check_cursor_links` L204-212 (~83 tok)
+  - fn `check_cursor_structure` L213-231 (~239 tok)
+  - fn `check_cursor_naming` L232-264 (~392 tok)
+  - fn `check_cursor_init` L265-274 (~129 tok)
+  - fn `check_cursor_autostart` L275-294 (~230 tok)
+  - fn `run_cursor` L295-312 (~150 tok)
+  - fn `check_docs_version` L313-326 (~128 tok)
+  - fn `check_docs_links` L327-339 (~106 tok)
+  - fn `check_docs_structure` L340-353 (~125 tok)
+  - fn `check_docs_naming` L354-373 (~234 tok)
+  - fn `check_docs_hub` L374-386 (~141 tok)
+  - fn `check_docs_html` L387-398 (~133 tok)
+  - fn `check_docs_gestordoc` L399-414 (~170 tok)
+  - fn `run_docs` L415-433 (~157 tok)
+  - fn `check_source_headers` L434-451 (~181 tok)
+  - fn `check_source_uses` L452-458 (~68 tok)
+  - fn `check_source_structure` L459-476 (~182 tok)
+  - fn `check_source_naming` L477-489 (~132 tok)
+  - fn `check_source_build` L490-502 (~151 tok)
+  - fn `check_source_ignore` L503-518 (~145 tok)
+  - fn `run_source` L519-543 (~227 tok)
+  - fn `main` L544-581 (~401 tok)
+- `validate_pack.py` — URL configuration (~6641 tok)
+  - fn `load_mirror_config` L78-94 (~190 tok)
+  - class `Issue` L95-103 (~38 tok)
+  - class `Report` L104-124 (~182 tok)
+  - fn `parse_frontmatter` L125-147 (~203 tok)
+  - fn `extract_fileversion` L148-152 (~32 tok)
+  - fn `is_changelog_line` L153-156 (~22 tok)
+  - fn `rel` L157-167 (~86 tok)
+  - fn `validate_skills` L168-218 (~596 tok)
+  - fn `validate_agents` L219-258 (~461 tok)
+  - fn `validate_rules` L259-272 (~118 tok)
+  - fn `validate_commands` L273-289 (~176 tok)
+  - fn `validate_manifests` L290-318 (~367 tok)
+  - fn `is_network_path` L319-335 (~162 tok)
+  - fn `validate_mirrors` L336-368 (~400 tok)
+  - fn `validate_counts` L369-382 (~158 tok)
+  - fn `check_stale_refs` L383-404 (~292 tok)
+  - fn `validate_no_instance_strings` L405-462 (~666 tok)
+  - fn `validate_indexes_fresh` L463-519 (~612 tok)
+  - fn `main` L520-609 (~896 tok)
+- `validate_skills_consistency.py` — -*- coding: utf-8 -*- (~3032 tok)
+  - class `Finding` L76-98 (~188 tok)
+  - fn `strip_version_suffix` L99-102 (~27 tok)
+  - fn `check_bom` L103-114 (~127 tok)
+  - fn `check_frontmatter_and_name` L115-177 (~708 tok)
+  - fn `check_pascal_ifdef` L178-215 (~442 tok)
+  - fn `check_broken_refs` L216-229 (~145 tok)
+  - fn `iter_target_files` L230-236 (~62 tok)
+  - fn `main` L237-297 (~635 tok)
 
 ## .cursor/skills/
 
-- `skills-pack-manifest_V1.26.0.md` — Skills Pack — Manifesto Canônico (~1838 tok)
+- `skills-pack-manifest_V1.27.0.md` — Skills Pack — Manifesto Canônico (~2490 tok)
 
 ## .cursor/skills/developer-assembly-instructions_V1.0.0/
 
@@ -1106,11 +1061,11 @@
 
 - `SKILL.md` — Project OOP Class Naming (~1884 tok)
 
-## .cursor/skills/developer-delphi-project-audit_V1.0.0/
+## .cursor/skills/developer-delphi-project-audit_V1.1.0/
 
-- `SKILL.md` — developer-delphi-project-audit (~2209 tok)
+- `SKILL.md` — developer-delphi-project-audit (~2295 tok)
 
-## .cursor/skills/developer-delphi-project-audit_V1.0.0/references/
+## .cursor/skills/developer-delphi-project-audit_V1.1.0/references/
 
 - `clean-code-delphi.md` — Clean Code em Delphi (~2083 tok)
 - `code-smells-delphi.md` — Catálogo de Code Smells em Delphi (~2624 tok)
@@ -1127,3 +1082,124 @@
 ## .cursor/skills/developer-delphi-project-spec_V1.0.0/references/
 
 - `spec-template.en.md` — Template: Software Specification Document (SPEC) (~1257 tok)
+- `spec-template.md` — Template: Documento de Especificacao de Software (SPEC) (~1258 tok)
+
+## .cursor/skills/developer-delphi-providers-loggers_V1.0.0/
+
+- `SKILL.md` — developer-delphi-providers-loggers (~1645 tok)
+
+## .cursor/skills/developer-delphi-providers-loggers_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-providers-loggers (~392 tok)
+
+## .cursor/skills/developer-delphi-providers-loggers_V1.0.0/exemplos/
+
+- `loggers_uso.md` — Exemplos — developer-delphi-providers-loggers (~593 tok)
+
+## .cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/
+
+- `SKILL.md` — developer-delphi-providers-orm-usage (~2681 tok)
+
+## .cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-providers-orm-usage (~393 tok)
+
+## .cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/exemplos/
+
+- `roteiro_attributes.md` — Roteiro Attributes — EntityManager + QueryBuilder (~772 tok)
+
+## .cursor/skills/developer-delphi-providers-parameters_V1.0.0/
+
+- `SKILL.md` — developer-delphi-providers-parameters (~1477 tok)
+
+## .cursor/skills/developer-delphi-providers-parameters_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-providers-parameters (~256 tok)
+
+## .cursor/skills/developer-delphi-providers-parameters_V1.0.0/exemplos/
+
+- `parametros_uso.md` — Exemplos — developer-delphi-providers-parameters (~481 tok)
+
+## .cursor/skills/developer-delphi-reporting-fastreport_V1.0.0/
+
+- `SKILL.md` — developer-delphi-reporting-fastreport (~2025 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-estrutura_V1.0.0/
+
+- `SKILL.md` — developer-delphi-rest-dataware-estrutura (~1537 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-estrutura_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-rest-dataware-estrutura (~355 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-expert_V1.0.0/
+
+- `SKILL.md` — developer-delphi-rest-dataware-expert (~3237 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-expert_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-rest-dataware-expert (~366 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-orchestrator_V1.0.0/
+
+- `SKILL.md` — developer-delphi-rest-dataware-orchestrator (~952 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-orchestrator_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-rest-dataware (~309 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/
+
+- `SKILL.md` — developer-delphi-rest-dataware-roteiro (~1054 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/consultas_rapidas/
+
+- `quick_ref.md` — Quick Reference — developer-delphi-rest-dataware-roteiro (~359 tok)
+
+## .cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/
+
+- `roteiro_auth.md` — Roteiro — Autenticação REST (REST DataWare) (~1188 tok)
+- `roteiro_client.md` — Roteiro — Cliente REST (REST DataWare) (~986 tok)
+- `roteiro_drivers.md` — Roteiro — Drivers de Banco (REST DataWare) (~1010 tok)
+- `roteiro_massive.md` — Roteiro — MassiveCache (REST DataWare) (~1130 tok)
+- `roteiro_server.md` — Roteiro — Servidor REST (REST DataWare) (~780 tok)
+
+## .cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/
+
+- `skill.md` — developer-delphi-servers-libraries-orchestrator_V1.1.0 (~4019 tok)
+
+## .cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/consultas_rapidas/
+
+- `family_m_decision_guide.md` — Guia de Decisão — Família M (Serviços e Bibliotecas) (~2949 tok)
+
+## .cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/templates/
+
+- `TEMPLATE_server_library_project_setup.md` — TEMPLATE — Checklist de Setup para Projecto de Servidor/Biblioteca (~3138 tok)
+
+## .cursor/skills/developer-delphi-testing-and-quality_V1.0.0/
+
+- `SKILL.md` — developer-delphi-testing-and-quality (~1482 tok)
+
+## .cursor/skills/developer-delphi-testing-dunitx_V1.0.0/
+
+- `SKILL.md` — developer-delphi-testing-dunitx (~2209 tok)
+
+## .cursor/skills/developer-delphi-testing-dunitx_V1.0.0/consultas_rapidas/
+
+- `assert_api.md` — DUnitX Assert API — Referencia Completa (~856 tok)
+- `dunitx_attributes.md` — DUnitX — Tabela de Atributos (~705 tok)
+- `mock_setup.md` — Delphi-Mocks — TMock<I> Referencia Rapida (~812 tok)
+
+## .cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/
+
+- `assertions.pas` — Declares uses (~1635 tok)
+- `mock_interface.pas` — uses: BuscarPorId, Existe, BuscarCliente (~1849 tok)
+- `setup_teardown.pas` — Declares uses (~1407 tok)
+- `test_case_attribute.pas` — uses: ValidarCPF, CalcularDesconto, ValidarCPF, CalcularDesconto (~1376 tok)
+- `test_fixture_basico.pas` — Declares uses (~1279 tok)
+- `test_isolation.pas` — uses: ContemEvento (~2189 tok)
+
+## .cursor/skills/developer-delphi-testing-dunitx_V1.0.0/templates/
+
+- `TEMPLATE_mock_service.pas` — real: Buscar, Validar, ExecutarBusca (~1579 tok)
+- `TEMPLATE_test_fixture.pas` — da: BuscarDado, BuscarDado, ProcessarDado (~2189 tok)

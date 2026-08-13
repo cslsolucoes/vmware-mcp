@@ -27,7 +27,7 @@ func registerSystemTools(r *Registry) {
 			"properties": map[string]interface{}{
 				"path": map[string]interface{}{
 					"type":        "string",
-					"description": `Inventory path pattern. Defaults to "*" (every VM under the default datacenter's VM folder).`,
+					"description": `Name pattern (govmomi find syntax) matched under every datacenter's VM folder, e.g. "*" for all VMs or "web*" to filter by name. Pass a full inventory path starting with "/" (e.g. "/MyDatacenter/vm/*") to scope to one datacenter instead. Defaults to "*".`,
 					"default":     "*",
 				},
 			},
@@ -64,16 +64,22 @@ func handleAbout(ctx context.Context, client *vmware.Client, args map[string]int
 }
 
 // handleListVMs resolves path via the client's Finder (see vmware.NewClient
-// — the Finder's default datacenter is set at connect time when resolvable).
+// — the Finder's default datacenter is set at connect time only when
+// resolvable, e.g. NOT for a vCenter with more than one datacenter). Uses
+// dcScopedPath so this keeps working against a multi-datacenter vCenter, not
+// just the standalone ESXi host this was first validated against.
 func handleListVMs(ctx context.Context, client *vmware.Client, args map[string]interface{}) (string, error) {
 	path := "*"
 	if v, ok := args["path"].(string); ok && v != "" {
 		path = v
 	}
+	scoped := dcScopedPath("vm", path)
 
-	vms, err := client.Finder.VirtualMachineList(ctx, path)
+	vms, err := client.Finder.VirtualMachineList(ctx, scoped)
 	if err != nil {
-		return "", fmt.Errorf("failed to list virtual machines matching %q: %w", path, err)
+		if err = emptyOnNotFound(err); err != nil {
+			return "", fmt.Errorf("failed to list virtual machines matching %q: %w", path, err)
+		}
 	}
 
 	names := make([]string, 0, len(vms))
