@@ -11,6 +11,27 @@
 ## Key Learnings
 
 - **Project:** MCPVMWare
+- **The "734/611 = 100%" coverage is 100% of the `object.*` govmomi
+  wrappers, NOT 100% of the raw vim25 SOAP surface.** `gen/main.go` walked
+  `object/`+`vapi/*` method sets; any managed-object method that has no
+  high-level `object.*` wrapper was invisible to it. The whole iSCSI family
+  fell in that gap: `object.HostStorageSystem` exposes 13 methods, none
+  iSCSI, yet the raw `HostStorageSystem` SOAP MO has 16 more
+  (`*InternetScsi*`, `EnableMultipathPath`/`DisableMultipathPath`/
+  `SetMultipathLunPolicy`) — 72 `InternetScsi` refs in
+  `referencia/govmomi/vim25/methods/methods.go`. Fixed 2026-08-19 by adding
+  `generated_host_iscsi.go` (15 tools) that call
+  `methods.Xxx(ctx, client.Client.Client, &types.Xxx{This: ss.Reference(), ...})`
+  directly (`ss` from the existing `hostStorageSystem()` helper) — the same
+  raw-`methods.*` pattern `generated_host_security.go` already used. When
+  the user says "aren't there more tools for X?", check the raw vim25
+  `methods.go` for the managed object, not just the `object.*` wrapper.
+- **Adding a vsphere-general tool requires updating `mode_test.go`'s
+  `vsphereGeneralTools` list too** — the 6 `TestMode_*` tests assert exact
+  set-equality per connection mode, so a new tool that registers but isn't
+  in the list (or vice-versa) fails the count/name assertions. iSCSI raised
+  vsphere-general 251→266 (total 734→749); the list was updated in the same
+  change.
 - **`esx.ResourcePool.DisabledMethod = ["CreateVApp", "CreateChildVM_Task"]`
   — vApp creation is a genuine vCenter-only vSphere capability, not a vcsim
   gap.** Found in Fase 6: `simulator.ResourcePool.CreateVApp`/`CreateChildVM`
@@ -400,6 +421,29 @@
 
 ## Do-Not-Repeat
 
+- [2026-08-19] **Guest-op test travava (~9 min) — causa REAL: bug de deadlock
+  no vcsim, NÃO socket exhaustion (minha 1ª hipótese, REFUTADA por evidência ao
+  ler a fonte do simulador — registrado como lição: não fixar a hipótese fácil).**
+  `simulator/guest_operations_manager.go` `StartProgramInGuest` contra VM sem
+  container backing (`vm.svm==nil`) desreferencia `vm.svm.c.id` sem `return` →
+  panic nil server-side; e `simulator/registry.go` `WithLock` faz `f(); unlock()`
+  SEM `defer`, então o panic (recuperado inofensivamente pelo net/http) deixa o
+  `ObjectLock` da VM travado PARA SEMPRE → qualquer guest-op seguinte na MESMA VM
+  deadlocka. Flaky por ordem de iteração de map (passa isolado). **Mitigação no
+  teste (o código sob teste está correto — é bug do vcsim vendorizado, read-only):**
+  (1) 1 vcsim compartilhado por arquivo de teste com subtests `t.Run` — boa
+  prática geral de qualquer forma; (2) drivar `start_program` POR ÚLTIMO numa VM
+  descartável dedicada (`simulator.ESX()` tem `Machine:2`), isolando o lock
+  envenenado. Lição dupla: (a) NÃO confiar em relatório vago de subagente
+  (correr+ler eu mesmo pegou o travamento que o "vou esperar" escondia);
+  (b) o subagente refutou minha teoria lendo a fonte — provar, não assumir.
+- [2026-08-19] **Gate `go test ./...` no Windows FALHA por flaky de contenção
+  quando roda os pacotes EM PARALELO (default): `tools` (muitos vcsim) +
+  `vmware` (mais vcsim) concorrem por portas/sockets e o `vmware` dá FAIL/timeout
+  (~22s) — mas cada pacote passa ISOLADO (`tools` ~89s, `vmware` ~4s). Não é
+  regressão.** SEMPRE rodar o gate da suíte completa com `-p 1` (serial, um
+  pacote por vez): `go test ./... -p 1 -count=1`. Aplicar em toda onda antes de
+  commitar; nunca concluir "FAIL" sem antes tentar isolado/serial.
 - [2026-08-11] **A regra global "atualizar o plano por fase/onda" (pendências
   NUMERADAS, estado marcado concluído/pendente/bloqueado, comandos+resultado
   literais, nota de commit mesmo quando não há) precisa de ser aplicada como

@@ -4,3 +4,6 @@
 
 # Config de MCP servers project-level — contem credenciais (ver .mcp.json._README)
 .mcp.json
+
+# Binarios compilados (Go) — nunca versionar, recompilar a partir de src/
+*.exe

@@ -1,6 +1,6 @@
 # MCPVMWare
 
-Servidor **MCP** (Model Context Protocol) para VMware — expõe **734 tools**
+Servidor **MCP** (Model Context Protocol) para VMware — expõe **749 tools**
 cobrindo os 3 produtos da linha VMware/Broadcom (vSphere/vCenter/ESXi,
 VMware Workstation Pro, e VMware Cloud on AWS) via um único binário,
 selecionado por modo de conexão.
@@ -14,13 +14,22 @@ um cliente por produto (`vmware/`, `workstation/`, `cloudaws/`).
 
 | Produto | Tools | Cliente | Técnica |
 | --- | --- | --- | --- |
-| vSphere / vCenter / ESXi | 611 | `vmware/` (govmomi) | geração de código: AST sobre `object/`+`vapi/*/*.go` (Fases 1-8a) + parse da collection Postman de VAMI legacy (Fase 8b) |
+| vSphere / vCenter / ESXi | 626 | `vmware/` (govmomi) | geração de código: AST sobre `object/`+`vapi/*/*.go` (Fases 1-8a) + parse da collection Postman de VAMI legacy (Fase 8b) + 15 tools de iSCSI/multipath via métodos vim25 crus (2026-08-19) |
 | VMware Workstation Pro (`vmrest`) | 28 | `workstation/` (HTTP+Basic Auth) | hand-written a partir da spec Swagger oficial (Fase 9) |
 | VMware Cloud on AWS (VMC) | 95 | `cloudaws/` (HTTP+CSP token-exchange) | hand-written a partir da collection Postman oficial (Fase 10) |
 
 Plano completo e histórico de execução fase-a-fase:
 `.workspace/plans/MCPVMWare2026-08-10-175300-plano-cobertura-completa-api-codegen.plan.md`
 (`status: concluído`). Reports formais por fase em `.workspace/reports/`.
+
+**Adição pós-plano (2026-08-19):** 15 tools de configuração do **iSCSI
+initiator** e **multipath** do host (`vmware_host_iscsi_*`,
+`vmware_host_storage_*multipath*`). O gerador AST cobria 100% dos wrappers
+`object.*` do govmomi, mas `object.HostStorageSystem` não expõe nenhum
+método iSCSI — a família `*InternetScsi*` só existe no managed object SOAP
+cru (`vim25/methods`), então essas tools chamam `methods.Xxx(...)`
+diretamente. São `vsphere-general` (funcionam em ESXi standalone), todas
+Tier2 (destrutivas-reversíveis). Ver `src/tools/generated_host_iscsi.go`.
 
 ## Estrutura do repositório
 
@@ -102,9 +111,10 @@ testes), `MCPVMWARE_DEBUG=1` (log verboso).
 ## Status
 
 Plano de cobertura completa **concluído** (Fases 0-10, 12/08/2026) — 734
-tools registadas, cobrindo vSphere/vCenter/ESXi, VMware Workstation Pro e
-VMware Cloud on AWS. Ver `.wolf/STATUS.md` para o estado atualizado
-sessão a sessão — é a fonte de verdade, não este README.
+tools; **+15 tools de iSCSI/multipath adicionadas em 2026-08-19 → 749 no
+total**, cobrindo vSphere/vCenter/ESXi, VMware Workstation Pro e VMware
+Cloud on AWS. Ver `.wolf/STATUS.md` para o estado atualizado sessão a
+sessão — é a fonte de verdade, não este README.
 
 **Pendências conhecidas** (não bloqueiam a cobertura, ver o plano para
 detalhe completo):

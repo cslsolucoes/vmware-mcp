@@ -211,6 +211,8 @@ func (r *Registry) registerTools() {
 	r.withClass(modeVSphereGeneral, registerVMProvisioningTools)
 	r.withClass(modeVCenterOnly, registerVMProvisioningVCenterOnlyTools)
 	r.withClass(modeVSphereGeneral, registerHostStorageTools)
+	r.withClass(modeVSphereGeneral, registerHostIscsiTools)
+	r.withClass(modeVSphereGeneral, registerHostIscsiPortBindingTools)
 	r.withClass(modeVSphereGeneral, registerHostNetworkTools)
 	r.withClass(modeVSphereGeneral, registerHostSecurityTools)
 	r.withClass(modeVSphereGeneral, registerHostMiscTools)
@@ -260,6 +262,20 @@ func (r *Registry) registerTools() {
 	r.withClass(modeCloudAWS, registerCloudAWSSDDCsTools)
 	r.withClass(modeCloudAWS, registerCloudAWSNetworkingCoreTools)
 	r.withClass(modeCloudAWS, registerCloudAWSNetworkingEdgeTools)
+
+	// Onda 2 (2026-08-19): managed objects sem wrapper object.* — raw vim25
+	// methods (PerformanceManager, LicenseManager, AlarmManager) + a leitura
+	// de port groups que faltava para o update_port_group ser seguro.
+	r.withClass(modeVSphereGeneral, registerPerformanceTools)
+	r.withClass(modeVSphereGeneral, registerLicenseTools)
+	r.withClass(modeVCenterOnly, registerAlarmTools)
+	r.withClass(modeVSphereGeneral, registerHostNetworkQueryTools)
+	// Fault Tolerance (2026-08-19, a pedido do owner) — VirtualMachine FT
+	// methods (CreateSecondary/TurnOnFT/etc.), sem wrapper object.*, vcenter-only.
+	r.withClass(modeVCenterOnly, registerVMFaultToleranceTools)
+	// Onda 3 (2026-08-19): Guest Operations — executar programas + gerenciar
+	// arquivos no SO convidado via VMware Tools; sem wrapper object.*, raw vim25.
+	r.withClass(modeVSphereGeneral, registerGuestOpsTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/

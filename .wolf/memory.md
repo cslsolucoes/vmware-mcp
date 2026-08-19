@@ -187,3 +187,28 @@
 | 19:05-19:09 | Integrado tudo: 4 funções `registerCloudAWSXTools` já wired (feito antes de delegar), catálogo `cloudAWSTools` novo em mode_test.go, corrigido `TestMode_CloudAWS`/`TestMode_Unrestricted` (asserções hardcoded desactualizadas) | src/tools/mode_test.go | OK — build/vet/test 100% limpos, 2 corridas seguidas sem flake | ~20k |
 | 19:09-19:15 | 2 smokes reais do binário via stdio: regressão vSphere (611 tools intactas) + CloudAWS novo (95 tools contra fixture local, gate tier1 negando sddc_create — deliberadamente SEM chamar nenhum tool sem gate, pra nunca tocar os servidores de produção reais da VMware) | scratchpad smoke/smoke_cloud (throwaway) | OK — fecha a Fase 10 e o PLANO INTEIRO (734 tools total, 100% atingido) | ~15k |
 | 19:15-19:30 | Documentação final: plano (secção "Fase 10 executada" + frontmatter status:concluído + critérios de conclusão actualizados), STATUS.md (Done + Next phase reescrito pra reflectir plano fechado), cerebrum.md (Key Learnings: padrão de 3º cliente, risco financeiro VMC, achados de dedup), report formal | `.wolf/STATUS.md`, `.wolf/cerebrum.md`, plano, `.workspace/reports/MCPVMWare2026-08-12-191500-fase10-cloudaws-codegen.report.md` | OK — plano de cobertura completa 100% concluído e documentado | ~30k |
+
+## Session: 2026-08-19 15:42
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-08-19 15:42
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 16:12 | Fechou lacuna iSCSI: 15 tools novas (initiator config + multipath) via raw vim25 methods sobre HostStorageSystem (object.* nao tem wrapper) | `src/tools/generated_host_iscsi.go` (+test), `registry.go`, `mode_test.go` | OK — go build/vet + suite completa verde; 15/15 reaches-server no vcsim; binario recompilado (d:/MCPVMWare/mcpvmware-mcp.exe) | ~8k |
+| 16:29 | Deploy+teste: bin producao substituido (hash identico ao build novo), smoke real vs ESXi 10.100.2.58 -> 626 tools (611+15 iSCSI) + vmware_about OK | `D:/ServidorDataCenter/mcpvmware-mcp.exe` | OK — deploy verificado ponta-a-ponta | ~3k |
+| 16:58 | Onda 1 iSCSI port binding (IscsiManager, 7 tools) via raw vim25 methods + property collector p/ MoRef; deploy p/ producao (hash identico) + smoke ESXi -> 633 tools, 22 iSCSI/multipath | `src/tools/generated_host_iscsi_portbinding.go` (+test), registry.go, mode_test.go | OK verde+deploy | ~10k |
+
+## Session: 2026-08-19 17:06
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-08-19 17:06
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 17:29 | Onda 2 (Perf 9 + License 13 + Alarm 10 + query_port_groups 1) + FT 7 integradas; suite completa verde; deploy producao (hash identico) + smoke ESXi -> 673 tools no modo all (FT 7 e query_port_groups confirmados) | generated_{performance,license,alarm,vm_ft,host_network_query}.go + registry.go + mode_test.go | OK verde+deploy | ~15k |
+| 18:13 | Onda 3 Guest Ops (15 tools). Code correto; teste travava por BUG do vcsim vendorizado (StartProgramInGuest nil-deref sem return + WithLock sem defer -> ObjectLock da VM envenenado -> deadlock). Corrigido no teste (1 vcsim compartilhado + start_program isolado por ultimo em VM dedicada). Integrado; build+TestGuestOps+TestMode verde. NAO deployado (acumulado). | generated_guest_ops.go (+test), registry.go, mode_test.go | OK verde | ~12k |

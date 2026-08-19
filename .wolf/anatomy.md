@@ -1,17 +1,18 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-08-10T06:23:15.341Z
-> Files: 508 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-08-19T19:35:30.954Z
+> Files: 509 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ./
 
 - `.claudeignore` — .claudeignore — Claude Code (Anthropic) (~379 tok)
 - `.cursorignore` — .cursorignore — Cursor IDE / VS Code (~367 tok)
-- `.gitignore` — Git ignore rules (~39 tok)
+- `.gitignore` — Git ignore rules (~64 tok)
 - `.gitmodules` (~361 tok)
+- `.mcp.json` (~599 tok)
 - `CLAUDE.md` — OpenWolf (~2204 tok)
 - `LICENSE` — Project license (~295 tok)
-- `README.md` — Project documentation (~779 tok)
+- `README.md` — Project documentation (~1565 tok)
 
 ## .claude/
 

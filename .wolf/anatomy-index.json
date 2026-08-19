@@ -1,12 +1,12 @@
 {
   "version": 1,
   "meta": {
-    "lastScanned": "2026-08-10T06:23:15.341Z",
-    "fileCount": 508,
+    "lastScanned": "2026-08-19T19:35:30.954Z",
+    "fileCount": 509,
     "hits": 0,
     "misses": 0,
-    "renderedHash": "55d9c59996f8e14a34772c2a44da5c228742f6dccc7fa846d1fd5d6882ce93d0",
-    "storeUpdatedAt": "2026-08-10T06:23:15.345Z"
+    "renderedHash": "eca3a8c1857a3ceea119069b0ab94b9c62b5f4fc2cc05d450414b00d13be1558",
+    "storeUpdatedAt": "2026-08-19T19:35:30.958Z"
   },
   "files": {
     ".claude/settings.json": {
@@ -15,7 +15,7 @@
       "hash": "59fccd724ffee27e",
       "size": 2547,
       "mtimeMs": 1786302456276.8933,
-      "updatedAt": "2026-08-10T06:23:15.117Z",
+      "updatedAt": "2026-08-19T19:35:30.124Z",
       "source": "scan"
     },
     ".claude/settings.local.json": {
@@ -24,7 +24,7 @@
       "hash": "5b773023984c0b9a",
       "size": 1281,
       "mtimeMs": 1786299516534.9358,
-      "updatedAt": "2026-08-10T06:23:15.118Z",
+      "updatedAt": "2026-08-19T19:35:30.124Z",
       "source": "scan"
     },
     ".claudeignore": {
@@ -33,7 +33,7 @@
       "hash": "d57c2bf4586726af",
       "size": 1421,
       "mtimeMs": 1786299516621.25,
-      "updatedAt": "2026-08-10T06:23:15.118Z",
+      "updatedAt": "2026-08-19T19:35:30.127Z",
       "source": "scan"
     },
     ".cursor/agents/agents-pack-manifest_V1.7.2.md": {
@@ -42,7 +42,7 @@
       "hash": "565ab886aef061c8",
       "size": 4828,
       "mtimeMs": 1786303466181.3403,
-      "updatedAt": "2026-08-10T06:23:15.119Z",
+      "updatedAt": "2026-08-19T19:35:30.128Z",
       "source": "scan"
     },
     ".cursor/agents/developer-agent-orchestrator_V2.4.0.md": {
@@ -51,7 +51,7 @@
       "hash": "35a0ab32725a64fd",
       "size": 12173,
       "mtimeMs": 1786303238499.6338,
-      "updatedAt": "2026-08-10T06:23:15.120Z",
+      "updatedAt": "2026-08-19T19:35:30.128Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-auditor_V1.0.0.md": {
@@ -60,7 +60,7 @@
       "hash": "e9fca67f743fb1a4",
       "size": 4716,
       "mtimeMs": 1777090315381.8352,
-      "updatedAt": "2026-08-10T06:23:15.120Z",
+      "updatedAt": "2026-08-19T19:35:30.129Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-connections-expert_V1.3.0.md": {
@@ -69,7 +69,7 @@
       "hash": "b5b426cbea9c650d",
       "size": 7855,
       "mtimeMs": 1783049995795.1306,
-      "updatedAt": "2026-08-10T06:23:15.120Z",
+      "updatedAt": "2026-08-19T19:35:30.129Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-database-expert_V1.3.0.md": {
@@ -78,7 +78,7 @@
       "hash": "57e3370c238d2178",
       "size": 8478,
       "mtimeMs": 1783049967957.8413,
-      "updatedAt": "2026-08-10T06:23:15.121Z",
+      "updatedAt": "2026-08-19T19:35:30.130Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-exceptions-expert_V1.3.0.md": {
@@ -87,7 +87,7 @@
       "hash": "87d654291c2cdcc6",
       "size": 7892,
       "mtimeMs": 1777071783612.5405,
-      "updatedAt": "2026-08-10T06:23:15.121Z",
+      "updatedAt": "2026-08-19T19:35:30.130Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-loggers-expert_V1.3.0.md": {
@@ -96,7 +96,7 @@
       "hash": "d88788c0464a34aa",
       "size": 7648,
       "mtimeMs": 1777071783613.5403,
-      "updatedAt": "2026-08-10T06:23:15.122Z",
+      "updatedAt": "2026-08-19T19:35:30.131Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-modules-orchestrator_V1.3.0.md": {
@@ -105,7 +105,7 @@
       "hash": "44812573c7455814",
       "size": 11079,
       "mtimeMs": 1777071783614.5408,
-      "updatedAt": "2026-08-10T06:23:15.123Z",
+      "updatedAt": "2026-08-19T19:35:30.132Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-orchestrator_V1.3.0.md": {
@@ -114,7 +114,7 @@
       "hash": "136e3cfc36657586",
       "size": 11513,
       "mtimeMs": 1777071783614.5408,
-      "updatedAt": "2026-08-10T06:23:15.123Z",
+      "updatedAt": "2026-08-19T19:35:30.132Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-orm-architect_V1.3.0.md": {
@@ -123,7 +123,7 @@
       "hash": "e866545a2d8f18c0",
       "size": 11045,
       "mtimeMs": 1783049999374.5105,
-      "updatedAt": "2026-08-10T06:23:15.123Z",
+      "updatedAt": "2026-08-19T19:35:30.133Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-parameters-expert_V1.3.0.md": {
@@ -132,7 +132,7 @@
       "hash": "988a95b14323396a",
       "size": 7434,
       "mtimeMs": 1777059126388.01,
-      "updatedAt": "2026-08-10T06:23:15.124Z",
+      "updatedAt": "2026-08-19T19:35:30.133Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-poolconnections-expert_V1.3.0.md": {
@@ -141,7 +141,7 @@
       "hash": "0f2a645894a36a89",
       "size": 8111,
       "mtimeMs": 1777059121725.5051,
-      "updatedAt": "2026-08-10T06:23:15.124Z",
+      "updatedAt": "2026-08-19T19:35:30.133Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-spec-writer_V1.0.0.md": {
@@ -150,7 +150,7 @@
       "hash": "2ae956f66042d4c5",
       "size": 4472,
       "mtimeMs": 1777090315393.0298,
-      "updatedAt": "2026-08-10T06:23:15.125Z",
+      "updatedAt": "2026-08-19T19:35:30.134Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-tester_V1.0.0.md": {
@@ -159,7 +159,7 @@
       "hash": "19d59b415674bcd6",
       "size": 6592,
       "mtimeMs": 1777090315387.5032,
-      "updatedAt": "2026-08-10T06:23:15.126Z",
+      "updatedAt": "2026-08-19T19:35:30.135Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-views-expert_V1.3.0.md": {
@@ -168,7 +168,7 @@
       "hash": "9c8b9628dc003f3b",
       "size": 7706,
       "mtimeMs": 1777059118644.0664,
-      "updatedAt": "2026-08-10T06:23:15.126Z",
+      "updatedAt": "2026-08-19T19:35:30.136Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-views-orchestrator_V1.3.0.md": {
@@ -177,7 +177,7 @@
       "hash": "39e0108883f8afbf",
       "size": 7949,
       "mtimeMs": 1777067417624.9653,
-      "updatedAt": "2026-08-10T06:23:15.126Z",
+      "updatedAt": "2026-08-19T19:35:30.136Z",
       "source": "scan"
     },
     ".cursor/agents/developer-delphi-agent-writer_V1.0.0.md": {
@@ -186,7 +186,7 @@
       "hash": "0d885c346e54a433",
       "size": 3609,
       "mtimeMs": 1777090315397.5564,
-      "updatedAt": "2026-08-10T06:23:15.127Z",
+      "updatedAt": "2026-08-19T19:35:30.137Z",
       "source": "scan"
     },
     ".cursor/agents/developer-golang-agent-orchestrator_V1.0.0.md": {
@@ -195,7 +195,7 @@
       "hash": "27801cc1b8844b26",
       "size": 9553,
       "mtimeMs": 1786303179510.7747,
-      "updatedAt": "2026-08-10T06:23:15.127Z",
+      "updatedAt": "2026-08-19T19:35:30.137Z",
       "source": "scan"
     },
     ".cursor/agents/developer-vuejs-agent-core-expert_V1.2.0.md": {
@@ -204,7 +204,7 @@
       "hash": "f1a80c8ccbbbcfe2",
       "size": 5458,
       "mtimeMs": 1776449262009.668,
-      "updatedAt": "2026-08-10T06:23:15.127Z",
+      "updatedAt": "2026-08-19T19:35:30.137Z",
       "source": "scan"
     },
     ".cursor/agents/developer-vuejs-agent-orchestrator_V1.2.0.md": {
@@ -213,7 +213,7 @@
       "hash": "4fdd07141fbfadab",
       "size": 7108,
       "mtimeMs": 1776449295101.522,
-      "updatedAt": "2026-08-10T06:23:15.128Z",
+      "updatedAt": "2026-08-19T19:35:30.138Z",
       "source": "scan"
     },
     ".cursor/agents/developer-vuejs-agent-routing-state-expert_V1.2.0.md": {
@@ -222,7 +222,7 @@
       "hash": "1fa2002f26ac47a9",
       "size": 4582,
       "mtimeMs": 1776449296266.9878,
-      "updatedAt": "2026-08-10T06:23:15.128Z",
+      "updatedAt": "2026-08-19T19:35:30.138Z",
       "source": "scan"
     },
     ".cursor/agents/developer-web-agent-quality-expert_V1.2.0.md": {
@@ -231,7 +231,7 @@
       "hash": "0495d18ea11dfd12",
       "size": 4654,
       "mtimeMs": 1776449297353.4995,
-      "updatedAt": "2026-08-10T06:23:15.128Z",
+      "updatedAt": "2026-08-19T19:35:30.139Z",
       "source": "scan"
     },
     ".cursor/agents/developer-web-agent-runtime-build-expert_V1.2.0.md": {
@@ -240,7 +240,7 @@
       "hash": "d088843d6160d61a",
       "size": 4718,
       "mtimeMs": 1776449298454.182,
-      "updatedAt": "2026-08-10T06:23:15.129Z",
+      "updatedAt": "2026-08-19T19:35:30.139Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-architecture_V1.2.0.md": {
@@ -249,7 +249,7 @@
       "hash": "6515c15fabb4f899",
       "size": 6096,
       "mtimeMs": 1776450082386.6453,
-      "updatedAt": "2026-08-10T06:23:15.129Z",
+      "updatedAt": "2026-08-19T19:35:30.140Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-class-indexer_V1.2.0.md": {
@@ -258,7 +258,7 @@
       "hash": "c9859dc57ea1cdde",
       "size": 8401,
       "mtimeMs": 1776988756113.0503,
-      "updatedAt": "2026-08-10T06:23:15.129Z",
+      "updatedAt": "2026-08-19T19:35:30.140Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-class-scanner_V1.2.0.md": {
@@ -267,7 +267,7 @@
       "hash": "49b7f75cd818b2eb",
       "size": 9443,
       "mtimeMs": 1776450082588.1482,
-      "updatedAt": "2026-08-10T06:23:15.130Z",
+      "updatedAt": "2026-08-19T19:35:30.140Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-class-writer_V1.2.0.md": {
@@ -276,7 +276,7 @@
       "hash": "a2f4b64bce57f102",
       "size": 9983,
       "mtimeMs": 1776450082698.7395,
-      "updatedAt": "2026-08-10T06:23:15.130Z",
+      "updatedAt": "2026-08-19T19:35:30.141Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-cursor-rules-integration_V1.2.0.md": {
@@ -285,7 +285,7 @@
       "hash": "c44897f5bc4c9377",
       "size": 5765,
       "mtimeMs": 1776450082788.9434,
-      "updatedAt": "2026-08-10T06:23:15.131Z",
+      "updatedAt": "2026-08-19T19:35:30.142Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-migration_V1.2.0.md": {
@@ -294,7 +294,7 @@
       "hash": "fce503b51ee0ddd5",
       "size": 6081,
       "mtimeMs": 1776450082976.874,
-      "updatedAt": "2026-08-10T06:23:15.131Z",
+      "updatedAt": "2026-08-19T19:35:30.142Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-migration-conflict-resolution_V1.2.0.md": {
@@ -303,7 +303,7 @@
       "hash": "a8aa5860faee9205",
       "size": 5924,
       "mtimeMs": 1776450082877.2363,
-      "updatedAt": "2026-08-10T06:23:15.131Z",
+      "updatedAt": "2026-08-19T19:35:30.142Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-orchestrator_V1.4.0.md": {
@@ -312,7 +312,7 @@
       "hash": "0b7327ed3fa50f24",
       "size": 14140,
       "mtimeMs": 1777065835529.97,
-      "updatedAt": "2026-08-10T06:23:15.132Z",
+      "updatedAt": "2026-08-19T19:35:30.143Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-review_V1.2.0.md": {
@@ -321,7 +321,7 @@
       "hash": "79d12e207ec9ff19",
       "size": 6114,
       "mtimeMs": 1776450083083.4841,
-      "updatedAt": "2026-08-10T06:23:15.132Z",
+      "updatedAt": "2026-08-19T19:35:30.143Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-roadmap_V1.2.0.md": {
@@ -330,7 +330,7 @@
       "hash": "7ab1fbdf3473dfc5",
       "size": 5514,
       "mtimeMs": 1776450083162.1892,
-      "updatedAt": "2026-08-10T06:23:15.132Z",
+      "updatedAt": "2026-08-19T19:35:30.144Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-rules_V1.4.0.md": {
@@ -339,7 +339,7 @@
       "hash": "8131f76cfbe0845b",
       "size": 9108,
       "mtimeMs": 1776988756193.2732,
-      "updatedAt": "2026-08-10T06:23:15.133Z",
+      "updatedAt": "2026-08-19T19:35:30.144Z",
       "source": "scan"
     },
     ".cursor/agents/documentation-agent-superseded-definition_V1.2.0.md": {
@@ -348,7 +348,7 @@
       "hash": "ad6eb4ce2cfb7f45",
       "size": 6709,
       "mtimeMs": 1776450083236.165,
-      "updatedAt": "2026-08-10T06:23:15.133Z",
+      "updatedAt": "2026-08-19T19:35:30.144Z",
       "source": "scan"
     },
     ".cursor/agents/governance-agent-orchestrator_V1.0.0.md": {
@@ -357,7 +357,7 @@
       "hash": "d1596321aec108bb",
       "size": 10183,
       "mtimeMs": 1777064158680.3994,
-      "updatedAt": "2026-08-10T06:23:15.133Z",
+      "updatedAt": "2026-08-19T19:35:30.145Z",
       "source": "scan"
     },
     ".cursor/agents/quality-agent-orchestrator_V1.0.0.md": {
@@ -366,7 +366,7 @@
       "hash": "20b1472acdad5031",
       "size": 7485,
       "mtimeMs": 1777064158683.9062,
-      "updatedAt": "2026-08-10T06:23:15.133Z",
+      "updatedAt": "2026-08-19T19:35:30.145Z",
       "source": "scan"
     },
     ".cursor/agents/README.md": {
@@ -375,7 +375,7 @@
       "hash": "650a4374e0ca5adb",
       "size": 6211,
       "mtimeMs": 1786306181460.9656,
-      "updatedAt": "2026-08-10T06:23:15.134Z",
+      "updatedAt": "2026-08-19T19:35:30.146Z",
       "source": "scan"
     },
     ".cursor/agents/version-agent-orchestrator_V1.0.0.md": {
@@ -384,7 +384,7 @@
       "hash": "58c2e6a3e1c93278",
       "size": 6379,
       "mtimeMs": 1777064158686.4873,
-      "updatedAt": "2026-08-10T06:23:15.134Z",
+      "updatedAt": "2026-08-19T19:35:30.146Z",
       "source": "scan"
     },
     ".cursor/commands/audit.md": {
@@ -393,7 +393,7 @@
       "hash": "e639e340823b6041",
       "size": 4069,
       "mtimeMs": 1777092364297.9893,
-      "updatedAt": "2026-08-10T06:23:15.135Z",
+      "updatedAt": "2026-08-19T19:35:30.146Z",
       "source": "scan"
     },
     ".cursor/commands/autostart.md": {
@@ -402,7 +402,7 @@
       "hash": "56b7927ef9f94c75",
       "size": 4042,
       "mtimeMs": 1777217240695.9856,
-      "updatedAt": "2026-08-10T06:23:15.135Z",
+      "updatedAt": "2026-08-19T19:35:30.147Z",
       "source": "scan"
     },
     ".cursor/commands/commands-pack-manifest_V1.5.0.md": {
@@ -411,7 +411,7 @@
       "hash": "aa08ec4b6de96869",
       "size": 4258,
       "mtimeMs": 1777092613384.864,
-      "updatedAt": "2026-08-10T06:23:15.135Z",
+      "updatedAt": "2026-08-19T19:35:30.147Z",
       "source": "scan"
     },
     ".cursor/commands/consolidar.md": {
@@ -420,7 +420,7 @@
       "hash": "32619e1b1712646c",
       "size": 3890,
       "mtimeMs": 1776373724646.4329,
-      "updatedAt": "2026-08-10T06:23:15.136Z",
+      "updatedAt": "2026-08-19T19:35:30.148Z",
       "source": "scan"
     },
     ".cursor/commands/doc.md": {
@@ -429,7 +429,7 @@
       "hash": "f9d9eac3825f1a4e",
       "size": 3293,
       "mtimeMs": 1777092166732.6372,
-      "updatedAt": "2026-08-10T06:23:15.136Z",
+      "updatedAt": "2026-08-19T19:35:30.148Z",
       "source": "scan"
     },
     ".cursor/commands/gestorerp-stack-relink.md": {
@@ -438,7 +438,7 @@
       "hash": "f9c470b5123463ac",
       "size": 2813,
       "mtimeMs": 1779234851627.4954,
-      "updatedAt": "2026-08-10T06:23:15.137Z",
+      "updatedAt": "2026-08-19T19:35:30.149Z",
       "source": "scan"
     },
     ".cursor/commands/iniciar.md": {
@@ -447,7 +447,7 @@
       "hash": "0304a96f615d723f",
       "size": 2410,
       "mtimeMs": 1777063776331.7437,
-      "updatedAt": "2026-08-10T06:23:15.137Z",
+      "updatedAt": "2026-08-19T19:35:30.149Z",
       "source": "scan"
     },
     ".cursor/commands/migration-plan.md": {
@@ -456,7 +456,7 @@
       "hash": "4a5f13bbbe518a5b",
       "size": 3007,
       "mtimeMs": 1776988757832.2332,
-      "updatedAt": "2026-08-10T06:23:15.137Z",
+      "updatedAt": "2026-08-19T19:35:30.149Z",
       "source": "scan"
     },
     ".cursor/commands/new-project.md": {
@@ -465,7 +465,7 @@
       "hash": "ec3216b84cb681ac",
       "size": 1757,
       "mtimeMs": 1777084391517.2395,
-      "updatedAt": "2026-08-10T06:23:15.137Z",
+      "updatedAt": "2026-08-19T19:35:30.150Z",
       "source": "scan"
     },
     ".cursor/commands/reframe.md": {
@@ -474,7 +474,7 @@
       "hash": "17a75695be5d4629",
       "size": 2221,
       "mtimeMs": 1786302457829.577,
-      "updatedAt": "2026-08-10T06:23:15.138Z",
+      "updatedAt": "2026-08-19T19:35:30.150Z",
       "source": "scan"
     },
     ".cursor/commands/review.md": {
@@ -483,7 +483,7 @@
       "hash": "d4c33f8d1e478663",
       "size": 1736,
       "mtimeMs": 1777084391520.243,
-      "updatedAt": "2026-08-10T06:23:15.138Z",
+      "updatedAt": "2026-08-19T19:35:30.150Z",
       "source": "scan"
     },
     ".cursor/commands/security-audit.md": {
@@ -492,7 +492,7 @@
       "hash": "e6f7e0b7337c9c86",
       "size": 2060,
       "mtimeMs": 1786302457827.5713,
-      "updatedAt": "2026-08-10T06:23:15.138Z",
+      "updatedAt": "2026-08-19T19:35:30.151Z",
       "source": "scan"
     },
     ".cursor/commands/spec.md": {
@@ -501,7 +501,7 @@
       "hash": "81c38bc6cfbb1b6e",
       "size": 4120,
       "mtimeMs": 1777092602858.9539,
-      "updatedAt": "2026-08-10T06:23:15.139Z",
+      "updatedAt": "2026-08-19T19:35:30.151Z",
       "source": "scan"
     },
     ".cursor/commands/sync-cursor-pack.md": {
@@ -510,7 +510,7 @@
       "hash": "3856dff7af6043cc",
       "size": 2847,
       "mtimeMs": 1776988757869.343,
-      "updatedAt": "2026-08-10T06:23:15.139Z",
+      "updatedAt": "2026-08-19T19:35:30.152Z",
       "source": "scan"
     },
     ".cursor/commands/syncdb.md": {
@@ -519,7 +519,7 @@
       "hash": "3ed9c235d1f973c2",
       "size": 4350,
       "mtimeMs": 1776988757907.05,
-      "updatedAt": "2026-08-10T06:23:15.139Z",
+      "updatedAt": "2026-08-19T19:35:30.152Z",
       "source": "scan"
     },
     ".cursor/commands/tdd.md": {
@@ -528,7 +528,7 @@
       "hash": "f22e66c509fdaa0f",
       "size": 1625,
       "mtimeMs": 1777090306427.374,
-      "updatedAt": "2026-08-10T06:23:15.140Z",
+      "updatedAt": "2026-08-19T19:35:30.152Z",
       "source": "scan"
     },
     ".cursor/commands/validate-docs.md": {
@@ -537,7 +537,7 @@
       "hash": "a05373acaac319b8",
       "size": 2757,
       "mtimeMs": 1776988757945.6392,
-      "updatedAt": "2026-08-10T06:23:15.140Z",
+      "updatedAt": "2026-08-19T19:35:30.153Z",
       "source": "scan"
     },
     ".cursor/commands/write.md": {
@@ -546,7 +546,7 @@
       "hash": "e205264de8d61de5",
       "size": 1508,
       "mtimeMs": 1777090306432.28,
-      "updatedAt": "2026-08-10T06:23:15.140Z",
+      "updatedAt": "2026-08-19T19:35:30.153Z",
       "source": "scan"
     },
     ".cursor/config.json": {
@@ -555,7 +555,7 @@
       "hash": "df3072e783bed454",
       "size": 7931,
       "mtimeMs": 1783128650651.3179,
-      "updatedAt": "2026-08-10T06:23:15.141Z",
+      "updatedAt": "2026-08-19T19:35:30.156Z",
       "source": "scan"
     },
     ".cursor/pack-inventory.json": {
@@ -564,7 +564,7 @@
       "hash": "a605adaf6763affe",
       "size": 271138,
       "mtimeMs": 1786306937598.2573,
-      "updatedAt": "2026-08-10T06:23:15.143Z",
+      "updatedAt": "2026-08-19T19:35:30.160Z",
       "source": "scan"
     },
     ".cursor/Patchs/2026-08-09_conformidade-pos-kit-golang.md": {
@@ -573,7 +573,7 @@
       "hash": "ee340573aa97e704",
       "size": 12567,
       "mtimeMs": 1786306930647.4214,
-      "updatedAt": "2026-08-10T06:23:15.144Z",
+      "updatedAt": "2026-08-19T19:35:30.161Z",
       "source": "scan"
     },
     ".cursor/Patchs/2026-08-09_kit-golang.md": {
@@ -582,7 +582,7 @@
       "hash": "fe75093d5586fe1b",
       "size": 5254,
       "mtimeMs": 1786304487583.5374,
-      "updatedAt": "2026-08-10T06:23:15.145Z",
+      "updatedAt": "2026-08-19T19:35:30.162Z",
       "source": "scan"
     },
     ".cursor/Patchs/2026-08-09_mcpvmware-go-scaffold.md": {
@@ -591,7 +591,7 @@
       "hash": "cb433b064b34043b",
       "size": 7511,
       "mtimeMs": 1786305915863.0554,
-      "updatedAt": "2026-08-10T06:23:15.145Z",
+      "updatedAt": "2026-08-19T19:35:30.163Z",
       "source": "scan"
     },
     ".cursor/plans/README.md": {
@@ -600,7 +600,7 @@
       "hash": "9d45195affd6bcf2",
       "size": 947,
       "mtimeMs": 1775342043940.5151,
-      "updatedAt": "2026-08-10T06:23:15.146Z",
+      "updatedAt": "2026-08-19T19:35:30.163Z",
       "source": "scan"
     },
     ".cursor/README.md": {
@@ -609,7 +609,7 @@
       "hash": "13413a67729e3921",
       "size": 38848,
       "mtimeMs": 1777258527033.8696,
-      "updatedAt": "2026-08-10T06:23:15.147Z",
+      "updatedAt": "2026-08-19T19:35:30.164Z",
       "source": "scan"
     },
     ".cursor/rules/backend-pascal-encoding-no-escapes_V1.0.0.mdc": {
@@ -618,7 +618,7 @@
       "hash": "f3e94467e0d2c239",
       "size": 3412,
       "mtimeMs": 1776872406159.079,
-      "updatedAt": "2026-08-10T06:23:15.147Z",
+      "updatedAt": "2026-08-19T19:35:30.177Z",
       "source": "scan"
     },
     ".cursor/rules/backend-pascal-source-header_V1.2.0.mdc": {
@@ -627,7 +627,7 @@
       "hash": "954ed1ba904ff998",
       "size": 5843,
       "mtimeMs": 1785627020658.356,
-      "updatedAt": "2026-08-10T06:23:15.148Z",
+      "updatedAt": "2026-08-19T19:35:30.187Z",
       "source": "scan"
     },
     ".cursor/rules/backend-pascal-unit-naming_V1.6.0.mdc": {
@@ -636,7 +636,7 @@
       "hash": "1cde07cfb048aaac",
       "size": 17310,
       "mtimeMs": 1785627474547.5425,
-      "updatedAt": "2026-08-10T06:23:15.148Z",
+      "updatedAt": "2026-08-19T19:35:30.205Z",
       "source": "scan"
     },
     ".cursor/rules/commons-placement-policy_V1.0.0.mdc": {
@@ -645,7 +645,7 @@
       "hash": "3c67f81a9269cbf7",
       "size": 4643,
       "mtimeMs": 1785959433118.2134,
-      "updatedAt": "2026-08-10T06:23:15.149Z",
+      "updatedAt": "2026-08-19T19:35:30.214Z",
       "source": "scan"
     },
     ".cursor/rules/cross-compiler-single-api_V1.0.0.mdc": {
@@ -654,7 +654,7 @@
       "hash": "7aac91efcfb0d5c0",
       "size": 2917,
       "mtimeMs": 1785959433120.2212,
-      "updatedAt": "2026-08-10T06:23:15.149Z",
+      "updatedAt": "2026-08-19T19:35:30.227Z",
       "source": "scan"
     },
     ".cursor/rules/documentation-file-versioning_V1.0.0.mdc": {
@@ -663,7 +663,7 @@
       "hash": "7265d182f9548041",
       "size": 3720,
       "mtimeMs": 1776561487429.6372,
-      "updatedAt": "2026-08-10T06:23:15.150Z",
+      "updatedAt": "2026-08-19T19:35:30.236Z",
       "source": "scan"
     },
     ".cursor/rules/documentation-migration-plan-mode_V1.2.0.mdc": {
@@ -672,7 +672,7 @@
       "hash": "fde24055e56aede8",
       "size": 9378,
       "mtimeMs": 1785627473325.0042,
-      "updatedAt": "2026-08-10T06:23:15.150Z",
+      "updatedAt": "2026-08-19T19:35:30.255Z",
       "source": "scan"
     },
     ".cursor/rules/fpc-native-c-objects-linking_V1.0.0.mdc": {
@@ -681,7 +681,7 @@
       "hash": "42d5463035e4f0fb",
       "size": 3675,
       "mtimeMs": 1785959433122.2222,
-      "updatedAt": "2026-08-10T06:23:15.150Z",
+      "updatedAt": "2026-08-19T19:35:30.266Z",
       "source": "scan"
     },
     ".cursor/rules/openwolf-protocol_V1.0.0.mdc": {
@@ -690,7 +690,7 @@
       "hash": "0e21bbfa8c314298",
       "size": 2002,
       "mtimeMs": 1785627366819.3723,
-      "updatedAt": "2026-08-10T06:23:15.151Z",
+      "updatedAt": "2026-08-19T19:35:30.277Z",
       "source": "scan"
     },
     ".cursor/rules/pack-artifact-placement_V1.3.0.mdc": {
@@ -699,7 +699,7 @@
       "hash": "e94fdbb186839bff",
       "size": 12862,
       "mtimeMs": 1785627388470.6694,
-      "updatedAt": "2026-08-10T06:23:15.151Z",
+      "updatedAt": "2026-08-19T19:35:30.293Z",
       "source": "scan"
     },
     ".cursor/rules/pack-inventory-autoupdate_V1.0.0.mdc": {
@@ -708,7 +708,7 @@
       "hash": "bffc84cb9be936ec",
       "size": 2619,
       "mtimeMs": 1777163824881.6343,
-      "updatedAt": "2026-08-10T06:23:15.152Z",
+      "updatedAt": "2026-08-19T19:35:30.306Z",
       "source": "scan"
     },
     ".cursor/rules/pack-rules-manifest_V1.8.0.md": {
@@ -717,7 +717,7 @@
       "hash": "7c72610650936daa",
       "size": 3565,
       "mtimeMs": 1786306834379.086,
-      "updatedAt": "2026-08-10T06:23:15.152Z",
+      "updatedAt": "2026-08-19T19:35:30.306Z",
       "source": "scan"
     },
     ".cursor/rules/pack-scripts-nomenclature_V1.4.0.mdc": {
@@ -726,7 +726,7 @@
       "hash": "5b19f8d7eef9ac92",
       "size": 4869,
       "mtimeMs": 1786306824328.5945,
-      "updatedAt": "2026-08-10T06:23:15.152Z",
+      "updatedAt": "2026-08-19T19:35:30.317Z",
       "source": "scan"
     },
     ".cursor/rules/project-bootstrap-autostart_V1.2.0.mdc": {
@@ -735,7 +735,7 @@
       "hash": "a4e063f15e20535a",
       "size": 14832,
       "mtimeMs": 1777217192656.867,
-      "updatedAt": "2026-08-10T06:23:15.153Z",
+      "updatedAt": "2026-08-19T19:35:30.331Z",
       "source": "scan"
     },
     ".cursor/rules/project-documentation_V1.0.1.mdc": {
@@ -744,7 +744,7 @@
       "hash": "6b5a81eedab15877",
       "size": 9839,
       "mtimeMs": 1785627388481.1982,
-      "updatedAt": "2026-08-10T06:23:15.153Z",
+      "updatedAt": "2026-08-19T19:35:30.347Z",
       "source": "scan"
     },
     ".cursor/rules/workspace-plans-persist_V1.4.0.mdc": {
@@ -753,7 +753,7 @@
       "hash": "7ee41f708244db7a",
       "size": 10761,
       "mtimeMs": 1785627388485.7026,
-      "updatedAt": "2026-08-10T06:23:15.153Z",
+      "updatedAt": "2026-08-19T19:35:30.363Z",
       "source": "scan"
     },
     ".cursor/rules/workspace-project_V1.1.1.mdc": {
@@ -762,7 +762,7 @@
       "hash": "14ada7098a7dbf61",
       "size": 2519,
       "mtimeMs": 1785627474038.3376,
-      "updatedAt": "2026-08-10T06:23:15.154Z",
+      "updatedAt": "2026-08-19T19:35:30.380Z",
       "source": "scan"
     },
     ".cursor/scripts/apply_mit_to_skills.py": {
@@ -771,7 +771,7 @@
       "hash": "5c04b8711f5f7439",
       "size": 3449,
       "mtimeMs": 1777217009729.6934,
-      "updatedAt": "2026-08-10T06:23:15.155Z",
+      "updatedAt": "2026-08-19T19:35:30.384Z",
       "source": "scan",
       "symbols": [
         {
@@ -810,7 +810,7 @@
       "hash": "8b1de7e91d880dd9",
       "size": 14158,
       "mtimeMs": 1776037296460.0496,
-      "updatedAt": "2026-08-10T06:23:15.156Z",
+      "updatedAt": "2026-08-19T19:35:30.386Z",
       "source": "scan",
       "symbols": [
         {
@@ -884,7 +884,7 @@
       "hash": "d2ac26ccfc0cd8ea",
       "size": 20432,
       "mtimeMs": 1775949389321.0305,
-      "updatedAt": "2026-08-10T06:23:15.157Z",
+      "updatedAt": "2026-08-19T19:35:30.389Z",
       "source": "scan",
       "symbols": [
         {
@@ -986,7 +986,7 @@
       "hash": "1534c99db88ee80a",
       "size": 14764,
       "mtimeMs": 1775949389322.0034,
-      "updatedAt": "2026-08-10T06:23:15.158Z",
+      "updatedAt": "2026-08-19T19:35:30.391Z",
       "source": "scan",
       "symbols": [
         {
@@ -1046,7 +1046,7 @@
       "hash": "04bd2689627e2e76",
       "size": 15548,
       "mtimeMs": 1776037297695.5217,
-      "updatedAt": "2026-08-10T06:23:15.158Z",
+      "updatedAt": "2026-08-19T19:35:30.393Z",
       "source": "scan"
     },
     ".cursor/scripts/bootstrap-build-config.ps1": {
@@ -1055,7 +1055,7 @@
       "hash": "d4a62fd84264ba27",
       "size": 13629,
       "mtimeMs": 1777165505481.5046,
-      "updatedAt": "2026-08-10T06:23:15.159Z",
+      "updatedAt": "2026-08-19T19:35:30.396Z",
       "source": "scan"
     },
     ".cursor/scripts/bootstrap-form-unit.ps1": {
@@ -1064,7 +1064,7 @@
       "hash": "1438de31f6cf3790",
       "size": 7383,
       "mtimeMs": 1775949389317.4502,
-      "updatedAt": "2026-08-10T06:23:15.159Z",
+      "updatedAt": "2026-08-19T19:35:30.397Z",
       "source": "scan"
     },
     ".cursor/scripts/bootstrap-mirror-symlinks.ps1": {
@@ -1073,7 +1073,7 @@
       "hash": "e65afbc429382b79",
       "size": 53344,
       "mtimeMs": 1776988770513.2979,
-      "updatedAt": "2026-08-10T06:23:15.161Z",
+      "updatedAt": "2026-08-19T19:35:30.400Z",
       "source": "scan"
     },
     ".cursor/scripts/bootstrap-reset.ps1": {
@@ -1082,7 +1082,7 @@
       "hash": "04b494d7b7d4a6f7",
       "size": 17780,
       "mtimeMs": 1775949389319.9949,
-      "updatedAt": "2026-08-10T06:23:15.161Z",
+      "updatedAt": "2026-08-19T19:35:30.403Z",
       "source": "scan"
     },
     ".cursor/scripts/bootstrap-skills-project.ps1": {
@@ -1091,7 +1091,7 @@
       "hash": "0653a6eccecbcf09",
       "size": 7280,
       "mtimeMs": 1777217789256.8596,
-      "updatedAt": "2026-08-10T06:23:15.162Z",
+      "updatedAt": "2026-08-19T19:35:30.405Z",
       "source": "scan"
     },
     ".cursor/scripts/database_session_manager.py": {
@@ -1100,7 +1100,7 @@
       "hash": "2f77cbe47b8b7999",
       "size": 24511,
       "mtimeMs": 1776371376904.6738,
-      "updatedAt": "2026-08-10T06:23:15.163Z",
+      "updatedAt": "2026-08-19T19:35:30.407Z",
       "source": "scan",
       "symbols": [
         {
@@ -1300,7 +1300,7 @@
       "hash": "a4a52317dd893c0d",
       "size": 11272,
       "mtimeMs": 1775949389324.513,
-      "updatedAt": "2026-08-10T06:23:15.163Z",
+      "updatedAt": "2026-08-19T19:35:30.410Z",
       "source": "scan",
       "symbols": [
         {
@@ -1381,7 +1381,7 @@
       "hash": "2b2b27de77ff0843",
       "size": 5144,
       "mtimeMs": 1776988770550.839,
-      "updatedAt": "2026-08-10T06:23:15.164Z",
+      "updatedAt": "2026-08-19T19:35:30.412Z",
       "source": "scan"
     },
     ".cursor/scripts/gen_audit_badge.py": {
@@ -1390,7 +1390,7 @@
       "hash": "d707730c3b1053d6",
       "size": 3717,
       "mtimeMs": 1776988770702.0654,
-      "updatedAt": "2026-08-10T06:23:15.164Z",
+      "updatedAt": "2026-08-19T19:35:30.414Z",
       "source": "scan",
       "symbols": [
         {
@@ -1429,7 +1429,7 @@
       "hash": "f9988a0839a05ec8",
       "size": 3363,
       "mtimeMs": 1776988770740.9543,
-      "updatedAt": "2026-08-10T06:23:15.165Z",
+      "updatedAt": "2026-08-19T19:35:30.416Z",
       "source": "scan",
       "symbols": [
         {
@@ -1461,7 +1461,7 @@
       "hash": "081cf3a6999fac40",
       "size": 14270,
       "mtimeMs": 1776042530439.177,
-      "updatedAt": "2026-08-10T06:23:15.165Z",
+      "updatedAt": "2026-08-19T19:35:30.418Z",
       "source": "scan",
       "symbols": [
         {
@@ -1514,7 +1514,7 @@
       "hash": "d5c1d87d13790ef1",
       "size": 10837,
       "mtimeMs": 1776988770779.5295,
-      "updatedAt": "2026-08-10T06:23:15.166Z",
+      "updatedAt": "2026-08-19T19:35:30.420Z",
       "source": "scan",
       "symbols": [
         {
@@ -1609,7 +1609,7 @@
       "hash": "871c488cdeb4cba1",
       "size": 20082,
       "mtimeMs": 1776988770588.4458,
-      "updatedAt": "2026-08-10T06:23:15.166Z",
+      "updatedAt": "2026-08-19T19:35:30.423Z",
       "source": "scan",
       "symbols": [
         {
@@ -1704,7 +1704,7 @@
       "hash": "f363d28e58f81fe2",
       "size": 31741,
       "mtimeMs": 1776262878479.9814,
-      "updatedAt": "2026-08-10T06:23:15.167Z",
+      "updatedAt": "2026-08-19T19:35:30.426Z",
       "source": "scan"
     },
     ".cursor/scripts/scripts-pack-manifest_V1.5.1.md": {
@@ -1713,7 +1713,7 @@
       "hash": "c23ec5f2599539f2",
       "size": 6602,
       "mtimeMs": 1786306843721.2476,
-      "updatedAt": "2026-08-10T06:23:15.167Z",
+      "updatedAt": "2026-08-19T19:35:30.427Z",
       "source": "scan"
     },
     ".cursor/scripts/sync_cursor_pack.py": {
@@ -1722,7 +1722,7 @@
       "hash": "5a43128bab6e3857",
       "size": 17528,
       "mtimeMs": 1777163824635.1768,
-      "updatedAt": "2026-08-10T06:23:15.168Z",
+      "updatedAt": "2026-08-19T19:35:30.429Z",
       "source": "scan",
       "symbols": [
         {
@@ -1796,7 +1796,7 @@
       "hash": "d07c8ccc34279a5a",
       "size": 19921,
       "mtimeMs": 1776519812044.3606,
-      "updatedAt": "2026-08-10T06:23:15.168Z",
+      "updatedAt": "2026-08-19T19:35:30.431Z",
       "source": "scan"
     },
     ".cursor/scripts/transform-headers-adorm.ps1": {
@@ -1805,7 +1805,7 @@
       "hash": "a782f0cc051df3c1",
       "size": 5694,
       "mtimeMs": 1776223415511.3347,
-      "updatedAt": "2026-08-10T06:23:15.169Z",
+      "updatedAt": "2026-08-19T19:35:30.433Z",
       "source": "scan"
     },
     ".cursor/scripts/transform-headers-backend.ps1": {
@@ -1814,7 +1814,7 @@
       "hash": "8d1c89901cfaf9f9",
       "size": 14377,
       "mtimeMs": 1776223144214.922,
-      "updatedAt": "2026-08-10T06:23:15.169Z",
+      "updatedAt": "2026-08-19T19:35:30.435Z",
       "source": "scan"
     },
     ".cursor/scripts/validate_consolidated.py": {
@@ -1823,7 +1823,7 @@
       "hash": "1d812ed2c1493252",
       "size": 22156,
       "mtimeMs": 1786306864763.1057,
-      "updatedAt": "2026-08-10T06:23:15.170Z",
+      "updatedAt": "2026-08-19T19:35:30.438Z",
       "source": "scan",
       "symbols": [
         {
@@ -2030,7 +2030,7 @@
       "hash": "a04203e27bf1a57e",
       "size": 23275,
       "mtimeMs": 1786305646720.0898,
-      "updatedAt": "2026-08-10T06:23:15.170Z",
+      "updatedAt": "2026-08-19T19:35:30.440Z",
       "source": "scan",
       "symbols": [
         {
@@ -2174,7 +2174,7 @@
       "hash": "dea3a9cc19f773a0",
       "size": 10679,
       "mtimeMs": 1786306850012.4146,
-      "updatedAt": "2026-08-10T06:23:15.171Z",
+      "updatedAt": "2026-08-19T19:35:30.442Z",
       "source": "scan",
       "symbols": [
         {
@@ -2241,7 +2241,7 @@
       "hash": "6df304a864aa6793",
       "size": 3039,
       "mtimeMs": 1775923746338.3481,
-      "updatedAt": "2026-08-10T06:23:15.172Z",
+      "updatedAt": "2026-08-19T19:35:30.444Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/consultas_rapidas/instrucoes_referencia.md": {
@@ -2250,7 +2250,7 @@
       "hash": "180da28d85b86182",
       "size": 3956,
       "mtimeMs": 1775923684571.4275,
-      "updatedAt": "2026-08-10T06:23:15.172Z",
+      "updatedAt": "2026-08-19T19:35:30.444Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/consultas_rapidas/jcc_tabela.md": {
@@ -2259,7 +2259,7 @@
       "hash": "d917d5ea07a386c8",
       "size": 2873,
       "mtimeMs": 1775923704755.3813,
-      "updatedAt": "2026-08-10T06:23:15.173Z",
+      "updatedAt": "2026-08-19T19:35:30.445Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/consultas_rapidas/string_ops.md": {
@@ -2268,7 +2268,7 @@
       "hash": "259abfceb9a80ff0",
       "size": 2707,
       "mtimeMs": 1775923724500.5474,
-      "updatedAt": "2026-08-10T06:23:15.173Z",
+      "updatedAt": "2026-08-19T19:35:30.445Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/aritmetica.asm": {
@@ -2277,7 +2277,7 @@
       "hash": "8cc94fbe8d64e476",
       "size": 5958,
       "mtimeMs": 1775923359948.21,
-      "updatedAt": "2026-08-10T06:23:15.174Z",
+      "updatedAt": "2026-08-19T19:35:30.447Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/bitwise_shifts.asm": {
@@ -2286,7 +2286,7 @@
       "hash": "694bfa614fe14c70",
       "size": 5665,
       "mtimeMs": 1775923389893.8843,
-      "updatedAt": "2026-08-10T06:23:15.174Z",
+      "updatedAt": "2026-08-19T19:35:30.450Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/comparacao_saltos.asm": {
@@ -2295,7 +2295,7 @@
       "hash": "85885ae506699cf8",
       "size": 5177,
       "mtimeMs": 1775923418085.3213,
-      "updatedAt": "2026-08-10T06:23:15.174Z",
+      "updatedAt": "2026-08-19T19:35:30.452Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/conditional_ops.asm": {
@@ -2304,7 +2304,7 @@
       "hash": "4a091c9c61a644f7",
       "size": 4671,
       "mtimeMs": 1775923498433.4917,
-      "updatedAt": "2026-08-10T06:23:15.175Z",
+      "updatedAt": "2026-08-19T19:35:30.454Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/loop_patterns.asm": {
@@ -2313,7 +2313,7 @@
       "hash": "c5feca0faff2b1b5",
       "size": 4461,
       "mtimeMs": 1775923473818.915,
-      "updatedAt": "2026-08-10T06:23:15.175Z",
+      "updatedAt": "2026-08-19T19:35:30.456Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/asm/string_operations.asm": {
@@ -2322,7 +2322,7 @@
       "hash": "962892320573a4cd",
       "size": 6510,
       "mtimeMs": 1775923452317.427,
-      "updatedAt": "2026-08-10T06:23:15.176Z",
+      "updatedAt": "2026-08-19T19:35:30.458Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/aritmetica_delphi.pas": {
@@ -2331,7 +2331,7 @@
       "hash": "bfba0a6877373ffc",
       "size": 3887,
       "mtimeMs": 1775923529931.283,
-      "updatedAt": "2026-08-10T06:23:15.177Z",
+      "updatedAt": "2026-08-19T19:35:30.460Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/bitwise_flags.pas": {
@@ -2340,7 +2340,7 @@
       "hash": "a3e6885fe1a10184",
       "size": 3640,
       "mtimeMs": 1775923554140.6094,
-      "updatedAt": "2026-08-10T06:23:15.177Z",
+      "updatedAt": "2026-08-19T19:35:30.462Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/condicional_cmov.pas": {
@@ -2349,7 +2349,7 @@
       "hash": "6e1ef2dda22af136",
       "size": 3568,
       "mtimeMs": 1775923607332.386,
-      "updatedAt": "2026-08-10T06:23:15.177Z",
+      "updatedAt": "2026-08-19T19:35:30.464Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/loop_counter.pas": {
@@ -2358,7 +2358,7 @@
       "hash": "71deb8d8c0f6359e",
       "size": 3159,
       "mtimeMs": 1775923627895.7544,
-      "updatedAt": "2026-08-10T06:23:15.178Z",
+      "updatedAt": "2026-08-19T19:35:30.467Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/prefixo_lock.pas": {
@@ -2367,7 +2367,7 @@
       "hash": "1285017303713ebd",
       "size": 4651,
       "mtimeMs": 1775923655762.401,
-      "updatedAt": "2026-08-10T06:23:15.178Z",
+      "updatedAt": "2026-08-19T19:35:30.469Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/exemplos/pas/string_move.pas": {
@@ -2376,7 +2376,7 @@
       "hash": "ad6e4338be9e4970",
       "size": 3877,
       "mtimeMs": 1775923580197.6704,
-      "updatedAt": "2026-08-10T06:23:15.178Z",
+      "updatedAt": "2026-08-19T19:35:30.471Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/SKILL.md": {
@@ -2385,7 +2385,7 @@
       "hash": "a4f6e21c25ed3ded",
       "size": 11389,
       "mtimeMs": 1777215453634.568,
-      "updatedAt": "2026-08-10T06:23:15.179Z",
+      "updatedAt": "2026-08-19T19:35:30.472Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/templates/TEMPLATE_atomic_inc.pas": {
@@ -2394,7 +2394,7 @@
       "hash": "b919a7fce60919b3",
       "size": 3634,
       "mtimeMs": 1775923789291.97,
-      "updatedAt": "2026-08-10T06:23:15.179Z",
+      "updatedAt": "2026-08-19T19:35:30.474Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/templates/TEMPLATE_loop_array.pas": {
@@ -2403,7 +2403,7 @@
       "hash": "72d5e1b8fbccb424",
       "size": 2570,
       "mtimeMs": 1775923767916.258,
-      "updatedAt": "2026-08-10T06:23:15.179Z",
+      "updatedAt": "2026-08-19T19:35:30.476Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/templates/TEMPLATE_loop_nasm.asm": {
@@ -2412,7 +2412,7 @@
       "hash": "fdf16a793c476a89",
       "size": 4271,
       "mtimeMs": 1775923834014.927,
-      "updatedAt": "2026-08-10T06:23:15.180Z",
+      "updatedAt": "2026-08-19T19:35:30.478Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-instructions_V1.0.0/templates/TEMPLATE_memset_asm.pas": {
@@ -2421,7 +2421,7 @@
       "hash": "5cb2ea706c914a4d",
       "size": 3426,
       "mtimeMs": 1775923812414.0183,
-      "updatedAt": "2026-08-10T06:23:15.180Z",
+      "updatedAt": "2026-08-19T19:35:30.480Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/consultas_rapidas/preservacao_regras.md": {
@@ -2430,7 +2430,7 @@
       "hash": "540f3ed8f05717be",
       "size": 2950,
       "mtimeMs": 1775923218808.56,
-      "updatedAt": "2026-08-10T06:23:15.181Z",
+      "updatedAt": "2026-08-19T19:35:30.481Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/consultas_rapidas/r8_r15_restricoes.md": {
@@ -2439,7 +2439,7 @@
       "hash": "845d1871406b32f5",
       "size": 2664,
       "mtimeMs": 1775923255364.2861,
-      "updatedAt": "2026-08-10T06:23:15.181Z",
+      "updatedAt": "2026-08-19T19:35:30.481Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/consultas_rapidas/registradores_completo.md": {
@@ -2448,7 +2448,7 @@
       "hash": "eab3b081f5fd4338",
       "size": 2873,
       "mtimeMs": 1775923198828.051,
-      "updatedAt": "2026-08-10T06:23:15.181Z",
+      "updatedAt": "2026-08-19T19:35:30.482Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/consultas_rapidas/self_e_params.md": {
@@ -2457,7 +2457,7 @@
       "hash": "8aa91e6d3209b80b",
       "size": 2790,
       "mtimeMs": 1775923236941.1245,
-      "updatedAt": "2026-08-10T06:23:15.182Z",
+      "updatedAt": "2026-08-19T19:35:30.482Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/asm/lea_calculos.asm": {
@@ -2466,7 +2466,7 @@
       "hash": "5b6ddda11e1058fa",
       "size": 3930,
       "mtimeMs": 1775923076558.1475,
-      "updatedAt": "2026-08-10T06:23:15.182Z",
+      "updatedAt": "2026-08-19T19:35:30.485Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/asm/registradores_subdivisoes.asm": {
@@ -2475,7 +2475,7 @@
       "hash": "e5a29ff840115970",
       "size": 5015,
       "mtimeMs": 1775923054991.9055,
-      "updatedAt": "2026-08-10T06:23:15.182Z",
+      "updatedAt": "2026-08-19T19:35:30.487Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/pas/parametros_register.pas": {
@@ -2484,7 +2484,7 @@
       "hash": "7d338adc1dc0651d",
       "size": 4340,
       "mtimeMs": 1775923103536.7805,
-      "updatedAt": "2026-08-10T06:23:15.183Z",
+      "updatedAt": "2026-08-19T19:35:30.490Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/pas/parametros_x64.pas": {
@@ -2493,7 +2493,7 @@
       "hash": "d356cfa7829ea3aa",
       "size": 4139,
       "mtimeMs": 1775923124808.415,
-      "updatedAt": "2026-08-10T06:23:15.183Z",
+      "updatedAt": "2026-08-19T19:35:30.492Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/pas/preservar_obrigatorios.pas": {
@@ -2502,7 +2502,7 @@
       "hash": "4b27ebcebb1b105e",
       "size": 4760,
       "mtimeMs": 1775923158276.3538,
-      "updatedAt": "2026-08-10T06:23:15.184Z",
+      "updatedAt": "2026-08-19T19:35:30.494Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/exemplos/pas/self_access.pas": {
@@ -2511,7 +2511,7 @@
       "hash": "c1df0bcddb273ad0",
       "size": 4509,
       "mtimeMs": 1775923175558.2095,
-      "updatedAt": "2026-08-10T06:23:15.184Z",
+      "updatedAt": "2026-08-19T19:35:30.496Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/SKILL.md": {
@@ -2520,7 +2520,7 @@
       "hash": "a9c1c9ec39f15df3",
       "size": 9295,
       "mtimeMs": 1777215453635.561,
-      "updatedAt": "2026-08-10T06:23:15.185Z",
+      "updatedAt": "2026-08-19T19:35:30.497Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/templates/TEMPLATE_func_preserva.pas": {
@@ -2529,7 +2529,7 @@
       "hash": "a4be7f06b893545f",
       "size": 4634,
       "mtimeMs": 1775923304140.155,
-      "updatedAt": "2026-08-10T06:23:15.185Z",
+      "updatedAt": "2026-08-19T19:35:30.499Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/templates/TEMPLATE_metodo_asm.pas": {
@@ -2538,7 +2538,7 @@
       "hash": "279bec1a258f1425",
       "size": 3539,
       "mtimeMs": 1775923278138.2158,
-      "updatedAt": "2026-08-10T06:23:15.185Z",
+      "updatedAt": "2026-08-19T19:35:30.501Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-registers_V1.0.0/templates/TEMPLATE_registradores.asm": {
@@ -2547,7 +2547,7 @@
       "hash": "ba11a43149b1e737",
       "size": 4453,
       "mtimeMs": 1775923328236.9011,
-      "updatedAt": "2026-08-10T06:23:15.186Z",
+      "updatedAt": "2026-08-19T19:35:30.504Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/consultas_rapidas/call_ret_delphi.md": {
@@ -2556,7 +2556,7 @@
       "hash": "13139862b1d16e0b",
       "size": 2801,
       "mtimeMs": 1775924129887.2083,
-      "updatedAt": "2026-08-10T06:23:15.186Z",
+      "updatedAt": "2026-08-19T19:35:30.505Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/consultas_rapidas/call_ret_mecanismo.md": {
@@ -2565,7 +2565,7 @@
       "hash": "f699a0d4561ead86",
       "size": 3158,
       "mtimeMs": 1775924110227.4312,
-      "updatedAt": "2026-08-10T06:23:15.187Z",
+      "updatedAt": "2026-08-19T19:35:30.505Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/consultas_rapidas/frame_anatomia_32.md": {
@@ -2574,7 +2574,7 @@
       "hash": "e5d80d6a49e3d4d0",
       "size": 3940,
       "mtimeMs": 1775924064068.8088,
-      "updatedAt": "2026-08-10T06:23:15.187Z",
+      "updatedAt": "2026-08-19T19:35:30.506Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/consultas_rapidas/frame_anatomia_64.md": {
@@ -2583,7 +2583,7 @@
       "hash": "60a6d6eea1d6a62a",
       "size": 4238,
       "mtimeMs": 1775924088052.0422,
-      "updatedAt": "2026-08-10T06:23:15.187Z",
+      "updatedAt": "2026-08-19T19:35:30.506Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/consultas_rapidas/pseudo_ops_x64.md": {
@@ -2592,7 +2592,7 @@
       "hash": "1336afe52bfeefb1",
       "size": 3646,
       "mtimeMs": 1775924154407.911,
-      "updatedAt": "2026-08-10T06:23:15.188Z",
+      "updatedAt": "2026-08-19T19:35:30.506Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/asm/chamada_recursiva.asm": {
@@ -2601,7 +2601,7 @@
       "hash": "3632e13d81085446",
       "size": 3617,
       "mtimeMs": 1775923911835.4473,
-      "updatedAt": "2026-08-10T06:23:15.188Z",
+      "updatedAt": "2026-08-19T19:35:30.508Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/asm/stack_frame_linux.asm": {
@@ -2610,7 +2610,7 @@
       "hash": "3e1b22178b4000aa",
       "size": 4854,
       "mtimeMs": 1775923862005.489,
-      "updatedAt": "2026-08-10T06:23:15.189Z",
+      "updatedAt": "2026-08-19T19:35:30.510Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/asm/stack_frame_windows.asm": {
@@ -2619,7 +2619,7 @@
       "hash": "f055e24c0bbb8e70",
       "size": 6103,
       "mtimeMs": 1775923893382.1477,
-      "updatedAt": "2026-08-10T06:23:15.189Z",
+      "updatedAt": "2026-08-19T19:35:30.512Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/asm/variaveis_locais.asm": {
@@ -2628,7 +2628,7 @@
       "hash": "89a405be9b7f3b3a",
       "size": 4659,
       "mtimeMs": 1775923936991.4875,
-      "updatedAt": "2026-08-10T06:23:15.189Z",
+      "updatedAt": "2026-08-19T19:35:30.514Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/pas/call_pascal_from_asm.pas": {
@@ -2637,7 +2637,7 @@
       "hash": "1d86527ecdf9fb60",
       "size": 3878,
       "mtimeMs": 1775924041138.7195,
-      "updatedAt": "2026-08-10T06:23:15.190Z",
+      "updatedAt": "2026-08-19T19:35:30.516Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/pas/frame_32bit.pas": {
@@ -2646,7 +2646,7 @@
       "hash": "253156ade55fa36f",
       "size": 3846,
       "mtimeMs": 1775923963476.499,
-      "updatedAt": "2026-08-10T06:23:15.190Z",
+      "updatedAt": "2026-08-19T19:35:30.517Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/pas/frame_64bit.pas": {
@@ -2655,7 +2655,7 @@
       "hash": "5775b9e04cfddcf6",
       "size": 3769,
       "mtimeMs": 1775923987154.1184,
-      "updatedAt": "2026-08-10T06:23:15.190Z",
+      "updatedAt": "2026-08-19T19:35:30.519Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/pas/noframe_leaf.pas": {
@@ -2664,7 +2664,7 @@
       "hash": "9064eac45313fcc6",
       "size": 3150,
       "mtimeMs": 1775924004122.4348,
-      "updatedAt": "2026-08-10T06:23:15.191Z",
+      "updatedAt": "2026-08-19T19:35:30.521Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/exemplos/pas/recursiva_asm.pas": {
@@ -2673,7 +2673,7 @@
       "hash": "154d95105bef787c",
       "size": 3188,
       "mtimeMs": 1775924021608.0864,
-      "updatedAt": "2026-08-10T06:23:15.191Z",
+      "updatedAt": "2026-08-19T19:35:30.523Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/SKILL.md": {
@@ -2682,7 +2682,7 @@
       "hash": "85726553a81bf898",
       "size": 10750,
       "mtimeMs": 1777215453635.561,
-      "updatedAt": "2026-08-10T06:23:15.191Z",
+      "updatedAt": "2026-08-19T19:35:30.523Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/templates/TEMPLATE_funcao_asm_32.pas": {
@@ -2691,7 +2691,7 @@
       "hash": "9ed6394d24666122",
       "size": 3596,
       "mtimeMs": 1775924178611.972,
-      "updatedAt": "2026-08-10T06:23:15.192Z",
+      "updatedAt": "2026-08-19T19:35:30.525Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/templates/TEMPLATE_funcao_asm_64.pas": {
@@ -2700,7 +2700,7 @@
       "hash": "8716cfaf227caa84",
       "size": 3984,
       "mtimeMs": 1775924199726.6377,
-      "updatedAt": "2026-08-10T06:23:15.192Z",
+      "updatedAt": "2026-08-19T19:35:30.527Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/templates/TEMPLATE_funcao_nasm.asm": {
@@ -2709,7 +2709,7 @@
       "hash": "5ee0b2bbe7eadca5",
       "size": 3888,
       "mtimeMs": 1775924237981.5842,
-      "updatedAt": "2026-08-10T06:23:15.192Z",
+      "updatedAt": "2026-08-19T19:35:30.529Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-stack-call_V1.0.0/templates/TEMPLATE_funcao_noframe.pas": {
@@ -2718,7 +2718,7 @@
       "hash": "7be37414ae996f91",
       "size": 3802,
       "mtimeMs": 1775924218958.7285,
-      "updatedAt": "2026-08-10T06:23:15.193Z",
+      "updatedAt": "2026-08-19T19:35:30.530Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/consultas_rapidas/cpu_view_guia.md": {
@@ -2727,7 +2727,7 @@
       "hash": "97fa9c971399289c",
       "size": 2929,
       "mtimeMs": 1775922939791.5635,
-      "updatedAt": "2026-08-10T06:23:15.193Z",
+      "updatedAt": "2026-08-19T19:35:30.531Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/consultas_rapidas/eflags_resumo.md": {
@@ -2736,7 +2736,7 @@
       "hash": "408dec26b3e2e205",
       "size": 2201,
       "mtimeMs": 1775922898652.8745,
-      "updatedAt": "2026-08-10T06:23:15.193Z",
+      "updatedAt": "2026-08-19T19:35:30.532Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/consultas_rapidas/enderecamento_modos.md": {
@@ -2745,7 +2745,7 @@
       "hash": "09a5d0caf2f27a2d",
       "size": 2464,
       "mtimeMs": 1775922959896.9263,
-      "updatedAt": "2026-08-10T06:23:15.194Z",
+      "updatedAt": "2026-08-19T19:35:30.532Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/consultas_rapidas/modos_cpu.md": {
@@ -2754,7 +2754,7 @@
       "hash": "b13ebd2b1b12358a",
       "size": 2837,
       "mtimeMs": 1775922919446.9053,
-      "updatedAt": "2026-08-10T06:23:15.194Z",
+      "updatedAt": "2026-08-19T19:35:30.532Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/consultas_rapidas/registradores_delphi.md": {
@@ -2763,7 +2763,7 @@
       "hash": "60da18e20cb46d78",
       "size": 2039,
       "mtimeMs": 1775922882146.5815,
-      "updatedAt": "2026-08-10T06:23:15.194Z",
+      "updatedAt": "2026-08-19T19:35:30.533Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/asm/estrutura_basica.asm": {
@@ -2772,7 +2772,7 @@
       "hash": "84cd8b1f50898eff",
       "size": 3029,
       "mtimeMs": 1775922751339.1775,
-      "updatedAt": "2026-08-10T06:23:15.195Z",
+      "updatedAt": "2026-08-19T19:35:30.536Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/asm/hello_linux_x64.asm": {
@@ -2781,7 +2781,7 @@
       "hash": "2e0db820463c63a6",
       "size": 1249,
       "mtimeMs": 1775922736158.963,
-      "updatedAt": "2026-08-10T06:23:15.195Z",
+      "updatedAt": "2026-08-19T19:35:30.538Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/asm/modos_enderecamento.asm": {
@@ -2790,7 +2790,7 @@
       "hash": "0edd48b8e8fdbe7c",
       "size": 4293,
       "mtimeMs": 1775922790066.9514,
-      "updatedAt": "2026-08-10T06:23:15.195Z",
+      "updatedAt": "2026-08-19T19:35:30.540Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/asm/registradores_gp.asm": {
@@ -2799,7 +2799,7 @@
       "hash": "88354068ff1ba2dc",
       "size": 3893,
       "mtimeMs": 1775922771590.2156,
-      "updatedAt": "2026-08-10T06:23:15.196Z",
+      "updatedAt": "2026-08-19T19:35:30.542Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/pas/cpu_view_demo.pas": {
@@ -2808,7 +2808,7 @@
       "hash": "71634c30008f72b3",
       "size": 2061,
       "mtimeMs": 1775922808668.7095,
-      "updatedAt": "2026-08-10T06:23:15.196Z",
+      "updatedAt": "2026-08-19T19:35:30.544Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/pas/cpuid_info.pas": {
@@ -2817,7 +2817,7 @@
       "hash": "83e42517c460e259",
       "size": 3614,
       "mtimeMs": 1775922863969.6099,
-      "updatedAt": "2026-08-10T06:23:15.196Z",
+      "updatedAt": "2026-08-19T19:35:30.546Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/pas/rdtsc_benchmark.pas": {
@@ -2826,7 +2826,7 @@
       "hash": "be43c99c74d16223",
       "size": 2967,
       "mtimeMs": 1775922841533.9197,
-      "updatedAt": "2026-08-10T06:23:15.197Z",
+      "updatedAt": "2026-08-19T19:35:30.547Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/exemplos/pas/registradores_basicos.pas": {
@@ -2835,7 +2835,7 @@
       "hash": "3d1c919405f64d23",
       "size": 2055,
       "mtimeMs": 1775922821624.608,
-      "updatedAt": "2026-08-10T06:23:15.197Z",
+      "updatedAt": "2026-08-19T19:35:30.549Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/SKILL.md": {
@@ -2844,7 +2844,7 @@
       "hash": "c4fd1323a0fbebd3",
       "size": 10861,
       "mtimeMs": 1777215453637.0676,
-      "updatedAt": "2026-08-10T06:23:15.197Z",
+      "updatedAt": "2026-08-19T19:35:30.549Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/templates/TEMPLATE_asm_minimo.pas": {
@@ -2853,7 +2853,7 @@
       "hash": "7fd432c8556c9449",
       "size": 3258,
       "mtimeMs": 1775922983073.9788,
-      "updatedAt": "2026-08-10T06:23:15.198Z",
+      "updatedAt": "2026-08-19T19:35:30.551Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/templates/TEMPLATE_cpuid_check.pas": {
@@ -2862,7 +2862,7 @@
       "hash": "b896e6a5c0053b1d",
       "size": 3890,
       "mtimeMs": 1775923007729.1484,
-      "updatedAt": "2026-08-10T06:23:15.198Z",
+      "updatedAt": "2026-08-19T19:35:30.553Z",
       "source": "scan"
     },
     ".cursor/skills/developer-assembly-x86-fundamentals_V1.0.0/templates/TEMPLATE_nasm_basico.asm": {
@@ -2871,7 +2871,7 @@
       "hash": "652231fa769ca46c",
       "size": 3921,
       "mtimeMs": 1775923026875.1833,
-      "updatedAt": "2026-08-10T06:23:15.198Z",
+      "updatedAt": "2026-08-19T19:35:30.555Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-estrutura_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -2880,7 +2880,7 @@
       "hash": "55c2ac467c33d72e",
       "size": 1333,
       "mtimeMs": 1776988811004.746,
-      "updatedAt": "2026-08-10T06:23:15.199Z",
+      "updatedAt": "2026-08-19T19:35:30.556Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-estrutura_V1.0.0/SKILL.md": {
@@ -2889,7 +2889,7 @@
       "hash": "b5151d04ea5db849",
       "size": 6565,
       "mtimeMs": 1777215453637.0676,
-      "updatedAt": "2026-08-10T06:23:15.199Z",
+      "updatedAt": "2026-08-19T19:35:30.556Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-expert_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -2898,7 +2898,7 @@
       "hash": "a97c2274d3a236df",
       "size": 2093,
       "mtimeMs": 1776988811081.4724,
-      "updatedAt": "2026-08-10T06:23:15.200Z",
+      "updatedAt": "2026-08-19T19:35:30.557Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-expert_V1.0.0/SKILL.md": {
@@ -2907,7 +2907,7 @@
       "hash": "1eede3eae6673f48",
       "size": 15716,
       "mtimeMs": 1777215453638.0828,
-      "updatedAt": "2026-08-10T06:23:15.200Z",
+      "updatedAt": "2026-08-19T19:35:30.557Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-orchestrator_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -2916,7 +2916,7 @@
       "hash": "e9bfe41bda7a85b0",
       "size": 950,
       "mtimeMs": 1775963722999.4758,
-      "updatedAt": "2026-08-10T06:23:15.201Z",
+      "updatedAt": "2026-08-19T19:35:30.558Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-orchestrator_V1.0.0/SKILL.md": {
@@ -2925,7 +2925,7 @@
       "hash": "5ef385062a449c64",
       "size": 3819,
       "mtimeMs": 1777215453639.0752,
-      "updatedAt": "2026-08-10T06:23:15.201Z",
+      "updatedAt": "2026-08-19T19:35:30.558Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -2934,7 +2934,7 @@
       "hash": "378e0e013acc228e",
       "size": 1500,
       "mtimeMs": 1775963928343.2898,
-      "updatedAt": "2026-08-10T06:23:15.201Z",
+      "updatedAt": "2026-08-19T19:35:30.559Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/exemplos/roteiro_auth.md": {
@@ -2943,7 +2943,7 @@
       "hash": "4b4644e236f54fae",
       "size": 3834,
       "mtimeMs": 1776988811140.1487,
-      "updatedAt": "2026-08-10T06:23:15.202Z",
+      "updatedAt": "2026-08-19T19:35:30.559Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/exemplos/roteiro_config.md": {
@@ -2952,7 +2952,7 @@
       "hash": "22984d3de05f2c16",
       "size": 4422,
       "mtimeMs": 1776988811189.4443,
-      "updatedAt": "2026-08-10T06:23:15.202Z",
+      "updatedAt": "2026-08-19T19:35:30.560Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/exemplos/roteiro_queries.md": {
@@ -2961,7 +2961,7 @@
       "hash": "15e3c5d0932efa52",
       "size": 4519,
       "mtimeMs": 1776988811233.1753,
-      "updatedAt": "2026-08-10T06:23:15.203Z",
+      "updatedAt": "2026-08-19T19:35:30.560Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/exemplos/roteiro_write.md": {
@@ -2970,7 +2970,7 @@
       "hash": "03584969c66bb963",
       "size": 5932,
       "mtimeMs": 1776988811270.946,
-      "updatedAt": "2026-08-10T06:23:15.203Z",
+      "updatedAt": "2026-08-19T19:35:30.560Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-active-directory-roteiro_V1.0.0/SKILL.md": {
@@ -2979,7 +2979,7 @@
       "hash": "86165b976fad1f59",
       "size": 4879,
       "mtimeMs": 1777215453639.0752,
-      "updatedAt": "2026-08-10T06:23:15.203Z",
+      "updatedAt": "2026-08-19T19:35:30.561Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/consultas_rapidas/android_dproj_release.md": {
@@ -2988,7 +2988,7 @@
       "hash": "7c997b89dd759d32",
       "size": 2227,
       "mtimeMs": 1775923113281.5464,
-      "updatedAt": "2026-08-10T06:23:15.204Z",
+      "updatedAt": "2026-08-19T19:35:30.561Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/consultas_rapidas/android_submission_checklist.md": {
@@ -2997,7 +2997,7 @@
       "hash": "eb6205b8f79d8acf",
       "size": 3813,
       "mtimeMs": 1775923158756.63,
-      "updatedAt": "2026-08-10T06:23:15.204Z",
+      "updatedAt": "2026-08-19T19:35:30.562Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/consultas_rapidas/android_versioning_guide.md": {
@@ -3006,7 +3006,7 @@
       "hash": "0b9f75230d44f33d",
       "size": 2674,
       "mtimeMs": 1775923132249.355,
-      "updatedAt": "2026-08-10T06:23:15.205Z",
+      "updatedAt": "2026-08-19T19:35:30.562Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/exemplos/android_aab_generation.md": {
@@ -3015,7 +3015,7 @@
       "hash": "cab7428ff6791cf1",
       "size": 4099,
       "mtimeMs": 1775923065623.3003,
-      "updatedAt": "2026-08-10T06:23:15.205Z",
+      "updatedAt": "2026-08-19T19:35:30.563Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/exemplos/android_keystore_creation.md": {
@@ -3024,7 +3024,7 @@
       "hash": "bca3479666ba4e34",
       "size": 4457,
       "mtimeMs": 1775923037566.8403,
-      "updatedAt": "2026-08-10T06:23:15.205Z",
+      "updatedAt": "2026-08-19T19:35:30.563Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/exemplos/android_playstore_upload.md": {
@@ -3033,7 +3033,7 @@
       "hash": "66876e5c9ee9a614",
       "size": 4968,
       "mtimeMs": 1775923097010.761,
-      "updatedAt": "2026-08-10T06:23:15.206Z",
+      "updatedAt": "2026-08-19T19:35:30.564Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/SKILL.md": {
@@ -3042,7 +3042,7 @@
       "hash": "7b56a403315ae41d",
       "size": 9715,
       "mtimeMs": 1777215453640.1,
-      "updatedAt": "2026-08-10T06:23:15.206Z",
+      "updatedAt": "2026-08-19T19:35:30.564Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/templates/TEMPLATE_android_release.dproj": {
@@ -3051,7 +3051,7 @@
       "hash": "b524f9cd600298b7",
       "size": 5393,
       "mtimeMs": 1775923187829.2732,
-      "updatedAt": "2026-08-10T06:23:15.206Z",
+      "updatedAt": "2026-08-19T19:35:30.567Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-publishing_V1.0.0/templates/TEMPLATE_keystore_commands.sh": {
@@ -3060,7 +3060,7 @@
       "hash": "003eb925f5742162",
       "size": 5499,
       "mtimeMs": 1775923215138.5159,
-      "updatedAt": "2026-08-10T06:23:15.207Z",
+      "updatedAt": "2026-08-19T19:35:30.569Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/consultas_rapidas/android_dproj_config.md": {
@@ -3069,7 +3069,7 @@
       "hash": "da22825181c4c0a9",
       "size": 3202,
       "mtimeMs": 1775922869474.9934,
-      "updatedAt": "2026-08-10T06:23:15.207Z",
+      "updatedAt": "2026-08-19T19:35:30.570Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/consultas_rapidas/android_permissions_list.md": {
@@ -3078,7 +3078,7 @@
       "hash": "a5eb2c247268de3f",
       "size": 4938,
       "mtimeMs": 1775922894413.8354,
-      "updatedAt": "2026-08-10T06:23:15.208Z",
+      "updatedAt": "2026-08-19T19:35:30.571Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/exemplos/android_manifest_template.xml": {
@@ -3087,7 +3087,7 @@
       "hash": "c2556e872abd58d9",
       "size": 6329,
       "mtimeMs": 1775922849818.0127,
-      "updatedAt": "2026-08-10T06:23:15.208Z",
+      "updatedAt": "2026-08-19T19:35:30.573Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/exemplos/android_permissions_runtime.pas": {
@@ -3096,7 +3096,7 @@
       "hash": "6ea4a5f81be9ea80",
       "size": 9326,
       "mtimeMs": 1775922822397.8716,
-      "updatedAt": "2026-08-10T06:23:15.208Z",
+      "updatedAt": "2026-08-19T19:35:30.575Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/exemplos/android_sdk_setup.md": {
@@ -3105,7 +3105,7 @@
       "hash": "6038f17e824b8d25",
       "size": 4384,
       "mtimeMs": 1775922783012.712,
-      "updatedAt": "2026-08-10T06:23:15.209Z",
+      "updatedAt": "2026-08-19T19:35:30.576Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/SKILL.md": {
@@ -3114,7 +3114,7 @@
       "hash": "1a5030069c923818",
       "size": 10238,
       "mtimeMs": 1777215453641.0774,
-      "updatedAt": "2026-08-10T06:23:15.209Z",
+      "updatedAt": "2026-08-19T19:35:30.576Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/templates/TEMPLATE_android_permissions.pas": {
@@ -3123,7 +3123,7 @@
       "hash": "78814e7a30f64926",
       "size": 5943,
       "mtimeMs": 1775922950429.9714,
-      "updatedAt": "2026-08-10T06:23:15.210Z",
+      "updatedAt": "2026-08-19T19:35:30.578Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-android-setup_V1.0.0/templates/TEMPLATE_AndroidManifest.xml": {
@@ -3132,7 +3132,7 @@
       "hash": "5ab48cd23f54c56c",
       "size": 7312,
       "mtimeMs": 1775922920813.9526,
-      "updatedAt": "2026-08-10T06:23:15.210Z",
+      "updatedAt": "2026-08-19T19:35:30.580Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/consultas_rapidas/callee_saved_tabela.md": {
@@ -3141,7 +3141,7 @@
       "hash": "d1aec5d9cb2c985c",
       "size": 1943,
       "mtimeMs": 1775922723211.3738,
-      "updatedAt": "2026-08-10T06:23:15.210Z",
+      "updatedAt": "2026-08-19T19:35:30.581Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/consultas_rapidas/convencoes_comparativo.md": {
@@ -3150,7 +3150,7 @@
       "hash": "06865a26ab07a647",
       "size": 1881,
       "mtimeMs": 1775922708076.3047,
-      "updatedAt": "2026-08-10T06:23:15.211Z",
+      "updatedAt": "2026-08-19T19:35:30.581Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/consultas_rapidas/convencoes_delphi.md": {
@@ -3159,7 +3159,7 @@
       "hash": "5592a59df3dbdff7",
       "size": 2174,
       "mtimeMs": 1775922693995.7908,
-      "updatedAt": "2026-08-10T06:23:15.211Z",
+      "updatedAt": "2026-08-19T19:35:30.582Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/consultas_rapidas/retorno_tipos.md": {
@@ -3168,7 +3168,7 @@
       "hash": "e8582f169aed58d4",
       "size": 2435,
       "mtimeMs": 1775922742796.5479,
-      "updatedAt": "2026-08-10T06:23:15.211Z",
+      "updatedAt": "2026-08-19T19:35:30.582Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/asm/cdecl_32bit.asm": {
@@ -3177,7 +3177,7 @@
       "hash": "738be900dbad3331",
       "size": 2142,
       "mtimeMs": 1775922600923.792,
-      "updatedAt": "2026-08-10T06:23:15.212Z",
+      "updatedAt": "2026-08-19T19:35:30.585Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/asm/stdcall_32bit.asm": {
@@ -3186,7 +3186,7 @@
       "hash": "5199bde92b09d65a",
       "size": 1754,
       "mtimeMs": 1775922585022.7654,
-      "updatedAt": "2026-08-10T06:23:15.212Z",
+      "updatedAt": "2026-08-19T19:35:30.586Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/asm/windows_x64_shadow.asm": {
@@ -3195,7 +3195,7 @@
       "hash": "a85caf4e8d6c9d8a",
       "size": 3190,
       "mtimeMs": 1775922623115.0627,
-      "updatedAt": "2026-08-10T06:23:15.212Z",
+      "updatedAt": "2026-08-19T19:35:30.588Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/pas/conv_cdecl.pas": {
@@ -3204,7 +3204,7 @@
       "hash": "e232086812b1b94d",
       "size": 933,
       "mtimeMs": 1775922654542.2305,
-      "updatedAt": "2026-08-10T06:23:15.213Z",
+      "updatedAt": "2026-08-19T19:35:30.590Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/pas/conv_register.pas": {
@@ -3213,7 +3213,7 @@
       "hash": "fa5258e2afcebe17",
       "size": 1276,
       "mtimeMs": 1775922634656.045,
-      "updatedAt": "2026-08-10T06:23:15.213Z",
+      "updatedAt": "2026-08-19T19:35:30.592Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/pas/conv_safecall.pas": {
@@ -3222,7 +3222,7 @@
       "hash": "97705a8bab4fab22",
       "size": 1567,
       "mtimeMs": 1775922666115.6206,
-      "updatedAt": "2026-08-10T06:23:15.213Z",
+      "updatedAt": "2026-08-19T19:35:30.594Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/pas/conv_stdcall.pas": {
@@ -3231,7 +3231,7 @@
       "hash": "c7a7b437ad92022d",
       "size": 1242,
       "mtimeMs": 1775922646066.6567,
-      "updatedAt": "2026-08-10T06:23:15.214Z",
+      "updatedAt": "2026-08-19T19:35:30.596Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/exemplos/pas/x64_shadow_space.pas": {
@@ -3240,7 +3240,7 @@
       "hash": "ed00aaafcdbe4ecf",
       "size": 1254,
       "mtimeMs": 1775922678729.5808,
-      "updatedAt": "2026-08-10T06:23:15.214Z",
+      "updatedAt": "2026-08-19T19:35:30.598Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/SKILL.md": {
@@ -3249,7 +3249,7 @@
       "hash": "036fa2838d1b49c2",
       "size": 7001,
       "mtimeMs": 1777215453641.0774,
-      "updatedAt": "2026-08-10T06:23:15.214Z",
+      "updatedAt": "2026-08-19T19:35:30.598Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/templates/TEMPLATE_conv_register.pas": {
@@ -3258,7 +3258,7 @@
       "hash": "99f9f30b49a068a8",
       "size": 852,
       "mtimeMs": 1775922752186.3318,
-      "updatedAt": "2026-08-10T06:23:15.215Z",
+      "updatedAt": "2026-08-19T19:35:30.600Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/templates/TEMPLATE_conv_stdcall.pas": {
@@ -3267,7 +3267,7 @@
       "hash": "f231dc79fc5afb2e",
       "size": 1037,
       "mtimeMs": 1775922762356.9976,
-      "updatedAt": "2026-08-10T06:23:15.215Z",
+      "updatedAt": "2026-08-19T19:35:30.602Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/templates/TEMPLATE_sysv_nasm.asm": {
@@ -3276,7 +3276,7 @@
       "hash": "7ab4ce2354da4398",
       "size": 1898,
       "mtimeMs": 1775922787092.517,
-      "updatedAt": "2026-08-10T06:23:15.216Z",
+      "updatedAt": "2026-08-19T19:35:30.604Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-calling-conventions_V1.0.0/templates/TEMPLATE_winapi_call.pas": {
@@ -3285,7 +3285,7 @@
       "hash": "6f649f6446e626f8",
       "size": 1076,
       "mtimeMs": 1775922771890.1636,
-      "updatedAt": "2026-08-10T06:23:15.216Z",
+      "updatedAt": "2026-08-19T19:35:30.606Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/consultas_rapidas/cpu_view_atalhos.md": {
@@ -3294,7 +3294,7 @@
       "hash": "b39eac1a9f4bd3cb",
       "size": 2354,
       "mtimeMs": 1775924093827.863,
-      "updatedAt": "2026-08-10T06:23:15.216Z",
+      "updatedAt": "2026-08-19T19:35:30.607Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/consultas_rapidas/erros_frequentes_asm.md": {
@@ -3303,7 +3303,7 @@
       "hash": "e908e002487eefcd",
       "size": 3103,
       "mtimeMs": 1775924176382.2822,
-      "updatedAt": "2026-08-10T06:23:15.217Z",
+      "updatedAt": "2026-08-19T19:35:30.607Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/consultas_rapidas/gdb_comandos.md": {
@@ -3312,7 +3312,7 @@
       "hash": "112107e9de5e6536",
       "size": 2398,
       "mtimeMs": 1775924152781.9272,
-      "updatedAt": "2026-08-10T06:23:15.217Z",
+      "updatedAt": "2026-08-19T19:35:30.608Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/consultas_rapidas/windbg_comandos.md": {
@@ -3321,7 +3321,7 @@
       "hash": "c4f82d807a8ed94a",
       "size": 2630,
       "mtimeMs": 1775924132940.639,
-      "updatedAt": "2026-08-10T06:23:15.217Z",
+      "updatedAt": "2026-08-19T19:35:30.608Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/consultas_rapidas/x64dbg_guia.md": {
@@ -3330,7 +3330,7 @@
       "hash": "ab4d8ef57324c91b",
       "size": 2649,
       "mtimeMs": 1775924114264.8877,
-      "updatedAt": "2026-08-10T06:23:15.218Z",
+      "updatedAt": "2026-08-19T19:35:30.609Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/exemplos/asm/gdb_session.sh": {
@@ -3339,7 +3339,7 @@
       "hash": "931a6eea5707682e",
       "size": 2410,
       "mtimeMs": 1775924025570.6985,
-      "updatedAt": "2026-08-10T06:23:15.218Z",
+      "updatedAt": "2026-08-19T19:35:30.611Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/exemplos/asm/programa_com_bug.asm": {
@@ -3348,7 +3348,7 @@
       "hash": "ac662f95f3fd49a7",
       "size": 1803,
       "mtimeMs": 1775924007365.361,
-      "updatedAt": "2026-08-10T06:23:15.219Z",
+      "updatedAt": "2026-08-19T19:35:30.613Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/exemplos/pas/breakpoint_asm.pas": {
@@ -3357,7 +3357,7 @@
       "hash": "b328b5def573d992",
       "size": 1868,
       "mtimeMs": 1775924041165.9172,
-      "updatedAt": "2026-08-10T06:23:15.219Z",
+      "updatedAt": "2026-08-19T19:35:30.615Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/exemplos/pas/rdtsc_profiling.pas": {
@@ -3366,7 +3366,7 @@
       "hash": "51f414e8dbec6736",
       "size": 1951,
       "mtimeMs": 1775924058042.964,
-      "updatedAt": "2026-08-10T06:23:15.219Z",
+      "updatedAt": "2026-08-19T19:35:30.617Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/exemplos/pas/stack_inspect.pas": {
@@ -3375,7 +3375,7 @@
       "hash": "5b7b1ed52619b47e",
       "size": 1853,
       "mtimeMs": 1775924072783.922,
-      "updatedAt": "2026-08-10T06:23:15.220Z",
+      "updatedAt": "2026-08-19T19:35:30.619Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/SKILL.md": {
@@ -3384,7 +3384,7 @@
       "hash": "c0b13e5a1f6d1c8e",
       "size": 6306,
       "mtimeMs": 1777215453642.0793,
-      "updatedAt": "2026-08-10T06:23:15.220Z",
+      "updatedAt": "2026-08-19T19:35:30.619Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/templates/TEMPLATE_debug_benchmark.pas": {
@@ -3393,7 +3393,7 @@
       "hash": "70847bf246cb4b30",
       "size": 1363,
       "mtimeMs": 1775924189012.327,
-      "updatedAt": "2026-08-10T06:23:15.220Z",
+      "updatedAt": "2026-08-19T19:35:30.621Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-debugging_V1.0.0/templates/TEMPLATE_int3_break.pas": {
@@ -3402,7 +3402,7 @@
       "hash": "0d06530cd8a1b4d0",
       "size": 1234,
       "mtimeMs": 1775924199840.0024,
-      "updatedAt": "2026-08-10T06:23:15.221Z",
+      "updatedAt": "2026-08-19T19:35:30.623Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/consultas_rapidas/dmtindex_como_funciona.md": {
@@ -3411,7 +3411,7 @@
       "hash": "e90ae867574b92a6",
       "size": 2069,
       "mtimeMs": 1775923906813.8008,
-      "updatedAt": "2026-08-10T06:23:15.221Z",
+      "updatedAt": "2026-08-19T19:35:30.624Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/consultas_rapidas/expressoes_asm.md": {
@@ -3420,7 +3420,7 @@
       "hash": "0d47e312df64bb40",
       "size": 3086,
       "mtimeMs": 1775923852841.4795,
-      "updatedAt": "2026-08-10T06:23:15.221Z",
+      "updatedAt": "2026-08-19T19:35:30.624Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/consultas_rapidas/operadores_compilacao.md": {
@@ -3429,7 +3429,7 @@
       "hash": "5a1e558db937b7ee",
       "size": 2381,
       "mtimeMs": 1775923889699.502,
-      "updatedAt": "2026-08-10T06:23:15.222Z",
+      "updatedAt": "2026-08-19T19:35:30.625Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/consultas_rapidas/ptr_word_dword.md": {
@@ -3438,7 +3438,7 @@
       "hash": "664bbda8b00f3bb5",
       "size": 2295,
       "mtimeMs": 1775923924038.9507,
-      "updatedAt": "2026-08-10T06:23:15.222Z",
+      "updatedAt": "2026-08-19T19:35:30.625Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/consultas_rapidas/vmtoffset_como_funciona.md": {
@@ -3447,7 +3447,7 @@
       "hash": "810fc0b6c59f8979",
       "size": 1982,
       "mtimeMs": 1775923870028.8237,
-      "updatedAt": "2026-08-10T06:23:15.222Z",
+      "updatedAt": "2026-08-19T19:35:30.625Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/asm/offset_ptr_nasm.asm": {
@@ -3456,7 +3456,7 @@
       "hash": "fde8ffd333de5afd",
       "size": 3048,
       "mtimeMs": 1775923758886.8425,
-      "updatedAt": "2026-08-10T06:23:15.223Z",
+      "updatedAt": "2026-08-19T19:35:30.628Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/asm/type_size_nasm.asm": {
@@ -3465,7 +3465,7 @@
       "hash": "839d189f83fb6feb",
       "size": 2527,
       "mtimeMs": 1775923779795.9004,
-      "updatedAt": "2026-08-10T06:23:15.224Z",
+      "updatedAt": "2026-08-19T19:35:30.629Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/pas/dmtindex_dynamic.pas": {
@@ -3474,7 +3474,7 @@
       "hash": "8e6a077db913da92",
       "size": 1521,
       "mtimeMs": 1775923831158.2334,
-      "updatedAt": "2026-08-10T06:23:15.224Z",
+      "updatedAt": "2026-08-19T19:35:30.631Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/pas/offset_global.pas": {
@@ -3483,7 +3483,7 @@
       "hash": "a870ecb10d26d89d",
       "size": 1442,
       "mtimeMs": 1775923792165.5386,
-      "updatedAt": "2026-08-10T06:23:15.225Z",
+      "updatedAt": "2026-08-19T19:35:30.633Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/pas/type_size.pas": {
@@ -3492,7 +3492,7 @@
       "hash": "c97154808628ab87",
       "size": 1447,
       "mtimeMs": 1775923804075.6475,
-      "updatedAt": "2026-08-10T06:23:15.225Z",
+      "updatedAt": "2026-08-19T19:35:30.635Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/exemplos/pas/vmtoffset_virtual.pas": {
@@ -3501,7 +3501,7 @@
       "hash": "51bd913ff68bc77c",
       "size": 1814,
       "mtimeMs": 1775923818691.9873,
-      "updatedAt": "2026-08-10T06:23:15.225Z",
+      "updatedAt": "2026-08-19T19:35:30.637Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/SKILL.md": {
@@ -3510,7 +3510,7 @@
       "hash": "502035e18a5a22eb",
       "size": 6796,
       "mtimeMs": 1777215453642.0793,
-      "updatedAt": "2026-08-10T06:23:15.225Z",
+      "updatedAt": "2026-08-19T19:35:30.638Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/templates/TEMPLATE_acesso_campo.pas": {
@@ -3519,7 +3519,7 @@
       "hash": "0627aa10cc169b3b",
       "size": 1113,
       "mtimeMs": 1775923935094.7542,
-      "updatedAt": "2026-08-10T06:23:15.226Z",
+      "updatedAt": "2026-08-19T19:35:30.640Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-expressions_V1.0.0/templates/TEMPLATE_chamada_virtual.pas": {
@@ -3528,7 +3528,7 @@
       "hash": "e22c54f936297166",
       "size": 1537,
       "mtimeMs": 1775923947282.3606,
-      "updatedAt": "2026-08-10T06:23:15.226Z",
+      "updatedAt": "2026-08-19T19:35:30.642Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/consultas_rapidas/declaracao_assembler.md": {
@@ -3537,7 +3537,7 @@
       "hash": "75cd4385de92b7f4",
       "size": 2113,
       "mtimeMs": 1775923208992.8374,
-      "updatedAt": "2026-08-10T06:23:15.227Z",
+      "updatedAt": "2026-08-19T19:35:30.643Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/consultas_rapidas/near_far.md": {
@@ -3546,7 +3546,7 @@
       "hash": "50677f3a4b4dc596",
       "size": 1677,
       "mtimeMs": 1775923286735.331,
-      "updatedAt": "2026-08-10T06:23:15.227Z",
+      "updatedAt": "2026-08-19T19:35:30.644Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/consultas_rapidas/prologue_epilogue.md": {
@@ -3555,7 +3555,7 @@
       "hash": "8938601f908706ac",
       "size": 2417,
       "mtimeMs": 1775923271170.3215,
-      "updatedAt": "2026-08-10T06:23:15.227Z",
+      "updatedAt": "2026-08-19T19:35:30.644Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/consultas_rapidas/pseudo_ops_completo.md": {
@@ -3564,7 +3564,7 @@
       "hash": "09c87ecc0b07109a",
       "size": 2765,
       "mtimeMs": 1775923232144.1792,
-      "updatedAt": "2026-08-10T06:23:15.228Z",
+      "updatedAt": "2026-08-19T19:35:30.645Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/consultas_rapidas/retorno_valores.md": {
@@ -3573,7 +3573,7 @@
       "hash": "19f73a1b7de69ddd",
       "size": 2355,
       "mtimeMs": 1775923251544.5032,
-      "updatedAt": "2026-08-10T06:23:15.228Z",
+      "updatedAt": "2026-08-19T19:35:30.645Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/asm/funcao_retorna_int.asm": {
@@ -3582,7 +3582,7 @@
       "hash": "3bd82f4ef85f6e9d",
       "size": 2448,
       "mtimeMs": 1775923105332.8135,
-      "updatedAt": "2026-08-10T06:23:15.228Z",
+      "updatedAt": "2026-08-19T19:35:30.647Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/asm/memcopy_nasm.asm": {
@@ -3591,7 +3591,7 @@
       "hash": "4530859839642b62",
       "size": 2063,
       "mtimeMs": 1775923129324.4897,
-      "updatedAt": "2026-08-10T06:23:15.229Z",
+      "updatedAt": "2026-08-19T19:35:30.649Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/asm/strlen_nasm.asm": {
@@ -3600,7 +3600,7 @@
       "hash": "9931b98b38291008",
       "size": 1799,
       "mtimeMs": 1775923116761.985,
-      "updatedAt": "2026-08-10T06:23:15.229Z",
+      "updatedAt": "2026-08-19T19:35:30.651Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/pas/func_bitcount.pas": {
@@ -3609,7 +3609,7 @@
       "hash": "3ec0b186b31e5e5c",
       "size": 1995,
       "mtimeMs": 1775923192774.4077,
-      "updatedAt": "2026-08-10T06:23:15.230Z",
+      "updatedAt": "2026-08-19T19:35:30.653Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/pas/func_noframe.pas": {
@@ -3618,7 +3618,7 @@
       "hash": "6f6731ef500ad459",
       "size": 1258,
       "mtimeMs": 1775923165743.6626,
-      "updatedAt": "2026-08-10T06:23:15.230Z",
+      "updatedAt": "2026-08-19T19:35:30.654Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/pas/func_pura_32.pas": {
@@ -3627,7 +3627,7 @@
       "hash": "a0efe1bd086ac96d",
       "size": 1476,
       "mtimeMs": 1775923142966.6367,
-      "updatedAt": "2026-08-10T06:23:15.230Z",
+      "updatedAt": "2026-08-19T19:35:30.656Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/pas/func_pura_64.pas": {
@@ -3636,7 +3636,7 @@
       "hash": "2802632531f371f6",
       "size": 1143,
       "mtimeMs": 1775923152911.828,
-      "updatedAt": "2026-08-10T06:23:15.230Z",
+      "updatedAt": "2026-08-19T19:35:30.658Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/exemplos/pas/func_strlen_asm.pas": {
@@ -3645,7 +3645,7 @@
       "hash": "e4af29eb1cd8a90e",
       "size": 879,
       "mtimeMs": 1775923178025.125,
-      "updatedAt": "2026-08-10T06:23:15.231Z",
+      "updatedAt": "2026-08-19T19:35:30.659Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/SKILL.md": {
@@ -3654,7 +3654,7 @@
       "hash": "aa14ccd8203cdc97",
       "size": 6995,
       "mtimeMs": 1777215453643.077,
-      "updatedAt": "2026-08-10T06:23:15.231Z",
+      "updatedAt": "2026-08-19T19:35:30.660Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/templates/TEMPLATE_func_assembler.pas": {
@@ -3663,7 +3663,7 @@
       "hash": "beaac4d402295940",
       "size": 660,
       "mtimeMs": 1775923294905.0464,
-      "updatedAt": "2026-08-10T06:23:15.231Z",
+      "updatedAt": "2026-08-19T19:35:30.662Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/templates/TEMPLATE_func_simd.pas": {
@@ -3672,7 +3672,7 @@
       "hash": "631eeca2126f2f97",
       "size": 2219,
       "mtimeMs": 1775923319862.0757,
-      "updatedAt": "2026-08-10T06:23:15.232Z",
+      "updatedAt": "2026-08-19T19:35:30.664Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-functions_V1.0.0/templates/TEMPLATE_func_x64.pas": {
@@ -3681,7 +3681,7 @@
       "hash": "a66b9770872b1403",
       "size": 934,
       "mtimeMs": 1775923303335.9817,
-      "updatedAt": "2026-08-10T06:23:15.232Z",
+      "updatedAt": "2026-08-19T19:35:30.666Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/consultas_rapidas/erros_comuns.md": {
@@ -3690,7 +3690,7 @@
       "hash": "bc3c8e4380c068ac",
       "size": 2386,
       "mtimeMs": 1775922990446.836,
-      "updatedAt": "2026-08-10T06:23:15.232Z",
+      "updatedAt": "2026-08-19T19:35:30.667Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/consultas_rapidas/offset_ptr_modificadores.md": {
@@ -3699,7 +3699,7 @@
       "hash": "f46368e384b16067",
       "size": 2380,
       "mtimeMs": 1775923009689.3687,
-      "updatedAt": "2026-08-10T06:23:15.233Z",
+      "updatedAt": "2026-08-19T19:35:30.667Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/consultas_rapidas/restricoes_plataforma.md": {
@@ -3708,7 +3708,7 @@
       "hash": "011c8a769670ab7e",
       "size": 1769,
       "mtimeMs": 1775922973154.3538,
-      "updatedAt": "2026-08-10T06:23:15.233Z",
+      "updatedAt": "2026-08-19T19:35:30.668Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/consultas_rapidas/sintaxe_asm_end.md": {
@@ -3717,7 +3717,7 @@
       "hash": "2d5d57df8f763647",
       "size": 1811,
       "mtimeMs": 1775922958724.0603,
-      "updatedAt": "2026-08-10T06:23:15.233Z",
+      "updatedAt": "2026-08-19T19:35:30.668Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/asm/asm_basico.asm": {
@@ -3726,7 +3726,7 @@
       "hash": "c9668bc82bdb8bb3",
       "size": 2227,
       "mtimeMs": 1775922843410.2998,
-      "updatedAt": "2026-08-10T06:23:15.234Z",
+      "updatedAt": "2026-08-19T19:35:30.670Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/asm/labels_locais.asm": {
@@ -3735,7 +3735,7 @@
       "hash": "64deb18dbd0bd042",
       "size": 2074,
       "mtimeMs": 1775922857390.4385,
-      "updatedAt": "2026-08-10T06:23:15.234Z",
+      "updatedAt": "2026-08-19T19:35:30.672Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_basico.pas": {
@@ -3744,7 +3744,7 @@
       "hash": "24faea2bab24e6c2",
       "size": 1188,
       "mtimeMs": 1775922868963.607,
-      "updatedAt": "2026-08-10T06:23:15.235Z",
+      "updatedAt": "2026-08-19T19:35:30.674Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_campos_objeto.pas": {
@@ -3753,7 +3753,7 @@
       "hash": "125d53bb9f83f40a",
       "size": 2080,
       "mtimeMs": 1775922899261.1914,
-      "updatedAt": "2026-08-10T06:23:15.235Z",
+      "updatedAt": "2026-08-19T19:35:30.676Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_restricao_inline.pas": {
@@ -3762,7 +3762,7 @@
       "hash": "22054cab4653f559",
       "size": 1624,
       "mtimeMs": 1775922944185.7188,
-      "updatedAt": "2026-08-10T06:23:15.235Z",
+      "updatedAt": "2026-08-19T19:35:30.678Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_result.pas": {
@@ -3771,7 +3771,7 @@
       "hash": "89f3753857952314",
       "size": 1301,
       "mtimeMs": 1775922929902.6377,
-      "updatedAt": "2026-08-10T06:23:15.236Z",
+      "updatedAt": "2026-08-19T19:35:30.679Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_small_large.pas": {
@@ -3780,7 +3780,7 @@
       "hash": "b15255a56ed5c90b",
       "size": 2509,
       "mtimeMs": 1775922918367.8926,
-      "updatedAt": "2026-08-10T06:23:15.236Z",
+      "updatedAt": "2026-08-19T19:35:30.681Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/exemplos/pas/inline_variaveis.pas": {
@@ -3789,7 +3789,7 @@
       "hash": "98cf1a14a10f4792",
       "size": 1377,
       "mtimeMs": 1775922880662.1013,
-      "updatedAt": "2026-08-10T06:23:15.236Z",
+      "updatedAt": "2026-08-19T19:35:30.683Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/SKILL.md": {
@@ -3798,7 +3798,7 @@
       "hash": "a2f7eee90ed4f683",
       "size": 5880,
       "mtimeMs": 1777215453644.0764,
-      "updatedAt": "2026-08-10T06:23:15.237Z",
+      "updatedAt": "2026-08-19T19:35:30.683Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/templates/TEMPLATE_inline_loop.pas": {
@@ -3807,7 +3807,7 @@
       "hash": "082d01e4aa7d717c",
       "size": 1474,
       "mtimeMs": 1775923031645.301,
-      "updatedAt": "2026-08-10T06:23:15.237Z",
+      "updatedAt": "2026-08-19T19:35:30.685Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/templates/TEMPLATE_inline_resultado.pas": {
@@ -3816,7 +3816,7 @@
       "hash": "4c50cb98461c895e",
       "size": 829,
       "mtimeMs": 1775923018748.603,
-      "updatedAt": "2026-08-10T06:23:15.237Z",
+      "updatedAt": "2026-08-19T19:35:30.687Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-inline_V1.0.0/templates/TEMPLATE_inline_string_op.pas": {
@@ -3825,7 +3825,7 @@
       "hash": "532f249ca0c40247",
       "size": 1602,
       "mtimeMs": 1775923044098.6108,
-      "updatedAt": "2026-08-10T06:23:15.238Z",
+      "updatedAt": "2026-08-19T19:35:30.689Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/consultas_rapidas/cruzamento_delphi.md": {
@@ -3834,7 +3834,7 @@
       "hash": "d1107dae3d4a1bd4",
       "size": 3202,
       "mtimeMs": 1775924369662.2876,
-      "updatedAt": "2026-08-10T06:23:15.238Z",
+      "updatedAt": "2026-08-19T19:35:30.690Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/consultas_rapidas/mapa_skills.md": {
@@ -3843,7 +3843,7 @@
       "hash": "7a8c05198009f98f",
       "size": 3167,
       "mtimeMs": 1775924280412.2324,
-      "updatedAt": "2026-08-10T06:23:15.238Z",
+      "updatedAt": "2026-08-19T19:35:30.690Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/consultas_rapidas/nasm_vs_delphi_asm.md": {
@@ -3852,7 +3852,7 @@
       "hash": "45e098153baab2de",
       "size": 3348,
       "mtimeMs": 1775924324772.5645,
-      "updatedAt": "2026-08-10T06:23:15.239Z",
+      "updatedAt": "2026-08-19T19:35:30.691Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/consultas_rapidas/progressao_aprendizado.md": {
@@ -3861,7 +3861,7 @@
       "hash": "eed16fee40090df5",
       "size": 2919,
       "mtimeMs": 1777072741016.8247,
-      "updatedAt": "2026-08-10T06:23:15.239Z",
+      "updatedAt": "2026-08-19T19:35:30.691Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/consultas_rapidas/quando_usar_asm.md": {
@@ -3870,7 +3870,7 @@
       "hash": "27a92dc234e2ff2a",
       "size": 2488,
       "mtimeMs": 1775924300166.2507,
-      "updatedAt": "2026-08-10T06:23:15.239Z",
+      "updatedAt": "2026-08-19T19:35:30.691Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-orchestrator_V1.1.0/SKILL.md": {
@@ -3879,7 +3879,7 @@
       "hash": "ff0e781438032b02",
       "size": 10089,
       "mtimeMs": 1777215453644.0764,
-      "updatedAt": "2026-08-10T06:23:15.240Z",
+      "updatedAt": "2026-08-19T19:35:30.692Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/consultas_rapidas/avx512_sintaxe_delphi.md": {
@@ -3888,7 +3888,7 @@
       "hash": "6727db46991cf994",
       "size": 2420,
       "mtimeMs": 1775923580577.9077,
-      "updatedAt": "2026-08-10T06:23:15.240Z",
+      "updatedAt": "2026-08-19T19:35:30.693Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/consultas_rapidas/instrucoes_sse.md": {
@@ -3897,7 +3897,7 @@
       "hash": "369ccf684344e8d3",
       "size": 2946,
       "mtimeMs": 1775923608976.3281,
-      "updatedAt": "2026-08-10T06:23:15.240Z",
+      "updatedAt": "2026-08-19T19:35:30.693Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/consultas_rapidas/non_volatile_xmm.md": {
@@ -3906,7 +3906,7 @@
       "hash": "4662bc728b282d68",
       "size": 2179,
       "mtimeMs": 1775923627211.0825,
-      "updatedAt": "2026-08-10T06:23:15.241Z",
+      "updatedAt": "2026-08-19T19:35:30.694Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/consultas_rapidas/registradores_simd.md": {
@@ -3915,7 +3915,7 @@
       "hash": "3866d6c24a2acdba",
       "size": 2151,
       "mtimeMs": 1775923557389.1304,
-      "updatedAt": "2026-08-10T06:23:15.241Z",
+      "updatedAt": "2026-08-19T19:35:30.694Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/asm/avx2_soma_8floats.asm": {
@@ -3924,7 +3924,7 @@
       "hash": "76c4de293aa477e7",
       "size": 2411,
       "mtimeMs": 1775923414342.4658,
-      "updatedAt": "2026-08-10T06:23:15.241Z",
+      "updatedAt": "2026-08-19T19:35:30.697Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/asm/sse_soma_floats.asm": {
@@ -3933,7 +3933,7 @@
       "hash": "f24d5350a6966745",
       "size": 2501,
       "mtimeMs": 1775923398287.4902,
-      "updatedAt": "2026-08-10T06:23:15.242Z",
+      "updatedAt": "2026-08-19T19:35:30.698Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/asm/sse2_inteiros.asm": {
@@ -3942,7 +3942,7 @@
       "hash": "853424d11644cbb2",
       "size": 2905,
       "mtimeMs": 1775923431058.5752,
-      "updatedAt": "2026-08-10T06:23:15.242Z",
+      "updatedAt": "2026-08-19T19:35:30.700Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/pas/avx2_soma_8floats.pas": {
@@ -3951,7 +3951,7 @@
       "hash": "7acd068ff57c9a39",
       "size": 3790,
       "mtimeMs": 1775923505402.3538,
-      "updatedAt": "2026-08-10T06:23:15.242Z",
+      "updatedAt": "2026-08-19T19:35:30.703Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/pas/avx512_masking.pas": {
@@ -3960,7 +3960,7 @@
       "hash": "5926e034e519bd04",
       "size": 2020,
       "mtimeMs": 1775923524469.717,
-      "updatedAt": "2026-08-10T06:23:15.243Z",
+      "updatedAt": "2026-08-19T19:35:30.705Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/pas/cpuid_avx_check.pas": {
@@ -3969,7 +3969,7 @@
       "hash": "fb51c94eedd049fe",
       "size": 3192,
       "mtimeMs": 1775923476108.6528,
-      "updatedAt": "2026-08-10T06:23:15.243Z",
+      "updatedAt": "2026-08-19T19:35:30.707Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/pas/sse_soma_floats.pas": {
@@ -3978,7 +3978,7 @@
       "hash": "b25f9fb9958687b4",
       "size": 2899,
       "mtimeMs": 1775923452880.5913,
-      "updatedAt": "2026-08-10T06:23:15.243Z",
+      "updatedAt": "2026-08-19T19:35:30.709Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/exemplos/pas/xmm_preserve.pas": {
@@ -3987,7 +3987,7 @@
       "hash": "4a222219bf78418e",
       "size": 1720,
       "mtimeMs": 1775923540434.6206,
-      "updatedAt": "2026-08-10T06:23:15.244Z",
+      "updatedAt": "2026-08-19T19:35:30.711Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/SKILL.md": {
@@ -3996,7 +3996,7 @@
       "hash": "cb95a3e62c608fba",
       "size": 8110,
       "mtimeMs": 1777215453645.0747,
-      "updatedAt": "2026-08-10T06:23:15.244Z",
+      "updatedAt": "2026-08-19T19:35:30.711Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/templates/TEMPLATE_avx2_loop.pas": {
@@ -4005,7 +4005,7 @@
       "hash": "3ee6533db672dd1a",
       "size": 1824,
       "mtimeMs": 1775923658359.141,
-      "updatedAt": "2026-08-10T06:23:15.244Z",
+      "updatedAt": "2026-08-19T19:35:30.713Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/templates/TEMPLATE_avx512_masked.pas": {
@@ -4014,7 +4014,7 @@
       "hash": "3375c55f4c2250b7",
       "size": 1700,
       "mtimeMs": 1775923673071.519,
-      "updatedAt": "2026-08-10T06:23:15.245Z",
+      "updatedAt": "2026-08-19T19:35:30.715Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/templates/TEMPLATE_simd_dispatch.pas": {
@@ -4023,7 +4023,7 @@
       "hash": "eda19aed56d23e15",
       "size": 2456,
       "mtimeMs": 1775923689498.729,
-      "updatedAt": "2026-08-10T06:23:15.245Z",
+      "updatedAt": "2026-08-19T19:35:30.717Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-assembly-simd-avx_V1.0.0/templates/TEMPLATE_sse_dot_product.pas": {
@@ -4032,7 +4032,7 @@
       "hash": "d1cec7e4dd5057aa",
       "size": 1822,
       "mtimeMs": 1775923644045.2913,
-      "updatedAt": "2026-08-10T06:23:15.245Z",
+      "updatedAt": "2026-08-19T19:35:30.719Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-build-toolchain_V1.0.0/exemplos/compile.md": {
@@ -4041,7 +4041,7 @@
       "hash": "ffe654a442f0bc29",
       "size": 26926,
       "mtimeMs": 1777057356688.276,
-      "updatedAt": "2026-08-10T06:23:15.246Z",
+      "updatedAt": "2026-08-19T19:35:30.720Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-build-toolchain_V1.0.0/exemplos/database.md": {
@@ -4050,7 +4050,7 @@
       "hash": "cb254a7b8dd22aec",
       "size": 16817,
       "mtimeMs": 1776988811311.8987,
-      "updatedAt": "2026-08-10T06:23:15.246Z",
+      "updatedAt": "2026-08-19T19:35:30.721Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-build-toolchain_V1.0.0/SKILL.md": {
@@ -4059,7 +4059,7 @@
       "hash": "3ed27bb72e4c9fd6",
       "size": 10077,
       "mtimeMs": 1777215453645.0747,
-      "updatedAt": "2026-08-10T06:23:15.247Z",
+      "updatedAt": "2026-08-19T19:35:30.721Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ci-cd-github_V1.0.0/SKILL.md": {
@@ -4068,7 +4068,7 @@
       "hash": "14b2105a37d16e0a",
       "size": 8562,
       "mtimeMs": 1777215453646.0757,
-      "updatedAt": "2026-08-10T06:23:15.247Z",
+      "updatedAt": "2026-08-19T19:35:30.722Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-claudeignore_V1.0.0/SKILL.md": {
@@ -4077,7 +4077,7 @@
       "hash": "59464779b8683f71",
       "size": 4154,
       "mtimeMs": 1777215453647.084,
-      "updatedAt": "2026-08-10T06:23:15.247Z",
+      "updatedAt": "2026-08-19T19:35:30.723Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/references/classes-structure.md": {
@@ -4086,7 +4086,7 @@
       "hash": "342e33923d40dc14",
       "size": 4822,
       "mtimeMs": 1777084163587.5198,
-      "updatedAt": "2026-08-10T06:23:15.248Z",
+      "updatedAt": "2026-08-19T19:35:30.723Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/references/component-prefixes.md": {
@@ -4095,7 +4095,7 @@
       "hash": "a918e926bad60ebd",
       "size": 4294,
       "mtimeMs": 1777084163594.568,
-      "updatedAt": "2026-08-10T06:23:15.248Z",
+      "updatedAt": "2026-08-19T19:35:30.724Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/references/forbidden-commands.md": {
@@ -4104,7 +4104,7 @@
       "hash": "18053ddc49497fcc",
       "size": 5125,
       "mtimeMs": 1777084163602.0989,
-      "updatedAt": "2026-08-10T06:23:15.248Z",
+      "updatedAt": "2026-08-19T19:35:30.724Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/references/formatting.md": {
@@ -4113,7 +4113,7 @@
       "hash": "cec40f87e45a07ba",
       "size": 3711,
       "mtimeMs": 1777084163609.1086,
-      "updatedAt": "2026-08-10T06:23:15.249Z",
+      "updatedAt": "2026-08-19T19:35:30.725Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/references/naming-conventions.md": {
@@ -4122,7 +4122,7 @@
       "hash": "c012e3ff4963941d",
       "size": 2830,
       "mtimeMs": 1777084163618.1514,
-      "updatedAt": "2026-08-10T06:23:15.249Z",
+      "updatedAt": "2026-08-19T19:35:30.725Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-standards_V1.0.0/SKILL.md": {
@@ -4131,7 +4131,7 @@
       "hash": "6a453f1f31786bcc",
       "size": 6231,
       "mtimeMs": 1777215453647.084,
-      "updatedAt": "2026-08-10T06:23:15.249Z",
+      "updatedAt": "2026-08-19T19:35:30.725Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-coding-workflow_V1.0.0/SKILL.md": {
@@ -4140,7 +4140,7 @@
       "hash": "c79a4146362c0d9c",
       "size": 7002,
       "mtimeMs": 1782576829208.0933,
-      "updatedAt": "2026-08-10T06:23:15.250Z",
+      "updatedAt": "2026-08-19T19:35:30.726Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-crypto-security_V1.0.0/SKILL.md": {
@@ -4149,7 +4149,7 @@
       "hash": "0017f3bc60a67a83",
       "size": 9225,
       "mtimeMs": 1777215453648.2727,
-      "updatedAt": "2026-08-10T06:23:15.250Z",
+      "updatedAt": "2026-08-19T19:35:30.726Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/consultas_rapidas/breakpoint_tipos.md": {
@@ -4158,7 +4158,7 @@
       "hash": "d12b42273d81e5aa",
       "size": 3562,
       "mtimeMs": 1775922624380.8425,
-      "updatedAt": "2026-08-10T06:23:15.251Z",
+      "updatedAt": "2026-08-19T19:35:30.727Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/consultas_rapidas/exceptions_config.md": {
@@ -4167,7 +4167,7 @@
       "hash": "3fdc0529eb9410ce",
       "size": 4606,
       "mtimeMs": 1775922659915.6265,
-      "updatedAt": "2026-08-10T06:23:15.251Z",
+      "updatedAt": "2026-08-19T19:35:30.727Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/consultas_rapidas/ide_atalhos_debug.md": {
@@ -4176,7 +4176,7 @@
       "hash": "50885047320ef070",
       "size": 4643,
       "mtimeMs": 1775922600931.146,
-      "updatedAt": "2026-08-10T06:23:15.252Z",
+      "updatedAt": "2026-08-19T19:35:30.728Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/exemplos/breakpoints_condicionais.pas": {
@@ -4185,7 +4185,7 @@
       "hash": "378485f8cd70fc5f",
       "size": 3061,
       "mtimeMs": 1775922503595.836,
-      "updatedAt": "2026-08-10T06:23:15.252Z",
+      "updatedAt": "2026-08-19T19:35:30.730Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/exemplos/output_debug.pas": {
@@ -4194,7 +4194,7 @@
       "hash": "a0a06c109699a4ad",
       "size": 5655,
       "mtimeMs": 1775922570899.2583,
-      "updatedAt": "2026-08-10T06:23:15.252Z",
+      "updatedAt": "2026-08-19T19:35:30.732Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/exemplos/watches_avancados.pas": {
@@ -4203,7 +4203,7 @@
       "hash": "d4fabc61a08837fb",
       "size": 4506,
       "mtimeMs": 1775922531584.3083,
-      "updatedAt": "2026-08-10T06:23:15.253Z",
+      "updatedAt": "2026-08-19T19:35:30.733Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/SKILL.md": {
@@ -4212,7 +4212,7 @@
       "hash": "e5c71d067bb1a015",
       "size": 7817,
       "mtimeMs": 1777215453648.2727,
-      "updatedAt": "2026-08-10T06:23:15.253Z",
+      "updatedAt": "2026-08-19T19:35:30.734Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-debugging-techniques_V1.0.0/templates/TEMPLATE_debug_helper.pas": {
@@ -4221,7 +4221,7 @@
       "hash": "409c2d0423a3e3d3",
       "size": 5953,
       "mtimeMs": 1775922691604.484,
-      "updatedAt": "2026-08-10T06:23:15.253Z",
+      "updatedAt": "2026-08-19T19:35:30.736Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-docs-to-structured-code_V1.0.0/SKILL.md": {
@@ -4230,7 +4230,7 @@
       "hash": "3f29c9eb4b249cd0",
       "size": 6735,
       "mtimeMs": 1777215453649.27,
-      "updatedAt": "2026-08-10T06:23:15.254Z",
+      "updatedAt": "2026-08-19T19:35:30.737Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-documentation-governance_V1.0.0/SKILL.md": {
@@ -4239,7 +4239,7 @@
       "hash": "76d95dd6f6f1a13b",
       "size": 6353,
       "mtimeMs": 1777215453649.27,
-      "updatedAt": "2026-08-10T06:23:15.254Z",
+      "updatedAt": "2026-08-19T19:35:30.737Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/consultas_rapidas/animatecolor_vs_tanimation.md": {
@@ -4248,7 +4248,7 @@
       "hash": "2f75faf25c6b5899",
       "size": 4491,
       "mtimeMs": 1775909769166.0017,
-      "updatedAt": "2026-08-10T06:23:15.255Z",
+      "updatedAt": "2026-08-19T19:35:30.738Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/consultas_rapidas/interpolacoes_tabela.md": {
@@ -4257,7 +4257,7 @@
       "hash": "da14b74110857be1",
       "size": 3648,
       "mtimeMs": 1775867563964.0522,
-      "updatedAt": "2026-08-10T06:23:15.255Z",
+      "updatedAt": "2026-08-19T19:35:30.738Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/consultas_rapidas/padroes_prontos.md": {
@@ -4266,7 +4266,7 @@
       "hash": "3b1b0d9ec3c540fe",
       "size": 6148,
       "mtimeMs": 1775867621831.808,
-      "updatedAt": "2026-08-10T06:23:15.255Z",
+      "updatedAt": "2026-08-19T19:35:30.739Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/consultas_rapidas/propriedades_animaveis.md": {
@@ -4275,7 +4275,7 @@
       "hash": "2749b51fc5ca0374",
       "size": 3751,
       "mtimeMs": 1775867588540.6726,
-      "updatedAt": "2026-08-10T06:23:15.256Z",
+      "updatedAt": "2026-08-19T19:35:30.739Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/animacao_cascata.pas": {
@@ -4284,7 +4284,7 @@
       "hash": "fe49fc1dec0d1bed",
       "size": 4857,
       "mtimeMs": 1775867512907.923,
-      "updatedAt": "2026-08-10T06:23:15.256Z",
+      "updatedAt": "2026-08-19T19:35:30.741Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/animacoes_basicas.pas": {
@@ -4293,7 +4293,7 @@
       "hash": "c7bc25d46e82aa3d",
       "size": 3286,
       "mtimeMs": 1775866741757.2097,
-      "updatedAt": "2026-08-10T06:23:15.256Z",
+      "updatedAt": "2026-08-19T19:35:30.743Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/animacoes_cor.pas": {
@@ -4302,7 +4302,7 @@
       "hash": "db1bd98b7e2a51bb",
       "size": 3631,
       "mtimeMs": 1775867488067.491,
-      "updatedAt": "2026-08-10T06:23:15.257Z",
+      "updatedAt": "2026-08-19T19:35:30.745Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/animacoes_declarativas.pas": {
@@ -4311,7 +4311,7 @@
       "hash": "b759e4ef2ae2964c",
       "size": 5658,
       "mtimeMs": 1775909678541.4072,
-      "updatedAt": "2026-08-10T06:23:15.257Z",
+      "updatedAt": "2026-08-19T19:35:30.747Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/fmx_forms/AnimacoesDemo.fmx": {
@@ -4320,7 +4320,7 @@
       "hash": "5f381fde6e6bfff4",
       "size": 3715,
       "mtimeMs": 1775909823832.1062,
-      "updatedAt": "2026-08-10T06:23:15.258Z",
+      "updatedAt": "2026-08-19T19:35:30.749Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/hover_animation.pas": {
@@ -4329,7 +4329,7 @@
       "hash": "2710c6af208bac95",
       "size": 4429,
       "mtimeMs": 1775867538410.3503,
-      "updatedAt": "2026-08-10T06:23:15.258Z",
+      "updatedAt": "2026-08-19T19:35:30.751Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/interpolacoes.pas": {
@@ -4338,7 +4338,7 @@
       "hash": "c335c1c6a628032c",
       "size": 5255,
       "mtimeMs": 1775909650741.055,
-      "updatedAt": "2026-08-10T06:23:15.258Z",
+      "updatedAt": "2026-08-19T19:35:30.753Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/lazy_load_pattern.pas": {
@@ -4347,7 +4347,7 @@
       "hash": "92400dfb5e9abe04",
       "size": 6252,
       "mtimeMs": 1775909737224.5437,
-      "updatedAt": "2026-08-10T06:23:15.259Z",
+      "updatedAt": "2026-08-19T19:35:30.755Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/exemplos/tab_switch_animation.pas": {
@@ -4356,7 +4356,7 @@
       "hash": "4e1399c0cb680154",
       "size": 5471,
       "mtimeMs": 1775909704746.2952,
-      "updatedAt": "2026-08-10T06:23:15.259Z",
+      "updatedAt": "2026-08-19T19:35:30.757Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/SKILL.md": {
@@ -4365,7 +4365,7 @@
       "hash": "689003a2182a5a6d",
       "size": 9919,
       "mtimeMs": 1777215453651.2734,
-      "updatedAt": "2026-08-10T06:23:15.259Z",
+      "updatedAt": "2026-08-19T19:35:30.757Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/templates/TEMPLATE_animacao_entrada.pas": {
@@ -4374,7 +4374,7 @@
       "hash": "5a4b98fcb146086a",
       "size": 2646,
       "mtimeMs": 1775867638414.5522,
-      "updatedAt": "2026-08-10T06:23:15.260Z",
+      "updatedAt": "2026-08-19T19:35:30.759Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/templates/TEMPLATE_animacao_saida.pas": {
@@ -4383,7 +4383,7 @@
       "hash": "b2714054798441fb",
       "size": 5456,
       "mtimeMs": 1775909795973.6191,
-      "updatedAt": "2026-08-10T06:23:15.260Z",
+      "updatedAt": "2026-08-19T19:35:30.761Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-animations_V1.0.0/templates/TEMPLATE_hover_card.pas": {
@@ -4392,7 +4392,7 @@
       "hash": "1450a366e4d862c3",
       "size": 4856,
       "mtimeMs": 1775867665393.8647,
-      "updatedAt": "2026-08-10T06:23:15.260Z",
+      "updatedAt": "2026-08-19T19:35:30.764Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/consultas_rapidas/dialogs_crossplatform.md": {
@@ -4401,7 +4401,7 @@
       "hash": "34877a393cfb963e",
       "size": 3620,
       "mtimeMs": 1775911080772.7869,
-      "updatedAt": "2026-08-10T06:23:15.261Z",
+      "updatedAt": "2026-08-19T19:35:30.765Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/consultas_rapidas/livebindings_resumo.md": {
@@ -4410,7 +4410,7 @@
       "hash": "3efb1c25acef0345",
       "size": 3382,
       "mtimeMs": 1775911057534.461,
-      "updatedAt": "2026-08-10T06:23:15.261Z",
+      "updatedAt": "2026-08-19T19:35:30.765Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/consultas_rapidas/tmultiview_modos.md": {
@@ -4419,7 +4419,7 @@
       "hash": "4e39532544933c05",
       "size": 3035,
       "mtimeMs": 1775911035683.8076,
-      "updatedAt": "2026-08-10T06:23:15.262Z",
+      "updatedAt": "2026-08-19T19:35:30.766Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/dialogs_fmx.pas": {
@@ -4428,7 +4428,7 @@
       "hash": "362c1c235f7cd917",
       "size": 4194,
       "mtimeMs": 1775910985896.7488,
-      "updatedAt": "2026-08-10T06:23:15.263Z",
+      "updatedAt": "2026-08-19T19:35:30.768Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/edit_components.pas": {
@@ -4437,7 +4437,7 @@
       "hash": "c56973f4609cd734",
       "size": 4077,
       "mtimeMs": 1775910939790.6033,
-      "updatedAt": "2026-08-10T06:23:15.263Z",
+      "updatedAt": "2026-08-19T19:35:30.770Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/listview_custom.pas": {
@@ -4446,7 +4446,7 @@
       "hash": "0ec0b4dff5f4f9f2",
       "size": 4308,
       "mtimeMs": 1775910963685.4062,
-      "updatedAt": "2026-08-10T06:23:15.263Z",
+      "updatedAt": "2026-08-19T19:35:30.772Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/livebindings_basico.pas": {
@@ -4455,7 +4455,7 @@
       "hash": "b574fbe59c929d47",
       "size": 3377,
       "mtimeMs": 1775910917425.3325,
-      "updatedAt": "2026-08-10T06:23:15.263Z",
+      "updatedAt": "2026-08-19T19:35:30.776Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/progressbar_arc.pas": {
@@ -4464,7 +4464,7 @@
       "hash": "7b47702b860358ad",
       "size": 4799,
       "mtimeMs": 1775911014276.5361,
-      "updatedAt": "2026-08-10T06:23:15.264Z",
+      "updatedAt": "2026-08-19T19:35:30.778Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/exemplos/tmultiview_uso.pas": {
@@ -4473,7 +4473,7 @@
       "hash": "6ad01f4179482c86",
       "size": 3391,
       "mtimeMs": 1775910898477.2766,
-      "updatedAt": "2026-08-10T06:23:15.264Z",
+      "updatedAt": "2026-08-19T19:35:30.781Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/SKILL.md": {
@@ -4482,7 +4482,7 @@
       "hash": "8361df811cad21df",
       "size": 6978,
       "mtimeMs": 1777215453652.5042,
-      "updatedAt": "2026-08-10T06:23:15.264Z",
+      "updatedAt": "2026-08-19T19:35:30.781Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/templates/TEMPLATE_form_binding.pas": {
@@ -4491,7 +4491,7 @@
       "hash": "2012918f1a80960f",
       "size": 4364,
       "mtimeMs": 1775911154624.1604,
-      "updatedAt": "2026-08-10T06:23:15.265Z",
+      "updatedAt": "2026-08-19T19:35:30.784Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/templates/TEMPLATE_listview_items.pas": {
@@ -4500,7 +4500,7 @@
       "hash": "73e8fec264ab376a",
       "size": 3943,
       "mtimeMs": 1775911130027.9595,
-      "updatedAt": "2026-08-10T06:23:15.265Z",
+      "updatedAt": "2026-08-19T19:35:30.786Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-components_V1.0.0/templates/TEMPLATE_multiview_drawer.pas": {
@@ -4509,7 +4509,7 @@
       "hash": "89ccb899fd9703eb",
       "size": 4229,
       "mtimeMs": 1775911107195.202,
-      "updatedAt": "2026-08-10T06:23:15.266Z",
+      "updatedAt": "2026-08-19T19:35:30.788Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/consultas_rapidas/alignlayout_tabela.md": {
@@ -4518,7 +4518,7 @@
       "hash": "fc5401b0d6ee08e3",
       "size": 3699,
       "mtimeMs": 1775866284843.1323,
-      "updatedAt": "2026-08-10T06:23:15.266Z",
+      "updatedAt": "2026-08-19T19:35:30.789Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/consultas_rapidas/containers_hierarquia.md": {
@@ -4527,7 +4527,7 @@
       "hash": "2a07f13b7730d78d",
       "size": 5686,
       "mtimeMs": 1775866530446.3435,
-      "updatedAt": "2026-08-10T06:23:15.267Z",
+      "updatedAt": "2026-08-19T19:35:30.789Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/consultas_rapidas/fill_stroke.md": {
@@ -4536,7 +4536,7 @@
       "hash": "ba5d0221d54339eb",
       "size": 3450,
       "mtimeMs": 1775866312038.9775,
-      "updatedAt": "2026-08-10T06:23:15.267Z",
+      "updatedAt": "2026-08-19T19:35:30.789Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/consultas_rapidas/padding_margins_diff.md": {
@@ -4545,7 +4545,7 @@
       "hash": "f30056af75623ea3",
       "size": 5693,
       "mtimeMs": 1775866562424.0354,
-      "updatedAt": "2026-08-10T06:23:15.267Z",
+      "updatedAt": "2026-08-19T19:35:30.790Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/exemplos/align_fill.pas": {
@@ -4554,7 +4554,7 @@
       "hash": "bc203e9e14ea1a16",
       "size": 3850,
       "mtimeMs": 1775866235183.7183,
-      "updatedAt": "2026-08-10T06:23:15.268Z",
+      "updatedAt": "2026-08-19T19:35:30.792Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/exemplos/layout_basico.pas": {
@@ -4563,7 +4563,7 @@
       "hash": "3abad49fc3bfb4af",
       "size": 3086,
       "mtimeMs": 1775866211072.961,
-      "updatedAt": "2026-08-10T06:23:15.268Z",
+      "updatedAt": "2026-08-19T19:35:30.793Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/exemplos/padding_margins.pas": {
@@ -4572,7 +4572,7 @@
       "hash": "f2dbc68ac248a8bb",
       "size": 5887,
       "mtimeMs": 1775866469197.1055,
-      "updatedAt": "2026-08-10T06:23:15.269Z",
+      "updatedAt": "2026-08-19T19:35:30.795Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/exemplos/responsive_layout.pas": {
@@ -4581,7 +4581,7 @@
       "hash": "a04ca177424ddeaf",
       "size": 5046,
       "mtimeMs": 1775866496966.535,
-      "updatedAt": "2026-08-10T06:23:15.269Z",
+      "updatedAt": "2026-08-19T19:35:30.797Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/exemplos/tipografia_fmx.pas": {
@@ -4590,7 +4590,7 @@
       "hash": "38b38604536ba4c8",
       "size": 3006,
       "mtimeMs": 1775866257513.305,
-      "updatedAt": "2026-08-10T06:23:15.269Z",
+      "updatedAt": "2026-08-19T19:35:30.799Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/SKILL.md": {
@@ -4599,7 +4599,7 @@
       "hash": "7b785f5ff9e73a45",
       "size": 10677,
       "mtimeMs": 1777215453652.5042,
-      "updatedAt": "2026-08-10T06:23:15.270Z",
+      "updatedAt": "2026-08-19T19:35:30.799Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/templates/TEMPLATE_card_layout.pas": {
@@ -4608,7 +4608,7 @@
       "hash": "e846de26e92fb51c",
       "size": 4953,
       "mtimeMs": 1775866590756.5068,
-      "updatedAt": "2026-08-10T06:23:15.270Z",
+      "updatedAt": "2026-08-19T19:35:30.801Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/templates/TEMPLATE_header_footer.pas": {
@@ -4617,7 +4617,7 @@
       "hash": "3aaf35e9c9417ba6",
       "size": 7574,
       "mtimeMs": 1775866661736.6167,
-      "updatedAt": "2026-08-10T06:23:15.271Z",
+      "updatedAt": "2026-08-19T19:35:30.803Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-containers_V1.0.0/templates/TEMPLATE_sidebar.pas": {
@@ -4626,7 +4626,7 @@
       "hash": "10bbf609586cd847",
       "size": 6500,
       "mtimeMs": 1775866625212.2485,
-      "updatedAt": "2026-08-10T06:23:15.271Z",
+      "updatedAt": "2026-08-19T19:35:30.805Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/consultas_rapidas/blur_vs_glow.md": {
@@ -4635,7 +4635,7 @@
       "hash": "fe115f16b41086bb",
       "size": 3590,
       "mtimeMs": 1775910740610.1055,
-      "updatedAt": "2026-08-10T06:23:15.271Z",
+      "updatedAt": "2026-08-19T19:35:30.805Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/consultas_rapidas/effects_animaveis.md": {
@@ -4644,7 +4644,7 @@
       "hash": "89e3b401f714d577",
       "size": 3599,
       "mtimeMs": 1775910764012.8577,
-      "updatedAt": "2026-08-10T06:23:15.272Z",
+      "updatedAt": "2026-08-19T19:35:30.806Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/consultas_rapidas/effects_hierarquia.md": {
@@ -4653,7 +4653,7 @@
       "hash": "e48ea89b30447379",
       "size": 3284,
       "mtimeMs": 1775910694649.0608,
-      "updatedAt": "2026-08-10T06:23:15.272Z",
+      "updatedAt": "2026-08-19T19:35:30.806Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/consultas_rapidas/shadow_parametros.md": {
@@ -4662,7 +4662,7 @@
       "hash": "299978e2338f02f8",
       "size": 3286,
       "mtimeMs": 1775910716899.8372,
-      "updatedAt": "2026-08-10T06:23:15.272Z",
+      "updatedAt": "2026-08-19T19:35:30.806Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/blur_effect.pas": {
@@ -4671,7 +4671,7 @@
       "hash": "2b330f6d5ceb754d",
       "size": 2986,
       "mtimeMs": 1775910476590.1028,
-      "updatedAt": "2026-08-10T06:23:15.273Z",
+      "updatedAt": "2026-08-19T19:35:30.809Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/fundo_fosco_overlay.pas": {
@@ -4680,7 +4680,7 @@
       "hash": "cf7b4c66d8336173",
       "size": 4781,
       "mtimeMs": 1775910671370.5354,
-      "updatedAt": "2026-08-10T06:23:15.273Z",
+      "updatedAt": "2026-08-19T19:35:30.811Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/glow_effect.pas": {
@@ -4689,7 +4689,7 @@
       "hash": "f922c66ef12103cb",
       "size": 2517,
       "mtimeMs": 1775910492901.7676,
-      "updatedAt": "2026-08-10T06:23:15.273Z",
+      "updatedAt": "2026-08-19T19:35:30.812Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/inner_glow.pas": {
@@ -4698,7 +4698,7 @@
       "hash": "fa22b564d01e60c9",
       "size": 4172,
       "mtimeMs": 1775910626317.8647,
-      "updatedAt": "2026-08-10T06:23:15.274Z",
+      "updatedAt": "2026-08-19T19:35:30.814Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/reflexo_effect.pas": {
@@ -4707,7 +4707,7 @@
       "hash": "0d442c3f03edbaf4",
       "size": 2594,
       "mtimeMs": 1775910643410.509,
-      "updatedAt": "2026-08-10T06:23:15.274Z",
+      "updatedAt": "2026-08-19T19:35:30.816Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/exemplos/shadow_effect.pas": {
@@ -4716,7 +4716,7 @@
       "hash": "fcc756513c92e4c0",
       "size": 3101,
       "mtimeMs": 1775910456916.8381,
-      "updatedAt": "2026-08-10T06:23:15.275Z",
+      "updatedAt": "2026-08-19T19:35:30.818Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/SKILL.md": {
@@ -4725,7 +4725,7 @@
       "hash": "4dd07e05bc1d1673",
       "size": 5326,
       "mtimeMs": 1777215453652.5042,
-      "updatedAt": "2026-08-10T06:23:15.275Z",
+      "updatedAt": "2026-08-19T19:35:30.818Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/templates/TEMPLATE_card_sombra.pas": {
@@ -4734,7 +4734,7 @@
       "hash": "8971b0181324e1c1",
       "size": 2899,
       "mtimeMs": 1775910783345.4568,
-      "updatedAt": "2026-08-10T06:23:15.275Z",
+      "updatedAt": "2026-08-19T19:35:30.820Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/templates/TEMPLATE_glow_button.pas": {
@@ -4743,7 +4743,7 @@
       "hash": "5bfbc3ef92707059",
       "size": 3810,
       "mtimeMs": 1775910836686.1926,
-      "updatedAt": "2026-08-10T06:23:15.276Z",
+      "updatedAt": "2026-08-19T19:35:30.822Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-effects_V1.0.0/templates/TEMPLATE_overlay_fosco.pas": {
@@ -4752,7 +4752,7 @@
       "hash": "9aa8aaef9b5e3d37",
       "size": 5332,
       "mtimeMs": 1775910813160.1138,
-      "updatedAt": "2026-08-10T06:23:15.276Z",
+      "updatedAt": "2026-08-19T19:35:30.824Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/consultas_rapidas/automap_pattern.md": {
@@ -4761,7 +4761,7 @@
       "hash": "373c5de20c3f20ed",
       "size": 2806,
       "mtimeMs": 1775914449478.1924,
-      "updatedAt": "2026-08-10T06:23:15.276Z",
+      "updatedAt": "2026-08-19T19:35:30.825Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/consultas_rapidas/frame_lifecycle.md": {
@@ -4770,7 +4770,7 @@
       "hash": "f0d92c434041939b",
       "size": 2034,
       "mtimeMs": 1775914387523.605,
-      "updatedAt": "2026-08-10T06:23:15.277Z",
+      "updatedAt": "2026-08-19T19:35:30.825Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/consultas_rapidas/frame_vs_form.md": {
@@ -4779,7 +4779,7 @@
       "hash": "625e9868b14a201a",
       "size": 2212,
       "mtimeMs": 1775914422205.2812,
-      "updatedAt": "2026-08-10T06:23:15.277Z",
+      "updatedAt": "2026-08-19T19:35:30.825Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/consultas_rapidas/heranca_visual.md": {
@@ -4788,7 +4788,7 @@
       "hash": "d00372b778295649",
       "size": 2571,
       "mtimeMs": 1775914407083.1833,
-      "updatedAt": "2026-08-10T06:23:15.277Z",
+      "updatedAt": "2026-08-19T19:35:30.826Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_basico.pas": {
@@ -4797,7 +4797,7 @@
       "hash": "1a466b17087fd4b6",
       "size": 3816,
       "mtimeMs": 1775914260901.8672,
-      "updatedAt": "2026-08-10T06:23:15.278Z",
+      "updatedAt": "2026-08-19T19:35:30.829Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_destruir_tudo.pas": {
@@ -4806,7 +4806,7 @@
       "hash": "b2177fdb8f91837e",
       "size": 3547,
       "mtimeMs": 1775914324489.7678,
-      "updatedAt": "2026-08-10T06:23:15.278Z",
+      "updatedAt": "2026-08-19T19:35:30.831Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_heranca.pas": {
@@ -4815,7 +4815,7 @@
       "hash": "af08e65311250c4e",
       "size": 5516,
       "mtimeMs": 1775914283016.1433,
-      "updatedAt": "2026-08-10T06:23:15.278Z",
+      "updatedAt": "2026-08-19T19:35:30.833Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_lazy_create.pas": {
@@ -4824,7 +4824,7 @@
       "hash": "0ba65679ca74883e",
       "size": 4253,
       "mtimeMs": 1775914344875.1206,
-      "updatedAt": "2026-08-10T06:23:15.279Z",
+      "updatedAt": "2026-08-19T19:35:30.835Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_modal.pas": {
@@ -4833,7 +4833,7 @@
       "hash": "ce7436586c80e3de",
       "size": 5831,
       "mtimeMs": 1775914371767.1633,
-      "updatedAt": "2026-08-10T06:23:15.279Z",
+      "updatedAt": "2026-08-19T19:35:30.837Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/exemplos/frame_parametros.pas": {
@@ -4842,7 +4842,7 @@
       "hash": "162d1ca0cabff60e",
       "size": 4774,
       "mtimeMs": 1775914304976.836,
-      "updatedAt": "2026-08-10T06:23:15.279Z",
+      "updatedAt": "2026-08-19T19:35:30.839Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/SKILL.md": {
@@ -4851,7 +4851,7 @@
       "hash": "76bb3b1f303f7c09",
       "size": 4349,
       "mtimeMs": 1777215453653.509,
-      "updatedAt": "2026-08-10T06:23:15.280Z",
+      "updatedAt": "2026-08-19T19:35:30.840Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/templates/TEMPLATE_frame_crud.pas": {
@@ -4860,7 +4860,7 @@
       "hash": "f91330d1b940adb2",
       "size": 5541,
       "mtimeMs": 1775914481704.08,
-      "updatedAt": "2026-08-10T06:23:15.280Z",
+      "updatedAt": "2026-08-19T19:35:30.842Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/templates/TEMPLATE_frame_listagem.pas": {
@@ -4869,7 +4869,7 @@
       "hash": "5dba2c173b811f81",
       "size": 7074,
       "mtimeMs": 1775914513933.1028,
-      "updatedAt": "2026-08-10T06:23:15.280Z",
+      "updatedAt": "2026-08-19T19:35:30.843Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-frames_V1.0.0/templates/TEMPLATE_frame_modal.pas": {
@@ -4878,7 +4878,7 @@
       "hash": "4fa79670ef4cea10",
       "size": 6031,
       "mtimeMs": 1775914545141.8406,
-      "updatedAt": "2026-08-10T06:23:15.281Z",
+      "updatedAt": "2026-08-19T19:35:30.845Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-layout_V1.1.0/consultas_rapidas/arquitetura_fmx.md": {
@@ -4887,7 +4887,7 @@
       "hash": "a958d35438d17630",
       "size": 4273,
       "mtimeMs": 1775866090199.822,
-      "updatedAt": "2026-08-10T06:23:15.282Z",
+      "updatedAt": "2026-08-19T19:35:30.846Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-layout_V1.1.0/consultas_rapidas/checklist_layout.md": {
@@ -4896,7 +4896,7 @@
       "hash": "dea3b2b28991d7fd",
       "size": 3187,
       "mtimeMs": 1775866117411.5886,
-      "updatedAt": "2026-08-10T06:23:15.282Z",
+      "updatedAt": "2026-08-19T19:35:30.847Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-layout_V1.1.0/consultas_rapidas/mapa_skills_fmx.md": {
@@ -4905,7 +4905,7 @@
       "hash": "f4db12b2af3f836a",
       "size": 3602,
       "mtimeMs": 1775866060387.573,
-      "updatedAt": "2026-08-10T06:23:15.283Z",
+      "updatedAt": "2026-08-19T19:35:30.847Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-layout_V1.1.0/SKILL.md": {
@@ -4914,7 +4914,7 @@
       "hash": "2254e3b6d636c803",
       "size": 8084,
       "mtimeMs": 1777215453653.509,
-      "updatedAt": "2026-08-10T06:23:15.283Z",
+      "updatedAt": "2026-08-19T19:35:30.847Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/consultas_rapidas/padroes_gestorerp.md": {
@@ -4923,7 +4923,7 @@
       "hash": "c7bcc4274be972e5",
       "size": 3689,
       "mtimeMs": 1775914719845.5903,
-      "updatedAt": "2026-08-10T06:23:15.284Z",
+      "updatedAt": "2026-08-19T19:35:30.848Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/consultas_rapidas/scaling_dpi.md": {
@@ -4932,7 +4932,7 @@
       "hash": "b9a2bf43331f8a64",
       "size": 2515,
       "mtimeMs": 1775914759607.2542,
-      "updatedAt": "2026-08-10T06:23:15.284Z",
+      "updatedAt": "2026-08-19T19:35:30.849Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/consultas_rapidas/stylebook_guia.md": {
@@ -4941,7 +4941,7 @@
       "hash": "743378ecf0e278dd",
       "size": 2527,
       "mtimeMs": 1775914737668.7468,
-      "updatedAt": "2026-08-10T06:23:15.284Z",
+      "updatedAt": "2026-08-19T19:35:30.849Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/exemplos/arcprogress_chart.pas": {
@@ -4950,7 +4950,7 @@
       "hash": "a764362dd962a15e",
       "size": 6985,
       "mtimeMs": 1775914628026.9626,
-      "updatedAt": "2026-08-10T06:23:15.285Z",
+      "updatedAt": "2026-08-19T19:35:30.851Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/exemplos/crud_padrao.pas": {
@@ -4959,7 +4959,7 @@
       "hash": "e21549c852b156de",
       "size": 9111,
       "mtimeMs": 1775914695540.8499,
-      "updatedAt": "2026-08-10T06:23:15.285Z",
+      "updatedAt": "2026-08-19T19:35:30.853Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/exemplos/drag_sem_titlebar.pas": {
@@ -4968,7 +4968,7 @@
       "hash": "ed419fd75cff53a1",
       "size": 4821,
       "mtimeMs": 1775914594457.9934,
-      "updatedAt": "2026-08-10T06:23:15.285Z",
+      "updatedAt": "2026-08-19T19:35:30.855Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/exemplos/estilo_customizado.pas": {
@@ -4977,7 +4977,7 @@
       "hash": "0c93d9c6f9c4a1a9",
       "size": 4366,
       "mtimeMs": 1775914652173.8035,
-      "updatedAt": "2026-08-10T06:23:15.286Z",
+      "updatedAt": "2026-08-19T19:35:30.857Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/SKILL.md": {
@@ -4986,7 +4986,7 @@
       "hash": "bd0441a5b7efd4f4",
       "size": 3231,
       "mtimeMs": 1777215453654.4856,
-      "updatedAt": "2026-08-10T06:23:15.286Z",
+      "updatedAt": "2026-08-19T19:35:30.858Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/templates/TEMPLATE_arc_progress.pas": {
@@ -4995,7 +4995,7 @@
       "hash": "80bd4ab9dfefdb78",
       "size": 4428,
       "mtimeMs": 1775914802882.011,
-      "updatedAt": "2026-08-10T06:23:15.286Z",
+      "updatedAt": "2026-08-19T19:35:30.860Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/templates/TEMPLATE_crud_completo.pas": {
@@ -5004,7 +5004,7 @@
       "hash": "430022126b31e06e",
       "size": 11211,
       "mtimeMs": 1775914847755.0535,
-      "updatedAt": "2026-08-10T06:23:15.287Z",
+      "updatedAt": "2026-08-19T19:35:30.862Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-fmx-patterns_V1.0.0/templates/TEMPLATE_drag_form.pas": {
@@ -5013,7 +5013,7 @@
       "hash": "3bb4fe530d428673",
       "size": 4148,
       "mtimeMs": 1775914781678.3938,
-      "updatedAt": "2026-08-10T06:23:15.287Z",
+      "updatedAt": "2026-08-19T19:35:30.865Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-horse-orchestrator_V1.0.0/skill.md": {
@@ -5022,7 +5022,7 @@
       "hash": "13b4c68ed72d2d65",
       "size": 6763,
       "mtimeMs": 1777215453654.4856,
-      "updatedAt": "2026-08-10T06:23:15.287Z",
+      "updatedAt": "2026-08-19T19:35:30.866Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-indy-email_V1.0.0/SKILL.md": {
@@ -5031,7 +5031,7 @@
       "hash": "85727c84747243ac",
       "size": 18094,
       "mtimeMs": 1777215453655.4753,
-      "updatedAt": "2026-08-10T06:23:15.288Z",
+      "updatedAt": "2026-08-19T19:35:30.866Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-indy-ftp_V1.0.0/SKILL.md": {
@@ -5040,7 +5040,7 @@
       "hash": "fc2d1f3b5ee8897c",
       "size": 13413,
       "mtimeMs": 1777215453655.4753,
-      "updatedAt": "2026-08-10T06:23:15.288Z",
+      "updatedAt": "2026-08-19T19:35:30.867Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-indy-http_V1.0.0/SKILL.md": {
@@ -5049,7 +5049,7 @@
       "hash": "029f0504804d6410",
       "size": 19995,
       "mtimeMs": 1777215453656.4758,
-      "updatedAt": "2026-08-10T06:23:15.289Z",
+      "updatedAt": "2026-08-19T19:35:30.867Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-indy-tcp_V1.0.0/SKILL.md": {
@@ -5058,7 +5058,7 @@
       "hash": "55117b5a081f5313",
       "size": 16706,
       "mtimeMs": 1777215453657.4783,
-      "updatedAt": "2026-08-10T06:23:15.289Z",
+      "updatedAt": "2026-08-19T19:35:30.868Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-publishing_V1.0.0/SKILL.md": {
@@ -5067,7 +5067,7 @@
       "hash": "e256404feb110c9e",
       "size": 7870,
       "mtimeMs": 1777215453657.999,
-      "updatedAt": "2026-08-10T06:23:15.290Z",
+      "updatedAt": "2026-08-19T19:35:30.869Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/consultas_rapidas/ios_dproj_config.md": {
@@ -5076,7 +5076,7 @@
       "hash": "f8226979bf042739",
       "size": 3727,
       "mtimeMs": 1775922661745.7578,
-      "updatedAt": "2026-08-10T06:23:15.290Z",
+      "updatedAt": "2026-08-19T19:35:30.869Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/consultas_rapidas/ios_sdk_manager.md": {
@@ -5085,7 +5085,7 @@
       "hash": "8ce7052a2b27767f",
       "size": 1977,
       "mtimeMs": 1775922677890.6013,
-      "updatedAt": "2026-08-10T06:23:15.291Z",
+      "updatedAt": "2026-08-19T19:35:30.870Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/exemplos/ios_certificate.md": {
@@ -5094,7 +5094,7 @@
       "hash": "0b8b1b3de3ce33b8",
       "size": 3497,
       "mtimeMs": 1775922615283.2856,
-      "updatedAt": "2026-08-10T06:23:15.291Z",
+      "updatedAt": "2026-08-19T19:35:30.870Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/exemplos/ios_provisioning.md": {
@@ -5103,7 +5103,7 @@
       "hash": "bf1f23aed0c4f447",
       "size": 4208,
       "mtimeMs": 1775922640789.657,
-      "updatedAt": "2026-08-10T06:23:15.291Z",
+      "updatedAt": "2026-08-19T19:35:30.871Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/exemplos/ios_setup_paserver.md": {
@@ -5112,7 +5112,7 @@
       "hash": "d6ddab02d3061eb1",
       "size": 3453,
       "mtimeMs": 1775922593129.0486,
-      "updatedAt": "2026-08-10T06:23:15.292Z",
+      "updatedAt": "2026-08-19T19:35:30.871Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/SKILL.md": {
@@ -5121,7 +5121,7 @@
       "hash": "437e491ba7351178",
       "size": 7405,
       "mtimeMs": 1777215453657.999,
-      "updatedAt": "2026-08-10T06:23:15.292Z",
+      "updatedAt": "2026-08-19T19:35:30.871Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-ios-setup_V1.0.0/templates/TEMPLATE_ios_connection_profile.dproj": {
@@ -5130,7 +5130,7 @@
       "hash": "01d6394d5b7487ba",
       "size": 4736,
       "mtimeMs": 1775922702009.8357,
-      "updatedAt": "2026-08-10T06:23:15.292Z",
+      "updatedAt": "2026-08-19T19:35:30.873Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-json-serialization_V1.0.0/SKILL.md": {
@@ -5139,7 +5139,7 @@
       "hash": "d90b07ce27f8fe58",
       "size": 8822,
       "mtimeMs": 1782576829210.093,
-      "updatedAt": "2026-08-10T06:23:15.293Z",
+      "updatedAt": "2026-08-19T19:35:30.874Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-master-orchestrator_V1.1.0/consultas_rapidas/arvore_decisao.md": {
@@ -5148,7 +5148,7 @@
       "hash": "6ba26de20d90e20e",
       "size": 5980,
       "mtimeMs": 1777064158710.7046,
-      "updatedAt": "2026-08-10T06:23:15.293Z",
+      "updatedAt": "2026-08-19T19:35:30.875Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-master-orchestrator_V1.1.0/consultas_rapidas/mapa_completo.md": {
@@ -5157,7 +5157,7 @@
       "hash": "f83ed5b034263e09",
       "size": 9318,
       "mtimeMs": 1777072741184.005,
-      "updatedAt": "2026-08-10T06:23:15.294Z",
+      "updatedAt": "2026-08-19T19:35:30.875Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-master-orchestrator_V1.1.0/consultas_rapidas/quando_usar_cada.md": {
@@ -5166,7 +5166,7 @@
       "hash": "ce51423cd7060e2a",
       "size": 8563,
       "mtimeMs": 1777064158714.213,
-      "updatedAt": "2026-08-10T06:23:15.294Z",
+      "updatedAt": "2026-08-19T19:35:30.876Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-master-orchestrator_V1.1.0/SKILL.md": {
@@ -5175,7 +5175,7 @@
       "hash": "87b4d04b96e439d2",
       "size": 15261,
       "mtimeMs": 1777215453659.006,
-      "updatedAt": "2026-08-10T06:23:15.294Z",
+      "updatedAt": "2026-08-19T19:35:30.876Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/consultas_rapidas/mobile_decision_guide.md": {
@@ -5184,7 +5184,7 @@
       "hash": "906ea3b3f8ccfa1c",
       "size": 3622,
       "mtimeMs": 1775923348797.7666,
-      "updatedAt": "2026-08-10T06:23:15.295Z",
+      "updatedAt": "2026-08-19T19:35:30.877Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/consultas_rapidas/mobile_dproj_full.md": {
@@ -5193,7 +5193,7 @@
       "hash": "c6ee937a8f56bff1",
       "size": 5611,
       "mtimeMs": 1775923377089.0764,
-      "updatedAt": "2026-08-10T06:23:15.295Z",
+      "updatedAt": "2026-08-19T19:35:30.877Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/exemplos/mobile_platforms_config.md": {
@@ -5202,7 +5202,7 @@
       "hash": "afa4b74a9eb1126d",
       "size": 5550,
       "mtimeMs": 1775923325373.5532,
-      "updatedAt": "2026-08-10T06:23:15.296Z",
+      "updatedAt": "2026-08-19T19:35:30.878Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/exemplos/mobile_project_setup.md": {
@@ -5211,7 +5211,7 @@
       "hash": "2a10370bf43d1ba2",
       "size": 5362,
       "mtimeMs": 1775923294604.7542,
-      "updatedAt": "2026-08-10T06:23:15.296Z",
+      "updatedAt": "2026-08-19T19:35:30.878Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/SKILL.md": {
@@ -5220,7 +5220,7 @@
       "hash": "0971f68d9f9d5e48",
       "size": 8842,
       "mtimeMs": 1777215453660.0022,
-      "updatedAt": "2026-08-10T06:23:15.297Z",
+      "updatedAt": "2026-08-19T19:35:30.879Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-mobile-orchestrator_V1.1.0/templates/TEMPLATE_mobile_dproj.xml": {
@@ -5229,7 +5229,7 @@
       "hash": "2ebaae7063730c01",
       "size": 9000,
       "mtimeMs": 1775923419305.491,
-      "updatedAt": "2026-08-10T06:23:15.298Z",
+      "updatedAt": "2026-08-19T19:35:30.882Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-modular-backend-scaffold_V1.0.0/SKILL.md": {
@@ -5238,7 +5238,7 @@
       "hash": "95cc921381ba8c66",
       "size": 11683,
       "mtimeMs": 1777215453660.0022,
-      "updatedAt": "2026-08-10T06:23:15.299Z",
+      "updatedAt": "2026-08-19T19:35:30.883Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-packaging-delivery_V1.0.0/SKILL.md": {
@@ -5247,7 +5247,7 @@
       "hash": "0d0e9d41a1045891",
       "size": 5780,
       "mtimeMs": 1777215453661.0054,
-      "updatedAt": "2026-08-10T06:23:15.299Z",
+      "updatedAt": "2026-08-19T19:35:30.883Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-programming-conditional-defines_V1.1.0/exemplos/diretivas_compilacao.md": {
@@ -5256,7 +5256,7 @@
       "hash": "bc26c04349e4d52c",
       "size": 17400,
       "mtimeMs": 1777064158720.7915,
-      "updatedAt": "2026-08-10T06:23:15.300Z",
+      "updatedAt": "2026-08-19T19:35:30.884Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-programming-conditional-defines_V1.1.0/SKILL.md": {
@@ -5265,7 +5265,7 @@
       "hash": "bfae8cf84edb0752",
       "size": 11674,
       "mtimeMs": 1777215453661.0054,
-      "updatedAt": "2026-08-10T06:23:15.300Z",
+      "updatedAt": "2026-08-19T19:35:30.884Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-programming-oop-fluent_V1.0.0/SKILL.md": {
@@ -5274,7 +5274,7 @@
       "hash": "2354c8a8169017b9",
       "size": 7369,
       "mtimeMs": 1777215453662.1902,
-      "updatedAt": "2026-08-10T06:23:15.300Z",
+      "updatedAt": "2026-08-19T19:35:30.885Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-programming-oop-naming_V1.0.0/SKILL.md": {
@@ -5283,7 +5283,7 @@
       "hash": "1c53c14dc85e6f04",
       "size": 7649,
       "mtimeMs": 1777215453662.1902,
-      "updatedAt": "2026-08-10T06:23:15.301Z",
+      "updatedAt": "2026-08-19T19:35:30.886Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/clean-code-delphi.md": {
@@ -5292,7 +5292,7 @@
       "hash": "e7116e49dec8712d",
       "size": 8516,
       "mtimeMs": 1777084077576.8977,
-      "updatedAt": "2026-08-10T06:23:15.301Z",
+      "updatedAt": "2026-08-19T19:35:30.886Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/code-smells-delphi.md": {
@@ -5301,7 +5301,7 @@
       "hash": "7a8bf29e59420905",
       "size": 10746,
       "mtimeMs": 1777084077583.9207,
-      "updatedAt": "2026-08-10T06:23:15.302Z",
+      "updatedAt": "2026-08-19T19:35:30.887Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/estimativas-modernizacao.md": {
@@ -5310,7 +5310,7 @@
       "hash": "b6efda6a6c43f58c",
       "size": 5168,
       "mtimeMs": 1777084077591.4402,
-      "updatedAt": "2026-08-10T06:23:15.302Z",
+      "updatedAt": "2026-08-19T19:35:30.887Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/estrutura-laudo.en.md": {
@@ -5319,7 +5319,7 @@
       "hash": "14399aeaa70062c7",
       "size": 8291,
       "mtimeMs": 1777084077598.9521,
-      "updatedAt": "2026-08-10T06:23:15.302Z",
+      "updatedAt": "2026-08-19T19:35:30.888Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/estrutura-laudo.md": {
@@ -5328,7 +5328,7 @@
       "hash": "9f6072dfc62be916",
       "size": 8043,
       "mtimeMs": 1777084077606.4773,
-      "updatedAt": "2026-08-10T06:23:15.303Z",
+      "updatedAt": "2026-08-19T19:35:30.888Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/style-guide.md": {
@@ -5337,7 +5337,7 @@
       "hash": "3f192188f5a6100c",
       "size": 7746,
       "mtimeMs": 1777084077613.0234,
-      "updatedAt": "2026-08-10T06:23:15.303Z",
+      "updatedAt": "2026-08-19T19:35:30.889Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/references/tecnologias-delphi.md": {
@@ -5346,7 +5346,7 @@
       "hash": "b877de0c2481ba13",
       "size": 7148,
       "mtimeMs": 1777084077619.0325,
-      "updatedAt": "2026-08-10T06:23:15.303Z",
+      "updatedAt": "2026-08-19T19:35:30.889Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-audit_V1.1.0/SKILL.md": {
@@ -5355,7 +5355,7 @@
       "hash": "1e601f812ac05466",
       "size": 9573,
       "mtimeMs": 1786305569753.6252,
-      "updatedAt": "2026-08-10T06:23:15.303Z",
+      "updatedAt": "2026-08-19T19:35:30.890Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-spec_V1.0.0/references/spec-template.en.md": {
@@ -5364,7 +5364,7 @@
       "hash": "1a17bd05ba6b78d5",
       "size": 5122,
       "mtimeMs": 1777084111339.7134,
-      "updatedAt": "2026-08-10T06:23:15.304Z",
+      "updatedAt": "2026-08-19T19:35:30.890Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-spec_V1.0.0/references/spec-template.md": {
@@ -5373,7 +5373,7 @@
       "hash": "f3b6787d43a7b8eb",
       "size": 5124,
       "mtimeMs": 1777084111347.2366,
-      "updatedAt": "2026-08-10T06:23:15.304Z",
+      "updatedAt": "2026-08-19T19:35:30.891Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-project-spec_V1.0.0/SKILL.md": {
@@ -5382,7 +5382,7 @@
       "hash": "78e2ec55e4a85c9c",
       "size": 4337,
       "mtimeMs": 1777215453663.1929,
-      "updatedAt": "2026-08-10T06:23:15.305Z",
+      "updatedAt": "2026-08-19T19:35:30.891Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-loggers_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5391,7 +5391,7 @@
       "hash": "cebc284b428ad3a0",
       "size": 1596,
       "mtimeMs": 1776469177546.117,
-      "updatedAt": "2026-08-10T06:23:15.305Z",
+      "updatedAt": "2026-08-19T19:35:30.893Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-loggers_V1.0.0/exemplos/loggers_uso.md": {
@@ -5400,7 +5400,7 @@
       "hash": "f2964ceac2c03f6a",
       "size": 2399,
       "mtimeMs": 1776469177547.1157,
-      "updatedAt": "2026-08-10T06:23:15.305Z",
+      "updatedAt": "2026-08-19T19:35:30.893Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-loggers_V1.0.0/SKILL.md": {
@@ -5409,7 +5409,7 @@
       "hash": "309ae8c4d8b80736",
       "size": 6734,
       "mtimeMs": 1777215453664.2217,
-      "updatedAt": "2026-08-10T06:23:15.306Z",
+      "updatedAt": "2026-08-19T19:35:30.894Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5418,7 +5418,7 @@
       "hash": "a8a956d8b957380d",
       "size": 1598,
       "mtimeMs": 1776988811350.967,
-      "updatedAt": "2026-08-10T06:23:15.306Z",
+      "updatedAt": "2026-08-19T19:35:30.895Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/exemplos/roteiro_attributes.md": {
@@ -5427,7 +5427,7 @@
       "hash": "406ad56394b19a7e",
       "size": 3101,
       "mtimeMs": 1775961884525.3074,
-      "updatedAt": "2026-08-10T06:23:15.307Z",
+      "updatedAt": "2026-08-19T19:35:30.896Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-orm-usage_V1.0.0/SKILL.md": {
@@ -5436,7 +5436,7 @@
       "hash": "d9cbfe950e2a6b1d",
       "size": 10941,
       "mtimeMs": 1782577028554.6863,
-      "updatedAt": "2026-08-10T06:23:15.307Z",
+      "updatedAt": "2026-08-19T19:35:30.896Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-parameters_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5445,7 +5445,7 @@
       "hash": "48eeb71584dc8d10",
       "size": 1047,
       "mtimeMs": 1776469177538.6003,
-      "updatedAt": "2026-08-10T06:23:15.307Z",
+      "updatedAt": "2026-08-19T19:35:30.897Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-parameters_V1.0.0/exemplos/parametros_uso.md": {
@@ -5454,7 +5454,7 @@
       "hash": "f050c124c2da08bb",
       "size": 1936,
       "mtimeMs": 1776469177541.1147,
-      "updatedAt": "2026-08-10T06:23:15.308Z",
+      "updatedAt": "2026-08-19T19:35:30.897Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-providers-parameters_V1.0.0/SKILL.md": {
@@ -5463,7 +5463,7 @@
       "hash": "89f491077f1b9067",
       "size": 6020,
       "mtimeMs": 1777215453664.2217,
-      "updatedAt": "2026-08-10T06:23:15.308Z",
+      "updatedAt": "2026-08-19T19:35:30.898Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-reporting-fastreport_V1.0.0/SKILL.md": {
@@ -5472,7 +5472,7 @@
       "hash": "7e446d2cbdffc6a2",
       "size": 8221,
       "mtimeMs": 1782576829211.0918,
-      "updatedAt": "2026-08-10T06:23:15.309Z",
+      "updatedAt": "2026-08-19T19:35:30.898Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-estrutura_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5481,7 +5481,7 @@
       "hash": "1b9d4778b341a1f0",
       "size": 1444,
       "mtimeMs": 1775964496206.0066,
-      "updatedAt": "2026-08-10T06:23:15.310Z",
+      "updatedAt": "2026-08-19T19:35:30.899Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-estrutura_V1.0.0/SKILL.md": {
@@ -5490,7 +5490,7 @@
       "hash": "04561bf9cba90111",
       "size": 6680,
       "mtimeMs": 1777215453665.223,
-      "updatedAt": "2026-08-10T06:23:15.310Z",
+      "updatedAt": "2026-08-19T19:35:30.899Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-expert_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5499,7 +5499,7 @@
       "hash": "a5de1de05a575fee",
       "size": 1501,
       "mtimeMs": 1775964263879.2583,
-      "updatedAt": "2026-08-10T06:23:15.311Z",
+      "updatedAt": "2026-08-19T19:35:30.900Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-expert_V1.0.0/SKILL.md": {
@@ -5508,7 +5508,7 @@
       "hash": "5f7f6d9ba2c28f29",
       "size": 13352,
       "mtimeMs": 1777215453666.223,
-      "updatedAt": "2026-08-10T06:23:15.311Z",
+      "updatedAt": "2026-08-19T19:35:30.901Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-orchestrator_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5517,7 +5517,7 @@
       "hash": "2f3af7da64d7ada4",
       "size": 1257,
       "mtimeMs": 1775964178622.3513,
-      "updatedAt": "2026-08-10T06:23:15.312Z",
+      "updatedAt": "2026-08-19T19:35:30.901Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-orchestrator_V1.0.0/SKILL.md": {
@@ -5526,7 +5526,7 @@
       "hash": "a5af7268502e2552",
       "size": 4569,
       "mtimeMs": 1777215453666.223,
-      "updatedAt": "2026-08-10T06:23:15.312Z",
+      "updatedAt": "2026-08-19T19:35:30.902Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/consultas_rapidas/quick_ref.md": {
@@ -5535,7 +5535,7 @@
       "hash": "10dd0aac17f5aa26",
       "size": 1451,
       "mtimeMs": 1775964312818.3184,
-      "updatedAt": "2026-08-10T06:23:15.313Z",
+      "updatedAt": "2026-08-19T19:35:30.902Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/roteiro_auth.md": {
@@ -5544,7 +5544,7 @@
       "hash": "f2c008f4d7bbd1b8",
       "size": 4802,
       "mtimeMs": 1775964388566.5247,
-      "updatedAt": "2026-08-10T06:23:15.313Z",
+      "updatedAt": "2026-08-19T19:35:30.903Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/roteiro_client.md": {
@@ -5553,7 +5553,7 @@
       "hash": "0ca7a80f9aa43337",
       "size": 3976,
       "mtimeMs": 1775964357350.6582,
-      "updatedAt": "2026-08-10T06:23:15.313Z",
+      "updatedAt": "2026-08-19T19:35:30.903Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/roteiro_drivers.md": {
@@ -5562,7 +5562,7 @@
       "hash": "c06b2207ded59260",
       "size": 4112,
       "mtimeMs": 1775964443331.914,
-      "updatedAt": "2026-08-10T06:23:15.314Z",
+      "updatedAt": "2026-08-19T19:35:30.904Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/roteiro_massive.md": {
@@ -5571,7 +5571,7 @@
       "hash": "d642c1c1245d5134",
       "size": 4561,
       "mtimeMs": 1775964415198.0088,
-      "updatedAt": "2026-08-10T06:23:15.314Z",
+      "updatedAt": "2026-08-19T19:35:30.904Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/exemplos/roteiro_server.md": {
@@ -5580,7 +5580,7 @@
       "hash": "07a27ab266a95dc3",
       "size": 3144,
       "mtimeMs": 1775964334311.7522,
-      "updatedAt": "2026-08-10T06:23:15.314Z",
+      "updatedAt": "2026-08-19T19:35:30.905Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-rest-dataware-roteiro_V1.0.0/SKILL.md": {
@@ -5589,7 +5589,7 @@
       "hash": "84b9b6dbdd2c4ca9",
       "size": 4288,
       "mtimeMs": 1777215453666.223,
-      "updatedAt": "2026-08-10T06:23:15.314Z",
+      "updatedAt": "2026-08-19T19:35:30.905Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/consultas_rapidas/family_m_decision_guide.md": {
@@ -5598,7 +5598,7 @@
       "hash": "ecc2b0b146b61128",
       "size": 12097,
       "mtimeMs": 1777071783412.703,
-      "updatedAt": "2026-08-10T06:23:15.315Z",
+      "updatedAt": "2026-08-19T19:35:30.906Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/skill.md": {
@@ -5607,7 +5607,7 @@
       "hash": "ae9003798ced4f28",
       "size": 16951,
       "mtimeMs": 1777215453667.2224,
-      "updatedAt": "2026-08-10T06:23:15.315Z",
+      "updatedAt": "2026-08-19T19:35:30.906Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-servers-libraries-orchestrator_V1.1.0/templates/TEMPLATE_server_library_project_setup.md": {
@@ -5616,7 +5616,7 @@
       "hash": "baeb6b2dbb56f4a0",
       "size": 12793,
       "mtimeMs": 1777072085038.643,
-      "updatedAt": "2026-08-10T06:23:15.316Z",
+      "updatedAt": "2026-08-19T19:35:30.907Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-and-quality_V1.0.0/SKILL.md": {
@@ -5625,7 +5625,7 @@
       "hash": "2fcd78675ae01a40",
       "size": 6072,
       "mtimeMs": 1777215453667.2224,
-      "updatedAt": "2026-08-10T06:23:15.317Z",
+      "updatedAt": "2026-08-19T19:35:30.908Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/consultas_rapidas/assert_api.md": {
@@ -5634,7 +5634,7 @@
       "hash": "b7b9998b0dc9f333",
       "size": 3427,
       "mtimeMs": 1775922994817.7927,
-      "updatedAt": "2026-08-10T06:23:15.317Z",
+      "updatedAt": "2026-08-19T19:35:30.908Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/consultas_rapidas/dunitx_attributes.md": {
@@ -5643,7 +5643,7 @@
       "hash": "67b910f752bf899e",
       "size": 2837,
       "mtimeMs": 1775922974113.135,
-      "updatedAt": "2026-08-10T06:23:15.317Z",
+      "updatedAt": "2026-08-19T19:35:30.909Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/consultas_rapidas/mock_setup.md": {
@@ -5652,7 +5652,7 @@
       "hash": "69954d96a241dbbe",
       "size": 3249,
       "mtimeMs": 1775923018298.663,
-      "updatedAt": "2026-08-10T06:23:15.318Z",
+      "updatedAt": "2026-08-19T19:35:30.909Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/assertions.pas": {
@@ -5661,7 +5661,7 @@
       "hash": "439e82340fb0ded2",
       "size": 6131,
       "mtimeMs": 1775922855687.75,
-      "updatedAt": "2026-08-10T06:23:15.318Z",
+      "updatedAt": "2026-08-19T19:35:30.911Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/mock_interface.pas": {
@@ -5670,7 +5670,7 @@
       "hash": "09bfbf7f2f45fa51",
       "size": 6953,
       "mtimeMs": 1775922917295.6643,
-      "updatedAt": "2026-08-10T06:23:15.319Z",
+      "updatedAt": "2026-08-19T19:35:30.913Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/setup_teardown.pas": {
@@ -5679,7 +5679,7 @@
       "hash": "125fd0a5756366ee",
       "size": 5290,
       "mtimeMs": 1775922830327.3103,
-      "updatedAt": "2026-08-10T06:23:15.319Z",
+      "updatedAt": "2026-08-19T19:35:30.915Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/test_case_attribute.pas": {
@@ -5688,7 +5688,7 @@
       "hash": "7511d4a9759a98b2",
       "size": 5163,
       "mtimeMs": 1775922883366.6045,
-      "updatedAt": "2026-08-10T06:23:15.319Z",
+      "updatedAt": "2026-08-19T19:35:30.917Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/test_fixture_basico.pas": {
@@ -5697,7 +5697,7 @@
       "hash": "2257bbf876df429c",
       "size": 4801,
       "mtimeMs": 1775922802180.2764,
-      "updatedAt": "2026-08-10T06:23:15.320Z",
+      "updatedAt": "2026-08-19T19:35:30.919Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/exemplos/test_isolation.pas": {
@@ -5706,7 +5706,7 @@
       "hash": "93b4a409ca951080",
       "size": 8217,
       "mtimeMs": 1775922953220.1877,
-      "updatedAt": "2026-08-10T06:23:15.320Z",
+      "updatedAt": "2026-08-19T19:35:30.921Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/SKILL.md": {
@@ -5715,7 +5715,7 @@
       "hash": "7a86c8f5fbd7f450",
       "size": 8910,
       "mtimeMs": 1777215453667.2224,
-      "updatedAt": "2026-08-10T06:23:15.320Z",
+      "updatedAt": "2026-08-19T19:35:30.921Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/templates/TEMPLATE_mock_service.pas": {
@@ -5724,7 +5724,7 @@
       "hash": "9eaf6aae7d3c4aab",
       "size": 5928,
       "mtimeMs": 1775923088785.5676,
-      "updatedAt": "2026-08-10T06:23:15.321Z",
+      "updatedAt": "2026-08-19T19:35:30.923Z",
       "source": "scan"
     },
     ".cursor/skills/developer-delphi-testing-dunitx_V1.0.0/templates/TEMPLATE_test_fixture.pas": {
@@ -5733,7 +5733,7 @@
       "hash": "c098b8d7540674c3",
       "size": 8220,
       "mtimeMs": 1775923060563.5813,
-      "updatedAt": "2026-08-10T06:23:15.321Z",
+      "updatedAt": "2026-08-19T19:35:30.925Z",
       "source": "scan"
     },
     ".cursor/skills/skills-pack-manifest_V1.27.0.md": {
@@ -5742,7 +5742,7 @@
       "hash": "36b999d5fb7cd9fa",
       "size": 10189,
       "mtimeMs": 1786303445851.1035,
-      "updatedAt": "2026-08-10T06:23:15.329Z",
+      "updatedAt": "2026-08-19T19:35:30.934Z",
       "source": "scan"
     },
     ".cursor/VERSION.md": {
@@ -5751,7 +5751,7 @@
       "hash": "0d1f99a598777014",
       "size": 1410,
       "mtimeMs": 1777163126342.5596,
-      "updatedAt": "2026-08-10T06:23:15.329Z",
+      "updatedAt": "2026-08-19T19:35:30.934Z",
       "source": "scan"
     },
     ".cursorignore": {
@@ -5760,16 +5760,16 @@
       "hash": "f1e514c85ad0808c",
       "size": 1379,
       "mtimeMs": 1786299516624.76,
-      "updatedAt": "2026-08-10T06:23:15.330Z",
+      "updatedAt": "2026-08-19T19:35:30.937Z",
       "source": "scan"
     },
     ".gitignore": {
       "description": "Git ignore rules",
-      "tokens": 39,
-      "hash": "949324930d1a378a",
-      "size": 148,
-      "mtimeMs": 1786330197384.4204,
-      "updatedAt": "2026-08-10T06:23:15.330Z",
+      "tokens": 64,
+      "hash": "aa157b22aa624f97",
+      "size": 244,
+      "mtimeMs": 1786386410052.1648,
+      "updatedAt": "2026-08-19T19:35:30.937Z",
       "source": "scan"
     },
     ".gitmodules": {
@@ -5778,7 +5778,16 @@
       "hash": "4820e56f799550df",
       "size": 1353,
       "mtimeMs": 1786330251925.8987,
-      "updatedAt": "2026-08-10T06:23:15.330Z",
+      "updatedAt": "2026-08-19T19:35:30.937Z",
+      "source": "scan"
+    },
+    ".mcp.json": {
+      "description": "",
+      "tokens": 599,
+      "hash": "c33e17134920d738",
+      "size": 2096,
+      "mtimeMs": 1787165127554.189,
+      "updatedAt": "2026-08-19T19:35:30.938Z",
       "source": "scan"
     },
     "CLAUDE.md": {
@@ -5787,7 +5796,7 @@
       "hash": "600f784e1e260a4e",
       "size": 9076,
       "mtimeMs": 1786302456283.8928,
-      "updatedAt": "2026-08-10T06:23:15.330Z",
+      "updatedAt": "2026-08-19T19:35:30.939Z",
       "source": "scan"
     },
     "LICENSE": {
@@ -5796,16 +5805,16 @@
       "hash": "686b037b899bd439",
       "size": 1103,
       "mtimeMs": 1786330312900.0005,
-      "updatedAt": "2026-08-10T06:23:15.331Z",
+      "updatedAt": "2026-08-19T19:35:30.940Z",
       "source": "scan"
     },
     "README.md": {
       "description": "Project documentation",
-      "tokens": 779,
-      "hash": "2bf0b7a33f870519",
-      "size": 3172,
-      "mtimeMs": 1786327101841.236,
-      "updatedAt": "2026-08-10T06:23:15.331Z",
+      "tokens": 1565,
+      "hash": "7670785a53b563ea",
+      "size": 6380,
+      "mtimeMs": 1787168112576.0188,
+      "updatedAt": "2026-08-19T19:35:30.940Z",
       "source": "scan"
     }
   }
