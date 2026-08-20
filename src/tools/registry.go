@@ -293,6 +293,11 @@ func (r *Registry) registerTools() {
 	// (vcenter) e HostVStorageObjectManager (host); mesmo campo ServiceContent, tipo por conexão.
 	r.withClass(modeVCenterOnly, registerFcdVcenterTools)
 	r.withClass(modeVSphereGeneral, registerFcdHostTools)
+	// Onda 8 (2026-08-20): vSAN (HostVsanSystem + HostVsanInternalSystem) +
+	// Guest Registry/Alias (registro Windows + aliases SSO no SO convidado).
+	r.withClass(modeVSphereGeneral, registerVsanTools)
+	r.withClass(modeVSphereGeneral, registerGuestWindowsRegistryTools)
+	r.withClass(modeVSphereGeneral, registerGuestAliasTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/
