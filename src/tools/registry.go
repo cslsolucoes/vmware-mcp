@@ -276,6 +276,9 @@ func (r *Registry) registerTools() {
 	// Onda 3 (2026-08-19): Guest Operations — executar programas + gerenciar
 	// arquivos no SO convidado via VMware Tools; sem wrapper object.*, raw vim25.
 	r.withClass(modeVSphereGeneral, registerGuestOpsTools)
+	// Onda 4 (2026-08-19): Crypto/KMS SOAP (CryptoManagerKmip) — KMIP servers,
+	// KMS clusters, chaves de encriptacao de VM; sem wrapper object.*, vcenter-only.
+	r.withClass(modeVCenterOnly, registerCryptoKmipTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/
