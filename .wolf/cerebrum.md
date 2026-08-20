@@ -453,6 +453,16 @@
   MESMO comando bash — o "exit 0" que li era do `echo` final, não do `go test`
   (que deu 1), e commitei com um FAIL na tela sem perceber. SEMPRE rodar o gate
   num comando, LER o resultado, e só então commitar num comando SEPARADO.
+- [2026-08-19] **Mesmo o gate por-pacote flaka DENTRO do `tools`: o pacote tem
+  ~400 testes que cada um sobe um vcsim (httptest TLS) — num único processo eles
+  competem por portas no Windows e ~1 a cada 2-3 runs um punhado FALHA com "dial
+  tcp / TLS handshake / connection failed". Os mais comuns: `TestVMLifecycleTools_UpgradeVM`,
+  `_Unregister`, `_UnsimulatedMethods` (todos passam ISOLADOS em ~3s).** Piora a
+  cada onda (mais tools = mais testes = mais vcsim). Gate CONFIÁVEL do `tools` =
+  RETRY: `for i in 1 2 3; do go test ./tools/ -count=1 -timeout 180s && break; done`.
+  Se um FAIL for só nesses testes-vcsim não-tocados com erro de conexão, é
+  ambiente (provar rodando o teste isolado), NÃO regressão — mas obter o verde
+  limpo por retry antes de commitar em vez de commitar com FAIL na tela.
 - [2026-08-11] **A regra global "atualizar o plano por fase/onda" (pendências
   NUMERADAS, estado marcado concluído/pendente/bloqueado, comandos+resultado
   literais, nota de commit mesmo quando não há) precisa de ser aplicada como

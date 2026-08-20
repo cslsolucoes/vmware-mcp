@@ -282,6 +282,10 @@ func (r *Registry) registerTools() {
 	// Onda 4b (2026-08-19): Distributed Virtual Switch (DVS + DVSManager) —
 	// métodos sem wrapper object.* além dos 6 já em generated_network.go; vcenter-only.
 	r.withClass(modeVCenterOnly, registerDvsTools)
+	// Onda 5 (2026-08-19): HostSystem restantes (power/lockdown/standby) +
+	// ClusterComputeResource (recomendações DRS/HA, HCI). Raw methods.*.
+	r.withClass(modeVSphereGeneral, registerHostSystemExtTools)
+	r.withClass(modeVCenterOnly, registerClusterTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/

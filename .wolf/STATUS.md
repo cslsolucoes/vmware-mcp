@@ -116,17 +116,38 @@ lab (host/cluster/rede/storage/vMotion/HA/DRS) é coberta pelos MCPs VMware+True
 
 ---
 
-**2026-08-19 — 15 tools iSCSI implementadas, DEPLOYADAS e TESTADAS.**
-`D:/ServidorDataCenter/mcpvmware-mcp.exe` (produção, compartilhado pelos 4
-servidores MCP) substituído pelo build novo (749 tools; hash SHA256 idêntico)
-e validado por smoke real contra o ESXi 10.100.2.58 (626 tools no modo `all`,
-as 15 iSCSI presentes, `vmware_about` real OK). **Resta apenas:**
-(1) usuário **reconectar** os 4 servidores no painel MCP — os 9 processos
-foram mortos para destravar o `.exe`, nenhum ativo agora; ao reconectar,
-VM01/02/03 (vCenter) e Test (ESXi) sobem com o binário novo.
-(2) **commit** — decidido NÃO commitar agora; base inteira (749 tools) segue
-uncommitted por política (autorização explícita por caminho quando o usuário
-quiser).
+**2026-08-19 (sessão longa) — EXPANSÃO ALÉM DAS 734: preenchendo frestas do
+gerador (métodos vim25 SEM wrapper `object.*`). Atual: 866 tools, TODAS
+commitadas+pushadas em `origin/main`. Git por onda (a pedido do usuário).**
+
+Commits desta sessão:
+- `262c389` (734→811): iSCSI completo (22: initiator+multipath+port binding),
+  FT (7), Guest Ops (15), Perf (9), License (13), Alarm (10), query_port_groups (1).
+- `ecd3506` (811→838): Crypto/KMS SOAP CryptoManagerKmip (27, vcenter-only).
+- `c89a6b3` (838→866): DVS + DVSManager (28, vcenter-only).
+
+**Próxima = onda 5. Ondas restantes do plano 100% (~370 tools):** storage FCD
+(Vcenter/HostVStorageObjectManager ~69), HostStorageSystem restantes (NVMe/vFlash
+~46), vSAN (~20), HostProfileManager (18), HealthUpdateManager (20),
+ClusterComputeResource (11), GuestWindowsRegistry+Alias (~11), IoFilter/IpPool/
+HostPatch/SmartCard/Datacenter/ScheduledTask/Event/etc. EXCLUIR plumbing interno
+(PropertyCollector/SessionManager/ListView/MonitoredEntities). Mapa por MO:
+scratchpad `soap_all.txt`/`mo_method.txt`.
+
+**DEPLOY: pendente.** Produção (`D:/ServidorDataCenter/mcpvmware-mcp.exe`) está no
+build de **796 tools** (iSCSI+onda2+FT, deployado 16:29). As ondas 3-4b (+70:
+guest ops, crypto, dvs) estão commitadas mas **NÃO deployadas** (acumuladas —
+rebuild+deploy quando o usuário pedir; derruba os processos MCP de produção).
+**Usuário PRECISA reconectar os 4 servidores MCP no painel** para pegar as 796
+já em produção.
+
+**Lições (todas no cerebrum):** (1) frestas = métodos vim25 sem wrapper `object.*`
+→ raw `methods.*`; (2) bug de deadlock no vcsim guest ops (`StartProgramInGuest`
+nil-deref + `WithLock` sem `defer`); (3) 1 vcsim por arquivo de teste (N esgota
+portas no Windows → trava); (4) gate = rodar CADA pacote em processo separado
+(nem `go test ./...` paralelo nem `-p 1` são confiáveis no Windows); (5)
+subagentes general-purpose às vezes sub-delegam/colidem — instruir anti-delegação
+e SEMPRE verificar o disco, nunca aceitar "verde" de relatório vago.
 
 ---
 
