@@ -1234,6 +1234,16 @@ func TestMode_All(t *testing.T) {
 	assertExactToolSet(t, r, all)
 }
 
+// TestMode_Everything proves --all-url (ConnectionModeEverything) registers
+// ALL 1030 tools of every product at once — the "100%" mode. Same expected
+// set as TestMode_Unrestricted (the zero mode), but reached via the named
+// mode main.go actually passes for --all-url.
+func TestMode_Everything(t *testing.T) {
+	r := newModeTestRegistry(t, ConnectionModeEverything)
+	all := append(append(append(append([]string{}, vcenterOnlyTools...), vsphereGeneralTools...), workstationTools...), cloudAWSTools...)
+	assertExactToolSet(t, r, all)
+}
+
 // TestMode_CloudAWS proves --cloud-aws-url registers exactly the 95
 // Fase 10 VMware Cloud on AWS tools (cloudAWSTools) and none of the
 // vSphere/Workstation tools — cloud-aws is always isolated, including

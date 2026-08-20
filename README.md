@@ -92,7 +92,8 @@ conexão por execução:
 | --- | --- | --- |
 | `--vcenter-url` | vCenter Server (VCSA) | vcenter-only + vsphere-general (**907**) |
 | `--vmware-url` | ESXi standalone | só vsphere-general (**386**) |
-| `--vmware-all-url` | vCenter ou ESXi | mesmo conjunto de `--vcenter-url` (**907**; Workstation/CloudAWS não incluídos — ver nota) |
+| `--vmware-all-url` | vCenter ou ESXi | mesmo conjunto de `--vcenter-url` (**907**; só vSphere) |
+| **`--all-url`** | vCenter/ESXi (+ opcionais) | **todas as 1030** — modo "100%" (ver abaixo) |
 | `--workstation-url` | `vmrest` local (Workstation Pro) | as **28** tools de Workstation |
 | `--cloud-aws-url` | VMware Cloud on AWS | as **95** tools de VMC |
 
@@ -100,10 +101,26 @@ conexão por execução:
 VMC usa `--refresh-token`/`VMC_REFRESH_TOKEN` em vez de usuário/senha (CSP
 token-exchange — gerar o refresh token manualmente na consola web da VMC).
 
-**Nota:** `--vmware-all-url` não inclui Workstation/CloudAWS — expor as 1030
-num só processo exige múltiplos clientes vivos simultâneos com credenciais
-distintas (um modo "tudo"). Está em implementação — use as flags por produto
-separadamente enquanto isso.
+### `--all-url` — modo "100%" (todas as 1030 tools)
+
+`--all-url` conecta ao vCenter/ESXi (primário, `--username`/`--password`) e
+**registra as 1030 tools de todos os produtos de uma vez**. As 907 de vSphere
+ficam funcionais imediatamente; as 28 de Workstation e 95 de VMC ficam
+**visíveis** no `tools/list` mas retornam um erro claro (`requires --workstation-url`
+/ `--cloud-aws-url`) se chamadas sem a conexão correspondente.
+
+Para deixá-las também funcionais, adicione as conexões secundárias na mesma
+invocação:
+
+```bash
+go run ./mcpvmware-mcp \
+  --all-url vcenter.local --username administrator@vsphere.local --password '...' \
+  --workstation-url http://127.0.0.1:8697/api \        # opcional (usa --username/--password como Basic Auth do vmrest)
+  --cloud-aws-url https://vmc.vmware.com --refresh-token '...'   # opcional (VMC usa refresh-token, sem colisão de credencial)
+```
+
+`--all-url` é mutuamente exclusivo com `--vcenter-url`/`--vmware-url`/`--vmware-all-url`
+(seriam redundantes), mas coexiste com `--workstation-url`/`--cloud-aws-url`.
 
 ## Ações destrutivas (Tier 1/2)
 
@@ -157,8 +174,6 @@ ondas de 2026-08-19→20 que preencheram os métodos vim25 SOAP sem wrapper
 verdade, não este README.
 
 **Pendências conhecidas:**
-- Modo "tudo" (`--all-url`) expondo as 1030 num só processo (arquitetura de
-  múltiplos clientes simultâneos) — em implementação.
 - Domínios sem simulador/ambiente de teste real disponível (VAMI legacy,
   `vmrest`, VMC on AWS) — verificados só via fixture `httptest`, nunca
   ponta-a-ponta contra um serviço real.

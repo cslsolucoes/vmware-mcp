@@ -45,7 +45,8 @@ var (
 	vcenterURL       = flag.String("vcenter-url", "", "Connect to a vCenter Server (VCSA). Exposes vCenter-only tools (cluster/DRS, tags, content library, VAMI) plus the general vSphere tools.")
 	vmwareURL        = flag.String("vmware-url", "", "Connect directly to a standalone ESXi host (no vCenter). Exposes only the general vSphere tools — nothing vCenter-only, since none of that exists on a bare host.")
 	workstationURL   = flag.String("workstation-url", "", "Connect to VMware Workstation Pro's local vmrest service, e.g. http://127.0.0.1:8697/api (https:// if vmrest was started with -c/-k). --username/--password are the vmrest Basic Auth credentials (vmrest.exe --config), not vCenter/ESXi ones.")
-	vmwareAllURL     = flag.String("vmware-all-url", "", "Connect to vCenter or ESXi (same SDK URL as --vcenter-url/--vmware-url) and expose every vSphere-family tool, vCenter-only included, regardless of which kind of endpoint this actually is. Does NOT include Workstation Pro tools yet — that needs a 2nd live client, an open architecture question (see the plan's Fase 0 note) — use --workstation-url separately for those.")
+	vmwareAllURL     = flag.String("vmware-all-url", "", "Connect to vCenter or ESXi (same SDK URL as --vcenter-url/--vmware-url) and expose every vSphere-family tool, vCenter-only included, regardless of which kind of endpoint this actually is. Does NOT include Workstation Pro/VMC tools — use --all-url for the full 1030-tool set.")
+	allURL           = flag.String("all-url", "", "\"100%\" mode: connect to vCenter/ESXi (primary, --username/--password) and register ALL 1030 tools of every product at once. Optionally add --workstation-url and/or --cloud-aws-url/--refresh-token as secondary connections to make those tools functional too; otherwise they list but return a clear \"requires --X\" error when called.")
 	cloudAWSURL      = flag.String("cloud-aws-url", "", "Connect to VMware Cloud on AWS. Selects the mode — the value is conventionally https://vmc.vmware.com (VMC's one global API host); auth is --refresh-token, not --username/--password.")
 	username         = flag.String("username", "", "Username for the selected connection (vCenter/ESXi, or vmrest Basic Auth when --workstation-url is used). Not used with --cloud-aws-url.")
 	password         = flag.String("password", "", "Password for the selected connection (vCenter/ESXi, or vmrest Basic Auth when --workstation-url is used). Not used with --cloud-aws-url.")
@@ -65,6 +66,23 @@ var Version = "dev"
 // flags was given and returns its URL plus the tools.ConnectionMode it
 // maps to. Exits the process (log.Fatal) on 0 or 2+ flags set.
 func resolveConnectionMode() (string, tools.ConnectionMode) {
+	// --all-url is the "everything" (100%) mode. Unlike the 5 exclusive
+	// primaries below, it MAY coexist with --workstation-url/--cloud-aws-url
+	// (optional secondary connections), so it's resolved first — it only
+	// conflicts with the other vSphere primaries, which would be redundant.
+	if *allURL != "" {
+		for _, c := range []struct{ url, flag string }{
+			{*vcenterURL, "--vcenter-url"},
+			{*vmwareURL, "--vmware-url"},
+			{*vmwareAllURL, "--vmware-all-url"},
+		} {
+			if c.url != "" {
+				log.Fatalf("--all-url already exposes every vSphere tool; do not combine it with %s (--workstation-url/--cloud-aws-url may be added as optional secondary connections)", c.flag)
+			}
+		}
+		return *allURL, tools.ConnectionModeEverything
+	}
+
 	type candidate struct {
 		url  string
 		mode tools.ConnectionMode
@@ -151,7 +169,7 @@ func main() {
 			log.Fatal("--cloud-aws-url requires --refresh-token (or the VMC_REFRESH_TOKEN env var) — --username/--password are not used in this mode")
 		}
 	} else if targetURL == "" || *username == "" || *password == "" {
-		log.Fatal("exactly one connection flag is required (--vcenter-url, --vmware-url, --vmware-all-url, --workstation-url, or --cloud-aws-url), along with --username and --password (or the equivalent VCENTER_URL/VCENTER_USERNAME/VCENTER_PASSWORD env vars) — --cloud-aws-url uses --refresh-token instead")
+		log.Fatal("a connection flag is required (--vcenter-url, --vmware-url, --vmware-all-url, --all-url, --workstation-url, or --cloud-aws-url), along with --username and --password (or the equivalent VCENTER_URL/VCENTER_USERNAME/VCENTER_PASSWORD env vars) — --cloud-aws-url uses --refresh-token instead")
 	}
 	if *insecure {
 		log.Println("WARNING: TLS certificate verification disabled - the connection is vulnerable to man-in-the-middle attacks")
@@ -192,6 +210,48 @@ func main() {
 			log.Fatalf("Failed to configure VMware Cloud on AWS connection: %v", err)
 		}
 		cloudClient = cc
+	case tools.ConnectionModeEverything:
+		// Primary: vSphere (required). Every vSphere/VAMI tool is live.
+		c, err := vmware.NewClient(ctx, vmware.Config{
+			URL:      targetURL,
+			Username: *username,
+			Password: *password,
+			Insecure: *insecure,
+		})
+		if err != nil {
+			log.Fatalf("Failed to connect to vCenter/ESXi (--all-url primary): %v", err)
+		}
+		defer c.Close(ctx)
+		client = c
+		// Optional secondary: Workstation Pro (vmrest). Reuses --username/
+		// --password as the vmrest Basic Auth creds; if they differ from the
+		// vSphere ones the 28 tools error at call time, which is fine.
+		if *workstationURL != "" {
+			wc, err := workstation.NewClient(workstation.Config{
+				URL:      *workstationURL,
+				Username: *username,
+				Password: *password,
+				Insecure: *insecure,
+			})
+			if err != nil {
+				log.Fatalf("Failed to configure Workstation Pro secondary connection (--all-url + --workstation-url): %v", err)
+			}
+			wsClient = wc
+			log.Println("--all-url: Workstation Pro (vmrest) secondary connection configured")
+		}
+		// Optional secondary: VMware Cloud on AWS (refresh-token — no cred
+		// collision with vSphere's username/password).
+		if *cloudAWSURL != "" || *refreshToken != "" {
+			cc, err := cloudaws.NewClient(cloudaws.Config{
+				RefreshToken: *refreshToken,
+				Insecure:     *insecure,
+			})
+			if err != nil {
+				log.Fatalf("Failed to configure VMware Cloud on AWS secondary connection (--all-url + --cloud-aws-url/--refresh-token): %v", err)
+			}
+			cloudClient = cc
+			log.Println("--all-url: VMware Cloud on AWS secondary connection configured")
+		}
 	default:
 		c, err := vmware.NewClient(ctx, vmware.Config{
 			URL:      targetURL,

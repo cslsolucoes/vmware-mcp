@@ -117,6 +117,16 @@ const (
 	// cloudaws.Client) — allows only cloud-aws tools (Fase 10 of the plan,
 	// 95 tools).
 	ConnectionModeCloudAWS ConnectionMode = "cloud-aws"
+	// ConnectionModeEverything (--all-url, 2026-08-20) registers ALL 1030
+	// tools of every product at once — the "100% mode". It resolves the open
+	// architecture question ConnectionModeAll deferred: main.go holds a live
+	// vSphere client (the --all-url endpoint, primary) and OPTIONALLY a
+	// Workstation and/or VMC client too, wired only when their flags are also
+	// given as secondary connections. Tools whose backing client was not
+	// connected still list, but return a clear "requires --X" error at call
+	// time (CallTool already guards nil wsClient/cloudClient) — so a plain
+	// `--all-url <vcenter>` exposes all 1030 with the 907 vSphere ones live.
+	ConnectionModeEverything ConnectionMode = "everything"
 )
 
 // toolMode classifies which product a tool belongs to. Assigned per
@@ -150,6 +160,8 @@ func connectionModeAllows(cm ConnectionMode, class toolMode) bool {
 		return class == modeVCenterOnly || class == modeVSphereGeneral
 	case ConnectionModeCloudAWS:
 		return class == modeCloudAWS
+	case ConnectionModeEverything:
+		return true
 	default:
 		return false
 	}

@@ -613,3 +613,29 @@
 ## Decision Log
 
 <!-- Significant technical decisions with rationale. Why X was chosen over Y. -->
+
+## Session 2026-08-20 (docs 100% + --all-url)
+
+### Do-Not-Repeat
+- [2026-08-20] **Windows Python `open(path)` sem `encoding="utf-8"` usa cp1252** (locale) e
+  mostra UTF-8 como mojibake (em-dash "—" vira `â€"`). Isso me fez quase "corrigir" um bug
+  inexistente. SEMPRE `open(..., encoding="utf-8")` ao ler ficheiros UTF-8; e provar por
+  `grep`/hexdump antes de afirmar que ha mojibake na fonte.
+- [2026-08-20] **Paths do Git Bash (`/tmp`, `/d/...`) NAO sao entendidos pelo Python nativo do
+  Windows.** Escrever no scratchpad e ler com path `D:/...` (barra normal serve). `/tmp` do Git
+  Bash mapeia p/ `%TEMP%` do Windows — inacessivel via `/tmp` no Python do Windows.
+
+### Key Learnings
+- **Dump do catalogo MCP offline:** `NewRegistry(ctx, nil, opts)` NAO derefencia o client (handlers
+  sao valores de funcao, nunca chamados no registro). Logo `src/cmd/dumptools` constroi um Registry
+  por modo com client nil e imprime name+description+inputSchema (o mesmo que `tools/list`) — fonte
+  de verdade p/ gerar TOOLS.md. `registerDestructive` chama `register` incondicionalmente → tools
+  destrutivas sempre listam (gate e no call), entao aparecem no dump.
+
+### Decision Log
+- [2026-08-20] **`--all-url` = ConnectionModeEverything (modo "100%").** Resolve a questao de
+  arquitetura que ConnectionModeAll adiava (multiplos clientes vivos). Design: primario vSphere
+  (obrigatorio) + secundarios OPCIONAIS Workstation/VMC (so conectam se as flags forem passadas).
+  Tools sem cliente conectado LISTAM (100% visiveis) mas retornam erro claro no call — CallTool ja
+  guardava wsClient/cloudClient nil. Workstation reusa --username/--password como Basic Auth do
+  vmrest (best-effort); VMC usa --refresh-token (sem colisao). Owner pediu explicitamente.
