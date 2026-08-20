@@ -286,6 +286,9 @@ func (r *Registry) registerTools() {
 	// ClusterComputeResource (recomendações DRS/HA, HCI). Raw methods.*.
 	r.withClass(modeVSphereGeneral, registerHostSystemExtTools)
 	r.withClass(modeVCenterOnly, registerClusterTools)
+	// Onda 6 (2026-08-19): HealthUpdateManager + IpPoolManager + HostProfileManager.
+	r.withClass(modeVCenterOnly, registerHealthIpPoolTools)
+	r.withClass(modeVCenterOnly, registerHostProfileTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/
