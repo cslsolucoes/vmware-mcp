@@ -138,13 +138,14 @@ avulsos) + o plumbing interno deliberadamente excluído (PropertyCollector/
 SessionManager/ListView/MonitoredEntities). Mapa por MO: scratchpad
 `soap_all.txt`/`mo_method.txt`.
 
-**AÇÃO PRINCIPAL PENDENTE = DEPLOY.** Produção (`D:/ServidorDataCenter/mcpvmware-mcp.exe`)
-está no build de **796 tools** (deployado 19/08 16:29). As ondas 3-9 (**+~234 tools**)
-estão commitadas mas **NÃO deployadas**. Deploy = `cd src && go build -o
-d:/MCPVMWare/mcpvmware-mcp.exe ./mcpvmware-mcp` → matar processos mcpvmware-mcp →
-copiar p/ `D:/ServidorDataCenter/` → validar hash → smoke stdio contra o ESXi
-10.100.2.58. **Só com autorização do usuário** (derruba os 3 vCenters de produção
-momentaneamente). **Usuário PRECISA reconectar os 4 servidores MCP no painel.**
+**DEPLOY DAS 1030 CONCLUÍDO — 20/08 12:44.** Produção
+(`D:/ServidorDataCenter/mcpvmware-mcp.exe`) = build de 1030 tools (hash SHA256
+`344DC318...`, 27.5 MB). Smoke real do binário de produção contra o ESXi
+10.100.2.58 confirmou **907 tools no modo `all`** (fcd 22, fcdhost 18, vsan 23,
+dvs 33, crypto 30, host_profile 21, iofilter 8, scheduledtask 7, guest_registry
+6 — todas presentes). Tudo em `origin/main` (`bf73e43`). **PENDÊNCIA DO USUÁRIO:
+reconectar os 4 servidores MCP no painel** (os processos foram mortos para o
+deploy; ao reconectar, VM01/02/03 sobem com 907 e o Test com 907 no modo all).
 
 **Lições (todas no cerebrum):** (1) frestas = vim25 sem wrapper `object.*` → raw
 `methods.*`; (2) bug deadlock vcsim guest ops; (3) 1 vcsim por arquivo de teste;
