@@ -289,6 +289,10 @@ func (r *Registry) registerTools() {
 	// Onda 6 (2026-08-19): HealthUpdateManager + IpPoolManager + HostProfileManager.
 	r.withClass(modeVCenterOnly, registerHealthIpPoolTools)
 	r.withClass(modeVCenterOnly, registerHostProfileTools)
+	// Onda 7 (2026-08-20): First-Class Disks / vStorageObject — VcenterVStorageObjectManager
+	// (vcenter) e HostVStorageObjectManager (host); mesmo campo ServiceContent, tipo por conexão.
+	r.withClass(modeVCenterOnly, registerFcdVcenterTools)
+	r.withClass(modeVSphereGeneral, registerFcdHostTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/
