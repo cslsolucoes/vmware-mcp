@@ -444,6 +444,15 @@
   regressão.** SEMPRE rodar o gate da suíte completa com `-p 1` (serial, um
   pacote por vez): `go test ./... -p 1 -count=1`. Aplicar em toda onda antes de
   commitar; nunca concluir "FAIL" sem antes tentar isolado/serial.
+- [2026-08-19] **`-p 1` REDUZ mas NÃO ELIMINA o flaky de contenção no Windows —
+  o `workstation` (que eu nem toquei) deu FAIL de conexão mesmo com `-p 1`, e
+  passou ISOLADO (1.3s).** Gate REALMENTE confiável = rodar CADA pacote em
+  PROCESSO SEPARADO: `for p in tools cloudaws vmware workstation; do go test
+  ./$p/ -count=1 -timeout 200s; echo "$p exit $?"; done`. **Erro de processo que
+  cometi (não repetir):** juntei `go test ./... | tail; git add; git commit` no
+  MESMO comando bash — o "exit 0" que li era do `echo` final, não do `go test`
+  (que deu 1), e commitei com um FAIL na tela sem perceber. SEMPRE rodar o gate
+  num comando, LER o resultado, e só então commitar num comando SEPARADO.
 - [2026-08-11] **A regra global "atualizar o plano por fase/onda" (pendências
   NUMERADAS, estado marcado concluído/pendente/bloqueado, comandos+resultado
   literais, nota de commit mesmo quando não há) precisa de ser aplicada como

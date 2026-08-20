@@ -279,6 +279,9 @@ func (r *Registry) registerTools() {
 	// Onda 4 (2026-08-19): Crypto/KMS SOAP (CryptoManagerKmip) — KMIP servers,
 	// KMS clusters, chaves de encriptacao de VM; sem wrapper object.*, vcenter-only.
 	r.withClass(modeVCenterOnly, registerCryptoKmipTools)
+	// Onda 4b (2026-08-19): Distributed Virtual Switch (DVS + DVSManager) —
+	// métodos sem wrapper object.* além dos 6 já em generated_network.go; vcenter-only.
+	r.withClass(modeVCenterOnly, registerDvsTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/
