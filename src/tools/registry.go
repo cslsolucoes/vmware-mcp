@@ -298,6 +298,12 @@ func (r *Registry) registerTools() {
 	r.withClass(modeVSphereGeneral, registerVsanTools)
 	r.withClass(modeVSphereGeneral, registerGuestWindowsRegistryTools)
 	r.withClass(modeVSphereGeneral, registerGuestAliasTools)
+	// Onda 9 (2026-08-20): storage avançado (vFlash host + IoFilter vCenter) +
+	// inventário/operações (Datacenter/Event geral + ScheduledTask vCenter).
+	r.withClass(modeVSphereGeneral, registerHostVFlashTools)
+	r.withClass(modeVCenterOnly, registerIoFilterTools)
+	r.withClass(modeVSphereGeneral, registerInventoryOpsTools)
+	r.withClass(modeVCenterOnly, registerInventoryOpsVCenterOnlyTools)
 }
 
 // withClass runs fn with r.currentClass set to class — register/

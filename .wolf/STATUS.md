@@ -116,38 +116,43 @@ lab (host/cluster/rede/storage/vMotion/HA/DRS) é coberta pelos MCPs VMware+True
 
 ---
 
-**2026-08-19 (sessão longa) — EXPANSÃO ALÉM DAS 734: preenchendo frestas do
-gerador (métodos vim25 SEM wrapper `object.*`). Atual: 866 tools, TODAS
+**2026-08-19/20 (sessão longa) — EXPANSÃO ALÉM DAS 734: preenchidas as frestas do
+gerador (métodos vim25 SEM wrapper `object.*`). Atual: ~1030 tools, TODAS
 commitadas+pushadas em `origin/main`. Git por onda (a pedido do usuário).**
 
-Commits desta sessão:
-- `262c389` (734→811): iSCSI completo (22: initiator+multipath+port binding),
-  FT (7), Guest Ops (15), Perf (9), License (13), Alarm (10), query_port_groups (1).
-- `ecd3506` (811→838): Crypto/KMS SOAP CryptoManagerKmip (27, vcenter-only).
-- `c89a6b3` (838→866): DVS + DVSManager (28, vcenter-only).
+Commits desta sessão (9 ondas):
+- `262c389` (734→811): iSCSI completo (22), FT (7), Guest Ops (15), Perf (9),
+  License (13), Alarm (10), query_port_groups (1).
+- `ecd3506` (811→838): Crypto/KMS SOAP CryptoManagerKmip (27).
+- `c89a6b3` (838→866): DVS + DVSManager (28).
+- `2c79108` (866→892): HostSystem restantes (13) + ClusterComputeResource (13).
+- `90c8ca3` (892→931): HostProfileManager (21) + HealthUpdate (10) + IpPool (8).
+- `45bcb6b` (931→971): First-Class Disks / vStorageObject vCenter (22) + host (18).
+- `dc468d0` (971→1001): vSAN (19) + Guest Registry/Alias (11).
+- onda 9 (1001→~1030): vFlash (5) + IoFilter (8) + Datacenter/Event (9) +
+  ScheduledTask (7). [commit em curso ao escrever isto]
 
-**Próxima = onda 5. Ondas restantes do plano 100% (~370 tools):** storage FCD
-(Vcenter/HostVStorageObjectManager ~69), HostStorageSystem restantes (NVMe/vFlash
-~46), vSAN (~20), HostProfileManager (18), HealthUpdateManager (20),
-ClusterComputeResource (11), GuestWindowsRegistry+Alias (~11), IoFilter/IpPool/
-HostPatch/SmartCard/Datacenter/ScheduledTask/Event/etc. EXCLUIR plumbing interno
-(PropertyCollector/SessionManager/ListView/MonitoredEntities). Mapa por MO:
-scratchpad `soap_all.txt`/`mo_method.txt`.
+**MAPA DE FRESTAS ESSENCIALMENTE ESGOTADO.** Sobram só nichos residuais (SmartCard,
+DirectPath, AnswerFile, HostPatch parcial, HostAccessManager, Kerberos, métodos
+avulsos) + o plumbing interno deliberadamente excluído (PropertyCollector/
+SessionManager/ListView/MonitoredEntities). Mapa por MO: scratchpad
+`soap_all.txt`/`mo_method.txt`.
 
-**DEPLOY: pendente.** Produção (`D:/ServidorDataCenter/mcpvmware-mcp.exe`) está no
-build de **796 tools** (iSCSI+onda2+FT, deployado 16:29). As ondas 3-4b (+70:
-guest ops, crypto, dvs) estão commitadas mas **NÃO deployadas** (acumuladas —
-rebuild+deploy quando o usuário pedir; derruba os processos MCP de produção).
-**Usuário PRECISA reconectar os 4 servidores MCP no painel** para pegar as 796
-já em produção.
+**AÇÃO PRINCIPAL PENDENTE = DEPLOY.** Produção (`D:/ServidorDataCenter/mcpvmware-mcp.exe`)
+está no build de **796 tools** (deployado 19/08 16:29). As ondas 3-9 (**+~234 tools**)
+estão commitadas mas **NÃO deployadas**. Deploy = `cd src && go build -o
+d:/MCPVMWare/mcpvmware-mcp.exe ./mcpvmware-mcp` → matar processos mcpvmware-mcp →
+copiar p/ `D:/ServidorDataCenter/` → validar hash → smoke stdio contra o ESXi
+10.100.2.58. **Só com autorização do usuário** (derruba os 3 vCenters de produção
+momentaneamente). **Usuário PRECISA reconectar os 4 servidores MCP no painel.**
 
-**Lições (todas no cerebrum):** (1) frestas = métodos vim25 sem wrapper `object.*`
-→ raw `methods.*`; (2) bug de deadlock no vcsim guest ops (`StartProgramInGuest`
-nil-deref + `WithLock` sem `defer`); (3) 1 vcsim por arquivo de teste (N esgota
-portas no Windows → trava); (4) gate = rodar CADA pacote em processo separado
-(nem `go test ./...` paralelo nem `-p 1` são confiáveis no Windows); (5)
-subagentes general-purpose às vezes sub-delegam/colidem — instruir anti-delegação
-e SEMPRE verificar o disco, nunca aceitar "verde" de relatório vago.
+**Lições (todas no cerebrum):** (1) frestas = vim25 sem wrapper `object.*` → raw
+`methods.*`; (2) bug deadlock vcsim guest ops; (3) 1 vcsim por arquivo de teste;
+(4) gate = cada pacote em processo separado + RETRY (o `tools` flaka por contenção
+de ~450 vcsim, piora a cada onda; `-p 1` não basta); (5) subagentes às vezes
+sub-delegam/colidem — anti-delegação + verificar disco, nunca aceitar "verde"
+vago; (6) NÃO juntar `go test | tail; git commit` no mesmo comando (o exit vira
+do echo — commitei com FAIL uma vez).
 
 ---
 
