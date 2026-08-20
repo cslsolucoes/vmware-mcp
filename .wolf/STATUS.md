@@ -2,13 +2,15 @@
 
 > Single source of truth for resuming work. Read this FIRST when starting a session.
 > Update this file at the end of every work phase so the next `/clear` resumes in 1 read.
-> Last updated: 2026-08-19
+> Last updated: 2026-08-20
 
 ---
 
 ## ✅ Done
 
 <!-- Move items here from "🚀 Next phase" when finished. Group by area. -->
+
+- **2026-08-20 12:44-13:30** — **Documentação "100%" (README 1030 + TOOLS.md completo) + novo modo `--all-url` (as 1030 tools num só processo) + deploy + config dos 3 vCenters.** (1) **Deploy** das 1030 (fecho das 9 ondas) verificado antes: binário p/ `D:\ServidorDataCenter`, smoke real ESXi → 907 no modo all. (2) **Docs:** `src/cmd/dumptools/main.go` faz dump offline do catálogo (`NewRegistry(ctx, nil, opts)` não derefencia o client → constrói Registry por modo e imprime name+description+inputSchema, o mesmo que `tools/list`) → `scripts/gen_tools_md.py` gera **`TOOLS.md`** (1030 tools, cada uma com descrição+sintaxe+tabela de params; 600 destrutivas marcadas). README 749→1030 com cobertura por produto (vSphere 907 [521 vcenter-only+386 vsphere-general] + VMC 95 + Workstation 28) + tabela por área + link. Commit `a1f1258`. (3) **`--all-url` = `ConnectionModeEverything`** (`src/tools/registry.go` + `main.go`): registra TODAS as classes (1030); primário vSphere (`--username/--password`) + secundários OPCIONAIS `--workstation-url`/`--cloud-aws-url` na mesma invocação; tools sem cliente conectado LISTAM mas retornam erro claro no call (CallTool já guardava wsClient/cloudClient nil). Exclusivo com `--vcenter/--vmware/--vmware-all-url`. `TestMode_Everything` valida o conjunto exato de 1030; gate 4/4 verde (tools/vmware/cloudaws/workstation); smoke do flag OK. Commit `1cf627b`. (4) **Deploy do binário `1030-allurl`** (hash `CC033E27…`, 27.5MB) p/ `D:\ServidorDataCenter\mcpvmware-mcp.exe` (nenhum processo rodava). (5) **`.mcp.json`:** VM01/02/03 `--vcenter-url`→`--all-url` (painel mostra 1030: 907 funcionais + 123 WS/VMC visíveis-mas-inertes sem backend); `mcpVmwareTest` mantém `--vmware-all-url` (907, ESXi). **Achado:** o "mojibake" (em-dash `â€"`) era artefato de leitura (Windows Python `open()` usa cp1252) — a fonte/live/TOOLS.md têm `—` correto; NÃO é bug. **Pendência do usuário:** reconectar os 4 servidores MCP no painel. **Limpeza sugerida (não feita):** `src/gen.exe` e `src/mcpvmware-mcp.exe` são binários stale tracked no git (~27MB cada) — candidatos a `git rm --cached` + gitignore.
 
 - **2026-08-19 16:47-18:46** — **Análise de cobertura do projeto "Lab VMware vSphere 6.5" (e-book) adaptado ao ambiente REAL da CSL + verificação de hardware ao vivo + report + 4 memórias. NÃO alterou código do MCP (só leitura/análise/planejamento; binário e tools inalterados).** Feita a partir do workspace `D:\ServidorDataCenter`. Usuário perguntou se os MCPs cobrem o projeto do `E-BOOK-LAB-VMWARE-FINAL.pdf` (guia de 218/229 págs, John Costa: Workstation→3 ESXi→Win2016 AD/DNS→VCSA→cluster/vSwitches→VMs/templates/clones→**HP VSA iSCSI**→Storage vMotion/vMotion/HA/DRS/FT). E-book convertido p/ Markdown (`pdftotext -enc UTF-8`) → `D:\MCPVMWare\.workspace\E-BOOK-LAB-VMWARE-FINAL.md` (10 tarefas viradas em headings). **Cobertura (evidência: grep em `src/**/*.go`, não teoria):** a camada de administração vSphere está coberta pelas ~749 tools — host (NTP/serviços/firewall/rede), rede (vSwitch/vDS/VLAN/portgroup/vmkernel + `host_nic_select_vnic`), storage (`host_iscsi_*` + `host_iscsi_portbinding` + multipath + VMFS + `storage_drs`), VM/clone/template/customize, cluster (`folder_create_cluster` + `compute_resource_reconfigure` com **HA+DRS** via `ClusterConfigSpecEx`, com o teste `reconfigure_cluster_enables_drs_and_ha`), **vMotion** (`vm_migrate`), **Storage vMotion** (`vm_relocate`), VAMI. **🔴 Única lacuna de código: Fault Tolerance** — ZERO tools `CreateSecondary`/`TurnOnFT` (`grep -i fault` → só comentários); fechável em `generated_vm_ft.go` (~4-6 tools raw-`methods.*`, mesmo padrão do fechamento iSCSI). Fora do alcance de QUALQUER MCP (por design): bootstrap (mídia/Workstation/instalar SO/deploy do VCSA) e config no SO convidado (AD/DNS — sem GuestOperations). **Adaptação HP VSA → TrueNAS:** T9.1 (storage) deixa de ser fora-de-escopo e passa a coberta pelo MCP TrueNAS (`pool_create`→`create_dataset` zvol→`iscsi_global/portal/initiator/auth/extent/target/targetextent`→`service_control`); fluxo integrado dos 2 MCPs documentado no report. **Verificação de hardware ao vivo** (autorizada pelo usuário; `vmware_host_info`, somente leitura, via mcpVmwareTest+VM01+VM02): **VM01** `vm-csl01.csltech.local` Dell R710, 2×Xeon **X5670** (Westmere) 12c/128GB, ESXi 6.7u3, 10.222.0.251; **VM02** `vm-csl02.csltech.local` R710, 2×**X5690** (Westmere) 12c/128GB, 6.7u3, 10.222.0.252; **VM03** `localhost.cslsolucoes.com.br` ⚠️ R720, 2×**E5-2697 v2** (Ivy Bridge) 24c/256GB, 7.0u3, 10.222.0.253 (/10.100.2.58 manut.). Total **48 cores / 512 GB**; cada host 2×SFP+ 10GbE + 2×RJ45 1GbE. **Decisões do owner:** (1) storage = **TrueNAS**; (2) **vCenter 8.0.2 → 7.0u3, instalação NOVA (greenfield)** — vSphere 8 não gerencia ESXi 6.7; o 7.0u3 gerencia 6.7+7.0 ⇒ os 3 hosts no mesmo vCenter sem tocar neles; (3) **manter** VM01/02 em 6.7u3 (Westmere/R710 fora do HCL do ESXi 7.0 — upgrade não passaria); (4) **EVC = Intel Westmere** (cluster misto; VMs perdem AVX); (5) rede **2 switches SFP+ 10GbE**, cada host 1 porta por switch (A/B), tráfego por VLAN (mgmt/vMotion/VM/FT em teaming; **iSCSI-A/B em MPIO**, nunca LACP), MTU 9000, TrueNAS com 2 portais; (6) ordem greenfield: VCSA em datastore local do VM03 → add 3 hosts → vDS+VLANs → iSCSI+VMFS → **storage vMotion do VCSA** p/ o TrueNAS → HA+DRS+EVC. **Pendências:** confirmar se os 2 switches são **stack/MLAG ou independentes**; saneamento pré-cluster (renomear VM03 `localhost`→`vm-csl03`; unificar DNS `csltech.local`×AD `cslsolucoes.com.br` + PTR reverso). **Artefatos:** report vivo `D:\MCPVMWare\.workspace\reports\MCPVMWare2026-08-19-165503-cobertura-ebook-lab-vmware.report.md` (com §11 do ambiente real + changelog); e-book em MD; **4 memórias** em `D:\Users\claiton.linhares\.claude\projects\d--ServidorDataCenter\memory\` (`datacenter-esxi-hosts-hardware`, `lab-vmware-truenas-projeto`, `mcp-vmware-cobertura-ft-gap`, `lab-vmware-report-artefatos`) + índice `MEMORY.md`. **Próximo dev no MCP: implementar Fault Tolerance** — único gap de código para o lab.
 
@@ -100,19 +102,19 @@
 
 ## 🚀 Next phase
 
-**2026-08-19 — Novo contexto de uso: implantar o lab do e-book no ambiente REAL da CSL (adaptado).**
-Análise de cobertura concluída (ver "Done" 16:47-18:46 e o report
-`.workspace/reports/MCPVMWare2026-08-19-165503-cobertura-ebook-lab-vmware.report.md`). O ambiente real já
-tem 3 hosts físicos (**48c/512GB**: 2× R710 Westmere 6.7u3 + 1× R720 Ivy Bridge 7.0u3) + storage **TrueNAS**;
-o vCenter será um **VCSA 7.0u3 novo (greenfield)** (o 8.0.2 não gerencia ESXi 6.7). Toda a camada de API do
-lab (host/cluster/rede/storage/vMotion/HA/DRS) é coberta pelos MCPs VMware+TrueNAS — **exceto Fault Tolerance**.
-- **→ Próximo dev priorizado no MCP: implementar Fault Tolerance** — `src/tools/generated_vm_ft.go`
-  (`vmware_vm_create_secondary`/`turn_on_ft`/`turn_off_ft`/`make_primary`; ~4-6 tools raw-`methods.*` tier2,
-  `modeVSphereGeneral`, mesmo padrão do fechamento iSCSI de 15:42). É o único gap de código para o lab.
-- **→ Pendências de AMBIENTE (não de código):** confirmar switches **stack/MLAG × independentes**; renomear
-  VM03 (`localhost`→`vm-csl03`) e unificar DNS/PTR (`csltech.local` × `cslsolucoes.com.br`); habilitar
-  **EVC=Westmere** ao criar o cluster; apontar os MCPs para o **VCSA 7.0u3** quando existir (hoje o alvo de
-  teste é ESXi standalone `10.100.2.58`).
+**2026-08-20 — AÇÃO PENDENTE DO USUÁRIO: reconectar os 4 servidores MCP no painel.**
+O binário `1030-allurl` está em `D:\ServidorDataCenter` e o `.mcp.json` já aponta VM01/02/03 para
+`--all-url` (mostrarão **1030** tools; VM Test segue `--vmware-all-url` = 907). Basta dar Reconnect nos 4.
+
+**Código do MCP essencialmente completo: 1030 tools (FT já implementado nas ondas — `generated_vm_ft.go`).**
+Toda a camada de API do lab (host/cluster/rede/storage/vMotion/HA/DRS/**FT**) está coberta.
+- **→ Opcional (não pedido):** nichos residuais do vim25 (SmartCard, DirectPath, HostPatch, Kerberos,
+  HostAccessManager, ~40 tools) — o proxy ainda os lista, mas a maioria é plumbing interno
+  (PropertyCollector/SessionManager/ViewManager) que não faz sentido como tool MCP.
+- **→ Pendências de AMBIENTE (lab e-book, não de código):** confirmar switches **stack/MLAG × independentes**;
+  renomear VM03 (`localhost`→`vm-csl03`) e unificar DNS/PTR (`csltech.local` × `cslsolucoes.com.br`); habilitar
+  **EVC=Westmere** ao criar o cluster; apontar os MCPs para o **VCSA 7.0u3** greenfield quando existir.
+- **→ Limpeza sugerida:** `git rm --cached src/gen.exe src/mcpvmware-mcp.exe` (binários stale tracked, ~27MB) + gitignore.
 
 ---
 
